@@ -1,10 +1,10 @@
-import "./App.css";
-
 function App() {
   return (
     <div className="App">
-      Sushant Kumar Portfolio is on the way. You will get details after
-      somedays. I'm working on this website. Please wait...
+      <h1 className="text-6xl font-bold underline bg-purple-600">
+        Sushant Kumar Portfolio is on the way. You will get details after
+        somedays. I'm working on this website.
+      </h1>
     </div>
   );
 }
