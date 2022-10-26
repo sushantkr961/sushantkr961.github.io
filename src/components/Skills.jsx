@@ -10,7 +10,7 @@ import tailwind from '../assests/tailwind.png';
 
 const Skills = () => {
   return (
-    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300' >
+    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300 font-medium' >
         {/* Container */}
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
             <div>
@@ -49,7 +49,7 @@ const Skills = () => {
                 </div>
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={tailwind} alt="html logo" />
-                    <p className='my-4'>tailwind</p>
+                    <p className='my-4'>tailwindcss</p>
                 </div>
             </div>
         </div>
