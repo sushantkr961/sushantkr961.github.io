@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.21bdfa99.css",
-    "main.js": "/static/js/main.38caff3d.js",
+    "main.css": "/static/css/main.fbb6bd37.css",
+    "main.js": "/static/js/main.24094468.js",
     "static/media/Jefit.jpeg": "/static/media/Jefit.02081e0ced2a49db2c2d.jpeg",
     "static/media/Orbitz.jpeg": "/static/media/Orbitz.5db3091ad6c0b616637e.jpeg",
+    "static/media/sushant.png": "/static/media/sushant.8dd99c717ef7eb8c4439.png",
     "static/media/Naukri.jpeg": "/static/media/Naukri.a6e493dc52d5fba86739.jpeg",
-    "static/media/logo.png": "/static/media/logo.b90117b0093ee3f3e128.png",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/logoW1.png": "/static/media/logoW1.88c3a32ae99c974a267b.png",
     "static/media/node.png": "/static/media/node.952a9ea986dcfa5229ad.png",
     "static/media/mongo.png": "/static/media/mongo.2a1528ddc31d4ce8518d.png",
     "static/media/html.png": "/static/media/html.2ba4fabc69a89a8f71e6.png",
@@ -15,11 +16,11 @@
     "static/media/expressJS.png": "/static/media/expressJS.b44f5a4b0ab040328aac.png",
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
-    "main.21bdfa99.css.map": "/static/css/main.21bdfa99.css.map",
-    "main.38caff3d.js.map": "/static/js/main.38caff3d.js.map"
+    "main.fbb6bd37.css.map": "/static/css/main.fbb6bd37.css.map",
+    "main.24094468.js.map": "/static/js/main.24094468.js.map"
   },
   "entrypoints": [
-    "static/css/main.21bdfa99.css",
-    "static/js/main.38caff3d.js"
+    "static/css/main.fbb6bd37.css",
+    "static/js/main.24094468.js"
   ]
 }
