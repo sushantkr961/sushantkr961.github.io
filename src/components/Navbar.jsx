@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
 
         {/* menu */}
-            <ul className='hidden md:flex mr-5 text-lg font-medium'>
+            <ul className='hidden lg:flex mr-5 text-lg font-medium'>
                 <li>
                     <Link to='home' smooth={true} duration={500}>
                         Home 
@@ -27,11 +27,11 @@ const Navbar = () => {
                         About
                     </Link>
                 </li>
-                {/* <li>
-                    <Link to='Education' smooth={true} duration={500}>
-                        Education
+                <li>
+                    <Link to='skills' smooth={true} duration={500}>
+                        Skills
                     </Link>
-                </li> */}
+                </li>
                 <li>
                     <Link to='projects' smooth={true} duration={500}>
                         Projects
@@ -50,7 +50,7 @@ const Navbar = () => {
             </ul>
 
         {/* Hamburger icon */}
-        <div onClick={handleClick} className='md:hidden z-10'>
+        <div onClick={handleClick} className='lg:hidden z-10'>
             {!nav ? <FaBars fontSize='30px' /> : <FaTimes fontSize='30px' />}
         </div>
 
@@ -66,11 +66,11 @@ const Navbar = () => {
                     About
                 </Link>
             </li>
-            {/* <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to='Education' smooth={true} duration={500}>
-                    Education
+            <li className='py-6 text-4xl'>
+                <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
+                    Skills
                 </Link>
-            </li> */}
+            </li>
             <li className='py-6 text-4xl'>
                 <Link onClick={handleClick} to='projects' smooth={true} duration={500}>
                     Projects

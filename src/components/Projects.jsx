@@ -14,6 +14,7 @@ const Projects = () => {
 
             {/* container for projects */}
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-center">
+            {/* <div className="text-center border"> */}
 
                 {/* Grid Item */}
                 {project.map((item, index) => (
