@@ -1,11 +1,12 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import bg from '../assests/bg.png'
 
 
 const Home = () => {
   return (
     <div name='home' className='w-full h-screen bg-[#0a192f] font-medium'
-    style={{ backgroundImage: `url(https://images.pexels.com/photos/1480690/pexels-photo-1480690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover'  }} 
+    style={{ backgroundImage: `url(${bg})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover'  }} 
     >
       
         {/* Container */}
