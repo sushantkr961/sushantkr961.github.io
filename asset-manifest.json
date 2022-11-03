@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd4bf6ea.css",
-    "main.js": "/static/js/main.6611173a.js",
+    "main.css": "/static/css/main.eb946b1a.css",
+    "main.js": "/static/js/main.c18db65b.js",
     "static/media/Jefit.jpeg": "/static/media/Jefit.02081e0ced2a49db2c2d.jpeg",
     "static/media/Orbitz.jpeg": "/static/media/Orbitz.5db3091ad6c0b616637e.jpeg",
     "static/media/sushant.png": "/static/media/sushant.8dd99c717ef7eb8c4439.png",
+    "static/media/bg.png": "/static/media/bg.153d2c477fcae6592c4d.png",
     "static/media/Naukri.jpeg": "/static/media/Naukri.a6e493dc52d5fba86739.jpeg",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/logoW1.png": "/static/media/logoW1.88c3a32ae99c974a267b.png",
@@ -16,11 +17,11 @@
     "static/media/expressJS.png": "/static/media/expressJS.b44f5a4b0ab040328aac.png",
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
-    "main.fd4bf6ea.css.map": "/static/css/main.fd4bf6ea.css.map",
-    "main.6611173a.js.map": "/static/js/main.6611173a.js.map"
+    "main.eb946b1a.css.map": "/static/css/main.eb946b1a.css.map",
+    "main.c18db65b.js.map": "/static/js/main.c18db65b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd4bf6ea.css",
-    "static/js/main.6611173a.js"
+    "static/css/main.eb946b1a.css",
+    "static/js/main.c18db65b.js"
   ]
 }
