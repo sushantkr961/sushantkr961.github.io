@@ -1,11 +1,10 @@
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
 import About from "./components/About";
-// import Education from "./components/Education";
-import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import { Contact } from "./components/Contact";
-// import Resume from "./components/Resume";
+import Skills from "./components/Skills";
+import SocialLinks from "./components/SocialLinks";
 
 function App() {
   return (
@@ -13,11 +12,11 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      {/* <Education /> */}
-      <Skills />
       <Projects />
-      {/* <Resume /> */}
+      <Skills />
       <Contact />
+
+      <SocialLinks />
     </div>
   );
 }

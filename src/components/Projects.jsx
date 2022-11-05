@@ -1,48 +1,116 @@
-import React from 'react';
-import { data } from '../data/data';
+import React from "react";
+import Jefit from "../assets/projects/Jefit.jpeg";
+import Naukri from "../assets/projects/Naukri.jpeg";
+import Orbitz from "../assets/projects/Orbitz.jpeg";
+import html from "../assets/html.png"
 
 const Projects = () => {
-    const project = data;
+  const portfolios = [
+    {
+      id: 1,
+      src: Jefit,
+      name: "Jefit Clone",
+      description: "An online store for personal trainers and training guides, jefit.com, offers a wide variety of exercise categories that target particular muscle regions.",
+      demo: `https://shimmering-starburst-c610de.netlify.app/`,
+      code: `https://github.com/sudip40/incompetent-string-8638`,
+      tech1: html,
+      tech2: html,
+      tech3: html,
+    },
+    {
+      id: 2,
+      src: Naukri,
+      name: "Jefit Clone",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum distinctio delectus officiis dolorem quisquam odit nostrum quidem, impedit, tempora exercitationem ea natus pariatur corrupti soluta perferendis error ipsa similique saepe!",
+      demo:``,
+      code: ``,
+      tech1:"",
+      tech2: "",
+      tech3: "",
+    },
+    {
+      id: 3,
+      src: Orbitz,
+      name: "Jefit Clone",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum distinctio delectus officiis dolorem quisquam odit nostrum quidem, impedit, tempora exercitationem ea natus pariatur corrupti soluta perferendis error ipsa similique saepe!",
+      demo:``,
+      code: ``,
+      tech1:"",
+      tech2: "",
+      tech3: "",
+    },
+    {
+      id: 4,
+      src: Jefit,
+      name: "Jefit Clone",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum distinctio delectus officiis dolorem quisquam odit nostrum quidem, impedit, tempora exercitationem ea natus pariatur corrupti soluta perferendis error ipsa similique saepe!",
+      demo:``,
+      code: ``,
+      tech1:"",
+      tech2: "",
+      tech3: "",
+    },
+    {
+      id: 5,
+      src: Naukri,
+      name: "Jefit Clone",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum distinctio delectus officiis dolorem quisquam odit nostrum quidem, impedit, tempora exercitationem ea natus pariatur corrupti soluta perferendis error ipsa similique saepe!",
+      demo:``,
+      code: ``,
+      tech1:"",
+      tech2: "",
+      tech3: "",
+    },
+    {
+      id: 6,
+      src: Orbitz,
+      name: "",
+      description: "",
+      demo:``,
+      code: ``,
+      tech1:"",
+      tech2: "",
+      tech3: "",
+      
+    },
+  ];
 
   return (
-    <div name='projects' className='w-full md:h-screen text-gray-300 bg-[#0a192f] font-medium'>
-        <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-            <div className='pb-8'>
-                <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>Projects</p>
-            </div>
-            {/* container for projects */}
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-center">
-            {/* <div className="text-center border"> */}
-
-                {/* Grid Item */}
-                {project.map((item, index) => (
-                    <div 
-                    key={index}
-                    style={{ backgroundImage: `url(${item.image})`}}
-                    className='shadow-lg shadow-[#040c16] group conatainer rounded-md flex justify-center items-center mx-auto content-div hover:scale-110 duration-500 w-[300px]'
-                    >
-                    {/* Hover effect for images */}
-                        <div className='opacity-0 group-hover:opacity-100'>
-                            <span className='text-2xl font-bold text-white tracking-wider'>
-                            {item.name}
-                            </span>
-                            <div className='pt-8 text-center'>
-                                {/* eslint-disable-next-line */}
-                                <a href={item.live} target="_blank" rel="noreferrer noopener">
-                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-500'>Demo</button>
-                                </a>
-                                <a href={item.github} target="_blank" rel="noreferrer noopener">
-                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-500'>Code</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-
-            </div>
+    <div name="projects" className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-auto border" >
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full border">
+        <div className="pb-8">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500"> Projects </p>
+          <p className="py-6">Check out some of my work right here</p>
         </div>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+          {portfolios.map(({ id, src, name, description,demo, code, tech1, tech2, tech3 }) => (
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg pb-3">
+              <img src={src} alt="" className="rounded-md duration-200 hover:scale-105 w-full h-44" />
+              <div className="flex items-center justify-center">
+                <a href={demo} target="_blank" rel="noreferrer noopener" className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md text-center" >
+                <button > Demo </button>
+                </a>
+                <a href={code} target="_blank" rel="noreferrer noopener" className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md text-center">
+                <button > Code </button>
+                </a>
+              </div>
+              <div>
+                <p className="text-lg font-bold underline text-center">{name}</p>
+                <p className="text-center p-3"> {description} </p>
+                <div className="flex justify-center gap-1">
+                  <img src={tech1} alt="" className="h-7 w-7" />
+                  <img src={tech2} alt="" className="h-7 w-7" />
+                  <img src={tech3} alt="" className="h-7 w-7" />
+                  <img src={tech3} alt="" className="h-7 w-7" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Projects;
