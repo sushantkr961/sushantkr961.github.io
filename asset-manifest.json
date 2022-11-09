@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.64410804.css",
-    "main.js": "/static/js/main.39f8ec1d.js",
+    "main.js": "/static/js/main.bb265120.js",
     "static/media/Jefit.jpeg": "/static/media/Jefit.02081e0ced2a49db2c2d.jpeg",
     "static/media/Orbitz.jpeg": "/static/media/Orbitz.5db3091ad6c0b616637e.jpeg",
     "static/media/heroImage.png": "/static/media/heroImage.553e94632635f3c43908.png",
@@ -16,10 +16,10 @@
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
     "main.64410804.css.map": "/static/css/main.64410804.css.map",
-    "main.39f8ec1d.js.map": "/static/js/main.39f8ec1d.js.map"
+    "main.bb265120.js.map": "/static/js/main.bb265120.js.map"
   },
   "entrypoints": [
     "static/css/main.64410804.css",
-    "static/js/main.39f8ec1d.js"
+    "static/js/main.bb265120.js"
   ]
 }
