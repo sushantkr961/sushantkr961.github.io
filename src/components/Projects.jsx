@@ -88,10 +88,10 @@ const Projects = () => {
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg pb-3">
               <img src={src} alt="" className="rounded-md duration-200 hover:scale-105 w-full h-44" />
               <div className="flex items-center justify-center">
-                <a href={demo} target="_blank" rel="noreferrer noopener" className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md text-center" >
+                <a href={demo} target="_blank" rel="noreferrer noopener" className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105" >
                 <button > Demo </button>
                 </a>
-                <a href={code} target="_blank" rel="noreferrer noopener" className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md text-center">
+                <a href={code} target="_blank" rel="noreferrer noopener" className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105">
                 <button > Code </button>
                 </a>
               </div>
