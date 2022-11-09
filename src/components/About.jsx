@@ -1,4 +1,6 @@
 import React from "react";
+import GitHubCalendar from "react-github-calendar";
+// import ReactTooltip from 'react-tooltip';
 
 const About = () => {
   return (
@@ -24,7 +26,8 @@ const About = () => {
               <p className="text-4xl font-bold inline border-b-4 border-gray-500"> My Statistics </p>
             </div>
           </div>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem laudantium, delectus error eius, provident eos, fugiat quo repudiandae voluptate quaerat alias quis hic dicta? Explicabo ipsum et ab unde nobis?</p>
+          <GitHubCalendar username="sushantkr961" color='#808a9f' style={{margin: 'auto'}} />
+          {/* <ReactTooltip /> */}
         </div>
       </div>
     </div>
