@@ -3,6 +3,9 @@ import Jefit from "../assets/projects/Jefit.jpeg";
 import Naukri from "../assets/projects/Naukri.jpeg";
 import Orbitz from "../assets/projects/Orbitz.jpeg";
 import html from "../assets/html.png"
+import css from "../assets/css.png"
+import javascript from "../assets/javascript.png"
+import github from "../assets/github.png"
 
 const Projects = () => {
   const portfolios = [
@@ -14,30 +17,33 @@ const Projects = () => {
       demo: `https://shimmering-starburst-c610de.netlify.app/`,
       code: `https://github.com/sudip40/incompetent-string-8638`,
       tech1: html,
-      tech2: html,
-      tech3: html,
+      tech2: css,
+      tech3: javascript,
+      tech4: github,
     },
     {
       id: 2,
       src: Naukri,
-      name: "Jefit Clone",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum distinctio delectus officiis dolorem quisquam odit nostrum quidem, impedit, tempora exercitationem ea natus pariatur corrupti soluta perferendis error ipsa similique saepe!",
-      demo:``,
-      code: ``,
-      tech1:"",
-      tech2: "",
-      tech3: "",
+      name: "Naukri.com Clone",
+      description: "Naukri.com is an Indian employment website operting in India founded by Indian bussinessman Sanjeev Bikhchandani.It is the largest employment website in India.",
+      demo:`https://superlative-klepon-42d3bf.netlify.app/`,
+      code: `https://github.com/sushantkr961/delicious-vacation-7867`,
+      tech1: html,
+      tech2: css,
+      tech3: javascript,
+      tech4: github,
     },
     {
       id: 3,
       src: Orbitz,
-      name: "Jefit Clone",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum distinctio delectus officiis dolorem quisquam odit nostrum quidem, impedit, tempora exercitationem ea natus pariatur corrupti soluta perferendis error ipsa similique saepe!",
-      demo:``,
-      code: ``,
-      tech1:"",
-      tech2: "",
-      tech3: "",
+      name: "Orbitz Clone",
+      description: "Kimaya is a online website thats offers to purchase fresh Indian & exotic fruits.It is hassle free online fruit ordering platform in Mumbai and Delhi.",
+      demo:`https://playful-crostata-7658aa.netlify.app/`,
+      code: `https://github.com/raus376/Kimaye-Website`,
+      tech1: html,
+      tech2: css,
+      tech3: javascript,
+      tech4: github,
     },
     {
       id: 4,
@@ -84,7 +90,7 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, name, description,demo, code, tech1, tech2, tech3 }) => (
+          {portfolios.map(({ id, src, name, description,demo, code, tech1, tech2, tech3, tech4 }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg pb-3">
               <img src={src} alt="" className="rounded-md duration-200 hover:scale-105 w-full h-44" />
               <div className="flex items-center justify-center">
@@ -102,7 +108,7 @@ const Projects = () => {
                   <img src={tech1} alt="" className="h-7 w-7" />
                   <img src={tech2} alt="" className="h-7 w-7" />
                   <img src={tech3} alt="" className="h-7 w-7" />
-                  <img src={tech3} alt="" className="h-7 w-7" />
+                  <img src={tech4} alt="" className="h-7 w-7" />
                 </div>
               </div>
             </div>
