@@ -3,10 +3,14 @@ import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
-import nextjs from "../assets/nextjs.png";
-import graphql from "../assets/graphql.png";
+import expressjs from "../assets/expressJs.png";
+import git from "../assets/git.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import mongodb from "../assets/mongodb.png";
+import redux from "../assets/redux.png";
+import nodejs from "../assets/nodejs.png";
+import typescript from "../assets/typescript.png";
 
 const Skills = () => {
   const techs = [
@@ -42,21 +46,45 @@ const Skills = () => {
     },
     {
       id: 6,
-      src: nextjs,
-      title: "Next JS",
-      style: "shadow-white",
+      src: expressjs,
+      title: "express JS",
+      style: "shadow-black",
     },
     {
       id: 7,
-      src: graphql,
-      title: "GraphQL",
-      style: "shadow-pink-400",
+      src: git,
+      title: "git",
+      style: "shadow-orange-700",
     },
     {
       id: 8,
       src: github,
       title: "GitHub",
       style: "shadow-gray-400",
+    },
+    {
+      id: 9,
+      src: mongodb,
+      title: "mongodb",
+      style: "shadow-green-600",
+    },
+    {
+      id: 10,
+      src: redux,
+      title: "Redux",
+      style: "shadow-purple-400",
+    },
+    {
+      id: 11,
+      src: nodejs,
+      title: "Node.js",
+      style: "shadow-green-300",
+    },
+    {
+      id: 12,
+      src: typescript,
+      title: "Typescript",
+      style: "shadow-blue-400",
     },
   ];
 

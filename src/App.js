@@ -15,7 +15,6 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
-
       <SocialLinks />
     </div>
   );
