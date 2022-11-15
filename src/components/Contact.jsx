@@ -12,7 +12,7 @@ const Contact = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500"> Contact </p>
           <p className="py-6">Submit the form below to get in touch with me.</p>
         </div>
-        <div className=" flex justify-center items-center">
+        <div className=" flex justify-center items-center md:flex-row sm:flex-col">
         <div className="mr-20 text-gray-300 text-lg mb-8">
             <li className="flex font-bold gap-3 mb-10"><BsFillTelephoneFill color="#1970F1" fontSize="25px"/> +91 7544909637</li>
             <a className='flex font-bold gap-3 mb-10' href="mailto:sushantonly961@gmail.com" target="_blank" rel="noreferrer noopener"><HiMail color="#1970F1" fontSize="25px" /> sushantonly961@gmail.com </a>
