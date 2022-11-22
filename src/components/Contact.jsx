@@ -6,13 +6,13 @@ import { ImLocation } from "react-icons/im";
 
 const Contact = () => {
   return (
-    <div name="contact" className="w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white" >
+    <div name="contact" className="w-full h-fit bg-gradient-to-b from-gray-800 to-black p-4 text-white" >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500"> Contact </p>
           <p className="py-6">Submit the form below to get in touch with me.</p>
         </div>
-        <div className=" flex justify-center items-center md:flex-row sm:flex-col">
+        <div className="md:flex justify-between">
         <div className="mr-20 text-gray-300 text-lg mb-8">
             <li className="flex font-bold gap-3 mb-10"><BsFillTelephoneFill color="#1970F1" fontSize="25px"/> +91 7544909637</li>
             <a className='flex font-bold gap-3 mb-10' href="mailto:sushantonly961@gmail.com" target="_blank" rel="noreferrer noopener"><HiMail color="#1970F1" fontSize="25px" /> sushantonly961@gmail.com </a>

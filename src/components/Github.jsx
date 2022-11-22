@@ -1,11 +1,14 @@
 import React from "react";
+import GitHubCalendar from "react-github-calendar";
+import ReactTooltip from "react-tooltip";
 
-
-const About = () => {
+const Github = () => {
   return (
-    <div name="about" className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-gray-300">
+    <div
+      name="about"
+      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-gray-300">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
+        {/* <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className='sm:text-right pb-8 pl-4'>
             <p className="text-4xl font-bold inline border-b-4 border-gray-500"> About </p>
           </div>
@@ -18,10 +21,28 @@ const About = () => {
           <div className="mb-8">
             <p>I am a Full stack web developer doing militry style coding and learning MERN Stack at Masai School. I have done various group as well as individual projects in my coding journey. I also did B.tech in Mechanical Engineering from Aryabhatta Knowledge University. My interests are coding, browsing, exploring new gadjets.</p>
           </div>
+        </div> */}
+
+        <div>
+          <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
+            {" "}
+            <div className="sm:text-right pb-8 pl-4">
+              <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+                {" "}
+                My Statistics{" "}
+              </p>{" "}
+            </div>{" "}
+          </div>{" "}
+          <GitHubCalendar
+            username="sushantkr961"
+            color="#808a9f"
+            style={{ margin: "auto" }}
+          />{" "}
+          <ReactTooltip />
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default Github;

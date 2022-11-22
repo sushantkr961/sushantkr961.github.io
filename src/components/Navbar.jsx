@@ -28,8 +28,10 @@ const Navbar = () => {
     },
   ];
 
+  // Ṩuͥຮhͣaͫnτkumar bg-[conic-gradient(var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900
+  // SuͥรhͣaͫŇ†kumar
   return (
-    <div className="flex justify-between items-center w-screen h-20 px-4 text-white bg-black fixed sm:w-screen">
+    <div className="flex justify-between lg:justify-around items-center  h-20 px-4 text-white bg-black sticky top-0 z-[100] sm:w-full md:w-full">
       <div>
         <h1 className="text-5xl font-signature ml-2">Sushant kr.</h1>
       </div>
@@ -40,7 +42,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"> {nav ? <FaTimes size={30} /> : <FaBars size={30} />} </div>
+      <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 text-white md:hidden"> {nav ? <FaTimes size={30} /> : <FaBars size={30} />} </div>
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
           {links.map(({ id, link }) => (
