@@ -1,6 +1,5 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
-import ReactTooltip from "react-tooltip";
 
 const Github = () => {
   return (
@@ -24,7 +23,18 @@ const Github = () => {
             color="#808a9f"
             style={{ margin: "auto" }}
           />{" "}
-          <ReactTooltip />
+          <div className="mt-8 m-auto md:flex md:justify-around md:align-middle">
+            <img
+            className="m-auto mb-5 md:w-[400px] rounded"
+              alt="sushantkr961's GitHub stats"
+              src="https://github-readme-stats.vercel.app/api?username=sushantkr961&show_icons=true&count_private=true&theme=chartreuse-dark&hide_border=true&bg_color=0D1117"
+            />
+            <img
+            className="m-auto md:w-[320px] rounded"
+              alt="Top Languages"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=sushantkr961&langs_count=8&count_private=true&layout=compact&theme=react&hide_border=true&bg_color=0D1117"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -32,3 +42,4 @@ const Github = () => {
 };
 
 export default Github;
+// 0D1117
