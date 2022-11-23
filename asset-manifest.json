@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a7bb39a.css",
-    "main.js": "/static/js/main.cdfec5c0.js",
+    "main.css": "/static/css/main.62bd3866.css",
+    "main.js": "/static/js/main.010e8caf.js",
     "static/media/Jefit.jpeg": "/static/media/Jefit.02081e0ced2a49db2c2d.jpeg",
     "static/media/Orbitz.jpeg": "/static/media/Orbitz.5db3091ad6c0b616637e.jpeg",
     "static/media/heroImage1.png": "/static/media/heroImage1.138bcb36af8685b69cb6.png",
@@ -20,11 +20,11 @@
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "static/media/git.png": "/static/media/git.a54d3fa44e02f2f61e69.png",
     "index.html": "/index.html",
-    "main.6a7bb39a.css.map": "/static/css/main.6a7bb39a.css.map",
-    "main.cdfec5c0.js.map": "/static/js/main.cdfec5c0.js.map"
+    "main.62bd3866.css.map": "/static/css/main.62bd3866.css.map",
+    "main.010e8caf.js.map": "/static/js/main.010e8caf.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a7bb39a.css",
-    "static/js/main.cdfec5c0.js"
+    "static/css/main.62bd3866.css",
+    "static/js/main.010e8caf.js"
   ]
 }
