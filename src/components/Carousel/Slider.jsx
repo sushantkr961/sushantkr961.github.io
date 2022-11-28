@@ -39,8 +39,8 @@ const Slider = () => {
       <Carousel responsive={responsive}>
         <Card
           id="1"
-          src={Jefit}
-          name="Jefit Clone"
+          src={Naukri}
+          name="Naukri (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
           demo="https://shimmering-starburst-c610de.netlify.app/"
           code="https://github.com/sushantkr961/incompetent-string-8638"
@@ -50,8 +50,8 @@ const Slider = () => {
         />
         <Card
           id="1"
-          src={Naukri}
-          name="Jefit Clone"
+          src={Jefit}
+          name="Jefit (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
           demo="https://shimmering-starburst-c610de.netlify.app/"
           code="https://github.com/sushantkr961/incompetent-string-8638"
@@ -62,7 +62,7 @@ const Slider = () => {
         <Card
           id="1"
           src={Orbitz}
-          name="Jefit Clone"
+          name="Orbitz (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
           demo="https://shimmering-starburst-c610de.netlify.app/"
           code="https://github.com/sushantkr961/incompetent-string-8638"
