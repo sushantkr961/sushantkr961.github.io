@@ -11,7 +11,7 @@ const Portfolio = () => {
         <div className="pb-0">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             {" "}
-            Portfolio{" "}
+            Projects{" "}
           </p>
           <p className="py-3">
             Check out some of collaborative and solo projects right here
