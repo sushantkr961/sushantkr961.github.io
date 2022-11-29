@@ -5,6 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import Jefit from "../assets/projects/Jefit.jpeg";
 import Naukri from "../assets/projects/Naukri.jpeg";
 import Orbitz from "../assets/projects/Orbitz.jpeg";
+import weather from "../assets/projects/weather.png";
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
@@ -12,6 +13,7 @@ import react from "../assets/react.png";
 import Chakra from "../assets/chakra.png";
 import firebase from "../assets/firebase.png";
 import Carousel from "react-multi-carousel";
+
 // import github from "../assets/github.png";
 
 const Slider = () => {
@@ -44,9 +46,9 @@ const Slider = () => {
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
           demo="https://shimmering-starburst-c610de.netlify.app/"
           code="https://github.com/sushantkr961/incompetent-string-8638"
-          tech1={html}
-          tech2={css}
-          tech3={javascript}
+          tech1={react}
+          tech2={firebase}
+          tech3={Chakra}
         />
         <Card
           id="1"
@@ -72,11 +74,11 @@ const Slider = () => {
         />
         <Card
           id="1"
-          src={Jefit}
-          name="Jefit Clone"
-          description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
-          demo="https://shimmering-starburst-c610de.netlify.app/"
-          code="https://github.com/sushantkr961/incompetent-string-8638"
+          src={weather}
+          name="Weather (Individual)"
+          description="Weather forecasting app where you can search weather by location all over the world and it also shows the forecasting of next seven days. It changes its icon according to the weather."
+          demo="https://poetic-capybara-629528.netlify.app/"
+          code="https://github.com/sushantkr961/Weather-App"
           tech1={html}
           tech2={css}
           tech3={javascript}
