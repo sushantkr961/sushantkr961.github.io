@@ -18,7 +18,7 @@ const SocialLinks = () => {
           <a className='flex justify-between items-center w-full text-gray-300' href="mailto:sushantonly961@gmail.com" target="_blank" rel="noreferrer noopener"> Email <HiOutlineMail size={30} /></a>
         </li>
         <li className='w-40 h-14 px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#974063]'>
-          <a className='flex justify-between items-center w-full text-gray-300' href="https://drive.google.com/uc?id=1vgTTQpxYPYJ22vHrKxWeDOwul_pDONSd&export=download" target="_blank" rel="noreferrer noopener"> Resume <BsFillPersonLinesFill size={30} /></a>
+          <a className='flex justify-between items-center w-full text-gray-300' href="https://drive.google.com/uc?id=14Qq1p4eUGvDNjziaUtVvT7HynPCK1jtx&export=download" target="_blank" rel="noreferrer noopener"> Resume <BsFillPersonLinesFill size={30} /></a>
         </li>
         <li className='w-40 h-14 px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0f4c75] rounded-br-md'>
           <a className='flex justify-between items-center w-full text-gray-300' href="https://twitter.com/sushantkr961" target="_blank" rel="noreferrer noopener"> Twitter <FaTwitter size={30} /></a>

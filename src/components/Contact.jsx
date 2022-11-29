@@ -20,7 +20,7 @@ const Contact = () => {
             <div className="flex justify-evenly">
               <a className='flex font-bold gap-3' href="https://www.linkedin.com/in/sushantkr961/" target="_blank" rel="noreferrer noopener"><FaLinkedin color="#1970F1" fontSize="30px" /></a>
               <a className='flex font-bold gap-3' href="https://github.com/sushantkr961" target="_blank" rel="noreferrer noopener"><FaGithub color="#1970F1" fontSize="30px" /></a>
-              <a className='flex font-bold gap-3' href="https://drive.google.com/uc?id=1vgTTQpxYPYJ22vHrKxWeDOwul_pDONSd&export=download" target="_blank" rel="noreferrer noopener"><BsFillPersonLinesFill color="#1970F1" fontSize="30px" /></a>
+              <a className='flex font-bold gap-3' href="https://drive.google.com/uc?id=14Qq1p4eUGvDNjziaUtVvT7HynPCK1jtx&export=download" target="_blank" rel="noreferrer noopener"><BsFillPersonLinesFill color="#1970F1" fontSize="30px" /></a>
             </div>
           </div>
           <form action="https://getform.io/f/a2faa1c8-8f78-4e02-8bed-5379f15866dc" method="POST" className=" flex flex-col w-full md:w-1/2" >

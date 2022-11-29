@@ -34,7 +34,7 @@ const Home = () => {
           </p>
           <div className="w-fit m-auto sm:m-0">
             <a
-              href="https://drive.google.com/file/d/1vgTTQpxYPYJ22vHrKxWeDOwul_pDONSd/view?usp=sharing"
+              href="https://drive.google.com/file/d/14Qq1p4eUGvDNjziaUtVvT7HynPCK1jtx/view?usp=sharing"
               target="_blank"
               rel="noreferrer noopener"
             >
