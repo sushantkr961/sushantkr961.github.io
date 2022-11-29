@@ -31,7 +31,7 @@ const Navbar = () => {
   // Ṩuͥຮhͣaͫnτkumar bg-[conic-gradient(var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900
   // SuͥรhͣaͫŇ†kumar
   return (
-    <div className="flex justify-between lg:justify-around items-center  h-20 px-4 text-white bg-black sticky top-0 z-[100] sm:w-full md:w-full">
+    <div className="flex justify-between lg:justify-around items-center  h-20 px-4 text-white sticky top-0 z-[100] sm:w-full md:w-full bg-gradient-to-l from-slate-900 via-gray-700 to-zinc-500">
       <div>
         <h1 className="text-5xl font-signature ml-2">Sushant kr.</h1>
       </div>

@@ -6,26 +6,26 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="h-fit w-full bg-gradient-to-b from-black via-black to-gray-800 pt-20 sm:pt-10 md:pt-0 md:h-screen"
+      className="h-fit w-full pt-20 sm:pt-10 md:pt-0 md:h-screen bg-gradient-to-b from-slate-900 via-gray-700 to-zinc-500"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <p className="text-blue-400 flex">
+          <p className="text-blue-400 flex shadow-">
             Hi,{" "}
             <img
               src="https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/waving-hand_1f44b.gif"
               alt="img"
-              className="w-5 h-5 "
+              className="w-5 h-5"
             />{" "}
             my name is
           </p>
-          <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
+          <h1 className="text-4xl sm:text-7xl font-bold text-gray-100">
             Sushant Kumar
           </h1>
-          <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
+          <h2 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
             I'm a Full Stack Web Developer.
           </h2>
-          <p className="text-[#8892b0] py-4 max-w-lg">
+          <p className="text-[#ccd6f6] py-4 max-w-lg">
             Dedicated and efficient Full Stack Web Developer capable of writing
             Production-Ready Code Using React JS,Redux,and CSS on the Frontend
             and Node JS,Express JS,and Mongo DB on the Backend to build
