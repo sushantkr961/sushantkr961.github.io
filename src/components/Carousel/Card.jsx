@@ -26,7 +26,7 @@ const Card = ({
             rel="noreferrer noopener"
             className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105"
           >
-            <button> Demo </button>
+            <button className="border px-3 py-2 rounded-md"> Demo </button>
           </a>
           <a
             href={code}
@@ -34,7 +34,7 @@ const Card = ({
             rel="noreferrer noopener"
             className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105"
           >
-            <button> Code </button>
+            <button className="border px-3 py-2 rounded-md" > Code </button>
           </a>
         </div>
         <div>
