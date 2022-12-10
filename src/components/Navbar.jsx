@@ -31,13 +31,13 @@ const Navbar = () => {
   // Ṩuͥຮhͣaͫnτkumar bg-[conic-gradient(var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900
   // SuͥรhͣaͫŇ†kumar
   return (
-    <div className="flex justify-between lg:justify-around items-center  h-20 px-4 text-white sticky top-0 z-[100] sm:w-full md:w-full bg-gradient-to-l from-slate-900 via-gray-700 to-zinc-500">
+    <div className="flex justify-between lg:justify-around items-center  h-20 px-4 text-white sticky top-0 z-[100] sm:w-full md:w-full bg-gradient-to-l from-slate-900 via-gray-700 to-zinc-500 2xl:h-26">
       <div>
-        <h1 className="text-3xl md:text-5xl font-signature ml-2">Sushant Kr</h1>
+        <h1 className="text-3xl md:text-5xl font-signature ml-2 2xl:text-5xl">Sushant Kr</h1>
       </div>
       <ul className="hidden lg:flex">
         {links.map(({ id, link }) => (
-          <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 duration-200" >
+          <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 duration-200 2xl:text-xl" >
             <Link to={link} smooth duration={500}> {link} </Link>
           </li>
         ))}

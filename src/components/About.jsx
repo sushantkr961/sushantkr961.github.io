@@ -4,14 +4,12 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-fit md:h-screen text-gray-300 bg-gradient-to-t from-slate-900 via-gray-700 to-zinc-500"
-    >
+      className="w-full h-fit md:h-screen text-gray-300 bg-gradient-to-t from-slate-900 via-gray-700 to-zinc-500">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-              {" "}
-              About Me{" "}
+          <div className="sm:text-right pb-8 pl-4 w-52">
+            <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-white">
+              About Me
             </p>
           </div>
           <div></div>
