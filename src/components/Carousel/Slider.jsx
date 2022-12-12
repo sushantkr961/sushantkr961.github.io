@@ -13,6 +13,7 @@ import react from "../assets/react.png";
 import Chakra from "../assets/chakra.png";
 import firebase from "../assets/firebase.png";
 import Carousel from "react-multi-carousel";
+import snake from '../assets/projects/snake.jpeg'
 
 // import github from "../assets/github.png";
 
@@ -51,7 +52,7 @@ const Slider = () => {
           tech3={Chakra}
         />
         <Card
-          id="1"
+          id="2"
           src={Jefit}
           name="Jefit (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
@@ -62,7 +63,18 @@ const Slider = () => {
           tech3={javascript}
         />
         <Card
-          id="1"
+          id="3"
+          src={snake}
+          name="Snake Game (Individual)"
+          description="Snake game is one of the most popular arcade games of all time.Snake Game has a super simple gameplay,in this game, the main objective of the player is to catch the maximum number of fruits without hitting the wall or itself."
+          demo="https://skhungrysnake.netlify.app/"
+          code="https://github.com/sushantkr961/Hungry-Snake-Game"
+          tech1={html}
+          tech2={css}
+          tech3={javascript}
+        />
+        <Card
+          id="4"
           src={Orbitz}
           name="Orbitz (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
@@ -73,7 +85,7 @@ const Slider = () => {
           tech3={javascript}
         />
         <Card
-          id="1"
+          id="5"
           src={weather}
           name="Weather (Individual)"
           description="Weather forecasting app where you can search weather by location all over the world and it also shows the forecasting of next seven days. It changes its icon according to the weather."
