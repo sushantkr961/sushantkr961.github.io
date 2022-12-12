@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c25f2118.css",
-    "main.js": "/static/js/main.96c3f31b.js",
+    "main.js": "/static/js/main.8fe3a7cb.js",
     "static/media/weather.png": "/static/media/weather.1a6395eea35510f8495d.png",
     "static/media/Jefit.jpeg": "/static/media/Jefit.02081e0ced2a49db2c2d.jpeg",
     "static/media/Orbitz.jpeg": "/static/media/Orbitz.5db3091ad6c0b616637e.jpeg",
@@ -12,6 +12,7 @@
     "static/media/firebase.png": "/static/media/firebase.28f9c2873f8b67954a80.png",
     "static/media/github.png": "/static/media/github.3b9e32903aa89111875d.png",
     "static/media/mongodb.png": "/static/media/mongodb.a8889d623357ad8ce30e.png",
+    "static/media/snake.jpeg": "/static/media/snake.63e2fbe02fd9ae499778.jpeg",
     "static/media/chakra.png": "/static/media/chakra.989d24c195f7bb36ecdc.png",
     "static/media/expressJs.png": "/static/media/expressJs.bbb32e3cb61e4558e056.png",
     "static/media/html.png": "/static/media/html.2ba4fabc69a89a8f71e6.png",
@@ -25,10 +26,10 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.c25f2118.css.map": "/static/css/main.c25f2118.css.map",
-    "main.96c3f31b.js.map": "/static/js/main.96c3f31b.js.map"
+    "main.8fe3a7cb.js.map": "/static/js/main.8fe3a7cb.js.map"
   },
   "entrypoints": [
     "static/css/main.c25f2118.css",
-    "static/js/main.96c3f31b.js"
+    "static/js/main.8fe3a7cb.js"
   ]
 }
