@@ -34,11 +34,11 @@ const About = () => {
         </div>
         <div className="mt-5 w-[90%] sm:grid sm:grid-cols-2 lg:flex justify-between">
           <div className="flex flex-col items-center justify-center p-1 m-1">
-            <p className="border-[5px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#ff4500]">1200+</p>
+            <p className="border-[5px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#ff4500]">1000+</p>
             <p className="text-lg font-bold">Hours of Coding</p>
           </div>
           <div className="flex flex-col items-center justify-center p-1 m-1">
-            <p className="border-[5px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#d1bea8]">1000+</p>
+            <p className="border-[5px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#d1bea8]">500+</p>
             <p className="text-lg font-bold">Hours of DSA</p>
           </div>
           <div className="flex flex-col items-center justify-center p-1 m-1">
