@@ -13,9 +13,13 @@ import react from "../assets/react.png";
 import Chakra from "../assets/chakra.png";
 import firebase from "../assets/firebase.png";
 import Carousel from "react-multi-carousel";
-import snake from '../assets/projects/snake.jpeg'
-
-// import github from "../assets/github.png";
+import snake from '../assets/projects/snake.jpeg';
+import trip from "../assets/projects/tripadvisor.png";
+import mongo from "../assets/mongodb.png";
+import node from "../assets/node.png";
+import exjs from "../assets/expressJs.png"
+import git from "../assets/git.png"
+import gitHub from "../assets/github.png";
 
 const Slider = () => {
   const responsive = {
@@ -42,6 +46,19 @@ const Slider = () => {
       <Carousel responsive={responsive}>
         <Card
           id="1"
+          src={trip}
+          name="Tripadvisor (Collaborative)"
+          description="Tripadvisor is an American online travel company that operates a website and mobile app with user-generated content and a comparison shopping website.It also offers online hotel reservations and bookings for transportation, lodging, travel experiences, and restaurants."
+          demo="https://tripadvisor-rsoni2843.web.app/"
+          code="https://github.com/sushantkr961/Tripadvisor-Clone"
+          tech1={react}
+          tech2={node}
+          tech3={Chakra}
+          tech4={mongo}
+          tech5={exjs}
+        />
+        <Card
+          id="2"
           src={Naukri}
           name="Naukri (Individual)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
@@ -50,9 +67,11 @@ const Slider = () => {
           tech1={react}
           tech2={firebase}
           tech3={Chakra}
+          tech4={git}
+          tech5={gitHub}
         />
         <Card
-          id="2"
+          id="3"
           src={Jefit}
           name="Jefit (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
@@ -61,9 +80,11 @@ const Slider = () => {
           tech1={html}
           tech2={css}
           tech3={javascript}
+          tech4={git}
+          tech5={gitHub}
         />
         <Card
-          id="3"
+          id="4"
           src={snake}
           name="Snake Game (Individual)"
           description="Snake game is one of the most popular arcade games of all time.Snake Game has a super simple gameplay,in this game, the main objective of the player is to catch the maximum number of fruits without hitting the wall or itself."
@@ -72,9 +93,11 @@ const Slider = () => {
           tech1={html}
           tech2={css}
           tech3={javascript}
+          tech4={git}
+          tech5={gitHub}
         />
         <Card
-          id="4"
+          id="5"
           src={Orbitz}
           name="Orbitz (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
@@ -83,9 +106,11 @@ const Slider = () => {
           tech1={html}
           tech2={css}
           tech3={javascript}
+          tech4={git}
+          tech5={gitHub}
         />
         <Card
-          id="5"
+          id="6"
           src={weather}
           name="Weather (Individual)"
           description="Weather forecasting app where you can search weather by location all over the world and it also shows the forecasting of next seven days. It changes its icon according to the weather."
@@ -94,6 +119,8 @@ const Slider = () => {
           tech1={html}
           tech2={css}
           tech3={javascript}
+          tech4={git}
+          tech5={gitHub}
         />
       </Carousel>
     </div>

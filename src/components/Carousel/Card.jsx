@@ -10,14 +10,16 @@ const Card = ({
   tech1,
   tech2,
   tech3,
+  tech4,
+  tech5
 }) => {
   return (
     <div>
-      <div key={id} className="shadow-md shadow-gray-600 rounded-lg pb-3 m-2">
+      <div key={id} className="shadow-md shadow-gray-600 rounded-lg pb-3 m-2 h-[550px]">
         <img
           src={src}
           alt=""
-          className="rounded-md duration-200 hover:scale-105 w-full h-44"
+          className="rounded-md duration-200 hover:scale-105 w-full h-44 border-2"
         />
         <div className="flex items-center justify-center">
           <a
@@ -26,7 +28,7 @@ const Card = ({
             rel="noreferrer noopener"
             className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105"
           >
-            <button className="border px-3 py-2 rounded-md"> Demo </button>
+            <button className="border-2 px-3 py-2 rounded-md"> Demo </button>
           </a>
           <a
             href={code}
@@ -34,16 +36,18 @@ const Card = ({
             rel="noreferrer noopener"
             className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105"
           >
-            <button className="border px-3 py-2 rounded-md" > Code </button>
+            <button className="border-2 px-3 py-2 rounded-md" > Code </button>
           </a>
         </div>
         <div>
           <p className="text-lg font-bold underline text-center">{name}</p>
-          <p className="text-center p-3"> {description} </p>
+          <p className="text-center p-3 h-[180px] overflow-hidden mb-2"> {description} </p>
           <div className="flex justify-center gap-1">
             <img src={tech1} alt="" className="h-7 w-7" />
             <img src={tech2} alt="" className="h-7 w-7" />
             <img src={tech3} alt="" className="h-7 w-7" />
+            <img src={tech4} alt="" className="h-7 w-7" />
+            <img src={tech5} alt="" className="h-7 w-7" />
           </div>
         </div>
       </div>
