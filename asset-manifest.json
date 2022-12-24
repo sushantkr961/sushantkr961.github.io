@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.09f6279f.css",
-    "main.js": "/static/js/main.e351a631.js",
+    "main.css": "/static/css/main.36598c21.css",
+    "main.js": "/static/js/main.98bb7144.js",
     "static/media/weather.png": "/static/media/weather.1a6395eea35510f8495d.png",
+    "static/media/tripadvisor.png": "/static/media/tripadvisor.766772b7f93ce665936b.png",
     "static/media/Jefit.jpeg": "/static/media/Jefit.02081e0ced2a49db2c2d.jpeg",
     "static/media/Orbitz.jpeg": "/static/media/Orbitz.5db3091ad6c0b616637e.jpeg",
     "static/media/heroImage1.png": "/static/media/heroImage1.138bcb36af8685b69cb6.png",
     "static/media/redux.png": "/static/media/redux.13709933f3b443c1da91.png",
     "static/media/Naukri.jpeg": "/static/media/Naukri.a6e493dc52d5fba86739.jpeg",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/node.png": "/static/media/node.952a9ea986dcfa5229ad.png",
     "static/media/firebase.png": "/static/media/firebase.28f9c2873f8b67954a80.png",
     "static/media/github.png": "/static/media/github.3b9e32903aa89111875d.png",
     "static/media/mongodb.png": "/static/media/mongodb.a8889d623357ad8ce30e.png",
@@ -26,11 +28,11 @@
     "static/media/git.png": "/static/media/git.a54d3fa44e02f2f61e69.png",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
-    "main.09f6279f.css.map": "/static/css/main.09f6279f.css.map",
-    "main.e351a631.js.map": "/static/js/main.e351a631.js.map"
+    "main.36598c21.css.map": "/static/css/main.36598c21.css.map",
+    "main.98bb7144.js.map": "/static/js/main.98bb7144.js.map"
   },
   "entrypoints": [
-    "static/css/main.09f6279f.css",
-    "static/js/main.e351a631.js"
+    "static/css/main.36598c21.css",
+    "static/js/main.98bb7144.js"
   ]
 }
