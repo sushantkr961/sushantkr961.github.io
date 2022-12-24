@@ -72,11 +72,11 @@ const Slider = () => {
         />
         <Card
           id="3"
-          src={Jefit}
-          name="Jefit (Collaborative)"
-          description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
-          demo="https://shimmering-starburst-c610de.netlify.app/"
-          code="https://github.com/sushantkr961/incompetent-string-8638"
+          src={snake}
+          name="Snake Game (Individual)"
+          description="Snake game is one of the most popular arcade games of all time.Snake Game has a super simple gameplay,in this game, the main objective of the player is to catch the maximum number of fruits without hitting the wall or itself."
+          demo="https://skhungrysnake.netlify.app/"
+          code="https://github.com/sushantkr961/Hungry-Snake-Game"
           tech1={html}
           tech2={css}
           tech3={javascript}
@@ -85,11 +85,11 @@ const Slider = () => {
         />
         <Card
           id="4"
-          src={snake}
-          name="Snake Game (Individual)"
-          description="Snake game is one of the most popular arcade games of all time.Snake Game has a super simple gameplay,in this game, the main objective of the player is to catch the maximum number of fruits without hitting the wall or itself."
-          demo="https://skhungrysnake.netlify.app/"
-          code="https://github.com/sushantkr961/Hungry-Snake-Game"
+          src={Jefit}
+          name="Jefit (Collaborative)"
+          description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
+          demo="https://shimmering-starburst-c610de.netlify.app/"
+          code="https://github.com/sushantkr961/incompetent-string-8638"
           tech1={html}
           tech2={css}
           tech3={javascript}

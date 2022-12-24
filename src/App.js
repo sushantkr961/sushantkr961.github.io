@@ -5,17 +5,23 @@ import GotoTop from "./components/GotoTop";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
-// import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import SocialLinks from "./components/SocialLinks";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   return (
     <div>
+      <AnimatedCursor
+        innerSize={10}
+        outerSize={18}
+        outerAlpha={0.3}
+        innerScale={0.9}
+        outerScale={5}
+      />
       <Navbar />
       <Home />
       <About />
-      {/* <Projects /> */}
       <Portfolio />
       <Github />
       <Skills />

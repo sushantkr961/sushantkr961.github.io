@@ -2,10 +2,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "hero-pattern": "url('../image/image4.jpg')",
-        "footer-texture": "url('')",
-      },
+      backgroundImage: {},
     },
     screen: {
       // sm: "640px",
