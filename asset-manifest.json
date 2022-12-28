@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.36598c21.css",
-    "main.js": "/static/js/main.6d4471c6.js",
+    "main.css": "/static/css/main.5c530461.css",
+    "main.js": "/static/js/main.e30875a0.js",
     "static/media/weather.png": "/static/media/weather.1a6395eea35510f8495d.png",
     "static/media/tripadvisor.png": "/static/media/tripadvisor.766772b7f93ce665936b.png",
     "static/media/Jefit.jpeg": "/static/media/Jefit.02081e0ced2a49db2c2d.jpeg",
@@ -10,9 +10,9 @@
     "static/media/redux.png": "/static/media/redux.13709933f3b443c1da91.png",
     "static/media/Naukri.jpeg": "/static/media/Naukri.a6e493dc52d5fba86739.jpeg",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/github_b.png": "/static/media/github_b.0a8990e27775a6f13125.png",
     "static/media/node.png": "/static/media/node.952a9ea986dcfa5229ad.png",
     "static/media/firebase.png": "/static/media/firebase.28f9c2873f8b67954a80.png",
-    "static/media/github.png": "/static/media/github.3b9e32903aa89111875d.png",
     "static/media/mongodb.png": "/static/media/mongodb.a8889d623357ad8ce30e.png",
     "static/media/snake.jpeg": "/static/media/snake.63e2fbe02fd9ae499778.jpeg",
     "static/media/chakra.png": "/static/media/chakra.989d24c195f7bb36ecdc.png",
@@ -22,17 +22,16 @@
     "static/media/css.png": "/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/nodejs.png": "/static/media/nodejs.a4713ff2ca054bf23788.png",
     "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/logo.png": "/static/media/logo.c247a4fe090079673afc.png",
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "static/media/git.png": "/static/media/git.a54d3fa44e02f2f61e69.png",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
-    "main.36598c21.css.map": "/static/css/main.36598c21.css.map",
-    "main.6d4471c6.js.map": "/static/js/main.6d4471c6.js.map"
+    "main.5c530461.css.map": "/static/css/main.5c530461.css.map",
+    "main.e30875a0.js.map": "/static/js/main.e30875a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.36598c21.css",
-    "static/js/main.6d4471c6.js"
+    "static/css/main.5c530461.css",
+    "static/js/main.e30875a0.js"
   ]
 }
