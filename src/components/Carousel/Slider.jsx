@@ -20,6 +20,10 @@ import node from "../assets/node.png";
 import exjs from "../assets/expressJs.png"
 import git from "../assets/git.png"
 import gitHub from "../assets/github_b.png";
+import mongodb from "../assets/mongodb.png";
+import express from "../assets/expressJs.png";
+import tripvilla from "../assets/projects/tripvilla.png";
+
 
 const Slider = () => {
   const responsive = {
@@ -59,16 +63,16 @@ const Slider = () => {
         />
         <Card
           id="2"
-          src={Naukri}
-          name="Naukri (Individual)"
-          description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
-          demo="https://shimmering-starburst-c610de.netlify.app/"
-          code="https://github.com/sushantkr961/incompetent-string-8638"
+          src={tripvilla}
+          name="Tripvilla (Collaborative)"
+          description="Tripvilla is one of Asia's largest Holiday Home Rental Companies in this website you can book room,hotel etc.The TripVillas website has been cloned by myself and my team of 4 members as project of our construct week over 5 days."
+          demo="https://cozytrip.vercel.app/"
+          code="https://github.com/rahulkr-dev/tripVilla_Clone"
           tech1={react}
-          tech2={firebase}
+          tech2={mongodb}
           tech3={Chakra}
-          tech4={git}
-          tech5={gitHub}
+          tech4={express}
+          tech5={node}
         />
         <Card
           id="3"
@@ -85,6 +89,19 @@ const Slider = () => {
         />
         <Card
           id="4"
+          src={Naukri}
+          name="Naukri (Individual)"
+          description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
+          demo="https://shimmering-starburst-c610de.netlify.app/"
+          code="https://github.com/sushantkr961/incompetent-string-8638"
+          tech1={react}
+          tech2={firebase}
+          tech3={Chakra}
+          tech4={git}
+          tech5={gitHub}
+        />
+        <Card
+          id="5"
           src={Jefit}
           name="Jefit (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
@@ -97,7 +114,7 @@ const Slider = () => {
           tech5={gitHub}
         />
         <Card
-          id="5"
+          id="6"
           src={Orbitz}
           name="Orbitz (Collaborative)"
           description="A social workout tracking platform that keeps gym goers stay motivated by tracking and analyzing their fitness goals.It offers a personal trainers and wide variety of exercise categories that target particular muscle regions."
@@ -110,7 +127,7 @@ const Slider = () => {
           tech5={gitHub}
         />
         <Card
-          id="6"
+          id="7"
           src={weather}
           name="Weather (Individual)"
           description="Weather forecasting app where you can search weather by location all over the world and it also shows the forecasting of next seven days. It changes its icon according to the weather."
