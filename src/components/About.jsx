@@ -4,11 +4,11 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-fit md:h-screen text-gray-300 bg-gradient-to-t from-slate-900 via-gray-700 to-zinc-500">
+      className="w-full h-fit md:h-screen text-gray-700 font-semibold">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4 w-52">
-            <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-white">
+            <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-black">
               About Me
             </p>
           </div>
@@ -21,7 +21,7 @@ const About = () => {
               around.
             </p>
           </div>
-          <div className="mb-8">
+          <div className="mb-8 ">
             <p>
               I am a Full stack web developer doing militry style coding and
               learning MERN Stack at Masai School. I have done various group as
@@ -34,19 +34,19 @@ const About = () => {
         </div>
         <div className="mt-5 w-[90%] sm:grid sm:grid-cols-2 lg:flex justify-between">
           <div className="flex flex-col items-center justify-center p-1 m-1">
-            <p className="border-[5px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#ff4500]">1000+</p>
+            <p className="border-[8px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#ff4500]">1000+</p>
             <p className="text-lg font-bold">Hours of Coding</p>
           </div>
           <div className="flex flex-col items-center justify-center p-1 m-1">
-            <p className="border-[5px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#d1bea8]">500+</p>
+            <p className="border-[8px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#d1bea8]">500+</p>
             <p className="text-lg font-bold">Hours of DSA</p>
           </div>
           <div className="flex flex-col items-center justify-center p-1 m-1">
-            <p className="border-[5px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#008000]">5+</p>
+            <p className="border-[8px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#008000]">5+</p>
             <p className="text-lg font-bold">Projects Done</p>
           </div>
           <div className="flex flex-col items-center justify-center p-1 m-1">
-            <p className="border-[5px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#483d8b]">100+</p>
+            <p className="border-[8px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#483d8b]">100+</p>
             <p className="text-lg font-bold">Hours of Soft skills</p>
           </div>
         </div>

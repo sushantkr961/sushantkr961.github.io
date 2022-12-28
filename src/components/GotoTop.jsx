@@ -28,7 +28,7 @@ const GotoTop = () => {
     <div className=" flex justify-center items-center relative">
       {isVisible && (
         <div
-          className="w-10 h-10 text-white bg-blue-700 rounded-[50%] fixed bottom-5 right-6 lg:bottom-12 lg:right-14  z-[999] flex justify-center items-center cursor-pointer bg-gradient-to-r from-indigo-500"
+          className="w-10 h-10 bg-gradient-to-b from-gray-300 to-gray-500 rounded-[50%] fixed bottom-5 right-6 lg:bottom-12 lg:right-14  z-[999] flex justify-center items-center cursor-pointer"
           onClick={goToBtn}
         >
           <FaArrowUp className="animate-bounce" />

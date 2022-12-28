@@ -5,7 +5,7 @@ const Portfolio = () => {
   return (
     <div
       name="projects"
-      className="bg-gradient-to-b from-slate-900 via-gray-700 to-zinc-500 text-white h-screen w-full"
+      className="text-black h-screen w-full font-semibold"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-0">

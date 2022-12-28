@@ -19,7 +19,7 @@ const Card = ({
         <img
           src={src}
           alt=""
-          className="rounded-md duration-200 hover:scale-105 w-full h-44 border-2"
+          className="rounded-md duration-200 hover:scale-105 w-full h-44 border-2 border-gray-400"
         />
         <div className="flex items-center justify-center">
           <a
@@ -28,7 +28,7 @@ const Card = ({
             rel="noreferrer noopener"
             className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105"
           >
-            <button className="border-2 px-3 py-2 rounded-md"> Demo </button>
+            <button className="border-2 border-gray-400 px-3 py-2 rounded-md"> Demo </button>
           </a>
           <a
             href={code}
@@ -36,7 +36,7 @@ const Card = ({
             rel="noreferrer noopener"
             className="w-[100px] px-6 py-3 m-4 duration-200 hover:scale-105"
           >
-            <button className="border-2 px-3 py-2 rounded-md" > Code </button>
+            <button className="border-2 border-gray-400 px-3 py-2 rounded-md" > Code </button>
           </a>
         </div>
         <div>

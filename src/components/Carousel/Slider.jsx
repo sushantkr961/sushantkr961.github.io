@@ -19,7 +19,7 @@ import mongo from "../assets/mongodb.png";
 import node from "../assets/node.png";
 import exjs from "../assets/expressJs.png"
 import git from "../assets/git.png"
-import gitHub from "../assets/github.png";
+import gitHub from "../assets/github_b.png";
 
 const Slider = () => {
   const responsive = {

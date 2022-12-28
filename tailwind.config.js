@@ -4,13 +4,7 @@ module.exports = {
     extend: {
       backgroundImage: {},
     },
-    screen: {
-      // sm: "640px",
-      // md: "768px",
-      // lg: "1024px",
-      // xl: "1280px",
-      // des: "1920px",
-    },
+    screen: {},
     fontFamily: {
       signature: ["Great Vibes"],
     },

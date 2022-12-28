@@ -6,15 +6,16 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
-// import SocialLinks from "./components/SocialLinks";
+import SocialLinks from "./components/SocialLinks";
 import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   return (
-    <div>
+    <div className="">
       <AnimatedCursor
+        color="0,0,0"
         innerSize={10}
-        outerSize={18}
+        outerSize={20}
         outerAlpha={0.3}
         innerScale={0.9}
         outerScale={5}
@@ -26,7 +27,7 @@ function App() {
       <Github />
       <Skills />
       <Contact />
-      {/* <SocialLinks /> */}
+      <SocialLinks />
       <GotoTop />
     </div>
   );
