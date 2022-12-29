@@ -32,7 +32,7 @@ const Navbar = () => {
   // Ṩuͥຮhͣaͫnτkumar bg-[conic-gradient(var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900
   // SuͥรhͣaͫŇ†kumar
   return (
-    <div className="flex justify-between lg:justify-around items-center  h-20 px-4 sticky top-0 z-[100] sm:w-full md:w-full 2xl:h-26 border-b-2 border-gray-200 bg-white">
+    <div className="flex justify-between lg:justify-around items-center  h-20 px-4 sticky top-0 z-[100] sm:w-full md:w-full 2xl:h-26 border-b-2 border-gray-200 backdrop-blur-3xl">
       <div className="font-semibold">
         <h1 className="text-3xl md:text-5xl font-signature ml-2 2xl:text-5xl">Sushant Kr</h1>
         {/* <img src={logo} alt="logo" width="60px" className="" /> */}
@@ -46,7 +46,7 @@ const Navbar = () => {
       </ul>
       <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 lg:hidden"> {nav ? <FaTimes size={30} /> : <FaBars size={30} />} </div>
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen backdrop-blur-xl font-semibold">
           {links.map(({ id, link }) => (
             <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
               <Link onClick={() => setNav(!nav)} to={link} smooth duration={500} > {link} </Link>
