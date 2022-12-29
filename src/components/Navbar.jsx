@@ -46,7 +46,7 @@ const Navbar = () => {
       </ul>
       <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 lg:hidden"> {nav ? <FaTimes size={30} /> : <FaBars size={30} />} </div>
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen backdrop-blur-xl font-semibold">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-white font-semibold">
           {links.map(({ id, link }) => (
             <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
               <Link onClick={() => setNav(!nav)} to={link} smooth duration={500} > {link} </Link>
