@@ -10,7 +10,7 @@ import tailwind from "./assets/tailwind.png";
 import mongodb from "./assets/mongodb.png";
 import redux from "./assets/redux.png";
 import nodejs from "./assets/nodejs.png";
-import typescript from "./assets/typescript.png";
+import chakra from "./assets/chakra.png";
 
 const Skills = () => {
   const techs = [
@@ -82,8 +82,8 @@ const Skills = () => {
     },
     {
       id: 12,
-      src: typescript,
-      title: "Typescript",
+      src: chakra,
+      title: "Chakra UI",
       style: "shadow-blue-400",
     },
   ];
