@@ -5,7 +5,7 @@ const Github = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen  text-gray-900"
+      className="w-full h-screen text-gray-900 mt-[50px] md:mt-0"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center items-center w-full h-full ">
         <div className="">
