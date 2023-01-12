@@ -37,7 +37,8 @@ const Github = () => {
             <img
               className="m-auto mb-5 md:w-[400px]  lg:w-[480px] rounded"
               alt="sushantkr961's GitHub stats"
-              src="https://github-readme-stats.vercel.app/api?username=sushantkr961&show_icons=true&theme=transparent"
+              // src="https://github-readme-stats.vercel.app/api?username=sushantkr961&show_icons=true&theme=transparent"
+              src="https://github-stats-alpha.vercel.app/api?username=sushantkr961"
             />
             <img
               className="m-auto md:w-[300px] lg:w-[360px] rounded"
