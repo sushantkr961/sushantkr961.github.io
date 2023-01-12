@@ -41,9 +41,10 @@ const Github = () => {
               src="https://github-stats-alpha.vercel.app/api?username=sushantkr961"
             />
             <img
-              className="m-auto md:w-[300px] lg:w-[360px] rounded"
+              className="m-auto md:w-[300px] lg:w-[350px] rounded"
               alt="Top Languages"
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=sushantkr961&layout=compact"
+              // src="https://github-readme-stats.vercel.app/api/top-langs/?username=sushantkr961&layout=compact"
+              src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=sushantkr961&theme=default"
             />
           </div>
         </div>
