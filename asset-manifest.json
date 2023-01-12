@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.63a622c0.css",
-    "main.js": "/static/js/main.82bcc4a3.js",
+    "main.js": "/static/js/main.8c14fdd7.js",
     "static/media/weather.png": "/static/media/weather.1a6395eea35510f8495d.png",
     "static/media/tripvilla.png": "/static/media/tripvilla.ae0df156d8e612aaf2c3.png",
     "static/media/tripadvisor.png": "/static/media/tripadvisor.766772b7f93ce665936b.png",
@@ -29,10 +29,10 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.63a622c0.css.map": "/static/css/main.63a622c0.css.map",
-    "main.82bcc4a3.js.map": "/static/js/main.82bcc4a3.js.map"
+    "main.8c14fdd7.js.map": "/static/js/main.8c14fdd7.js.map"
   },
   "entrypoints": [
     "static/css/main.63a622c0.css",
-    "static/js/main.82bcc4a3.js"
+    "static/js/main.8c14fdd7.js"
   ]
 }
