@@ -43,8 +43,8 @@ const Github = () => {
             <img
               className="m-auto md:w-[300px] lg:w-[350px] rounded"
               alt="Top Languages"
-              // src="https://github-readme-stats.vercel.app/api/top-langs/?username=sushantkr961&layout=compact"
-              src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=sushantkr961&theme=default"
+              src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=sushantkr961"
+              // src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=sushantkr961&theme=default"
             />
           </div>
         </div>
