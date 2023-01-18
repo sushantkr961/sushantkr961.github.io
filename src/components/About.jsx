@@ -38,7 +38,7 @@ const About = () => {
             <p className="text-lg font-bold">Hours of Coding</p>
           </div>
           <div className="flex flex-col items-center justify-center p-1 m-1">
-            <p className="border-[8px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#d1bea8]">500+</p>
+            <p className="border-[8px] rounded-[50%] p-10 w-16 h-16 flex justify-center items-center text-xl font-medium m-3 border-[#d1bea8]">400+</p>
             <p className="text-lg font-bold">Hours of DSA</p>
           </div>
           <div className="flex flex-col items-center justify-center p-1 m-1">
