@@ -13,7 +13,7 @@ const Home = () => {
           <p className="text-black flex shadow-">
             Hi,{" "}
             <img
-              src="https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/waving-hand_1f44b.gif"
+              src="https://media.tenor.com/SNL9_xhZl9oAAAAj/waving-hand-joypixels.gif"
               alt="img"
               className="w-5 h-5"
             />{" "}
