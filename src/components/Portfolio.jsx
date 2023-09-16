@@ -5,7 +5,7 @@ const Portfolio = () => {
   return (
     <div
       name="projects"
-      className="text-black h-screen w-full font-semibold mt-[100px] md:mt-0"
+      className="text-black h-screen w-full font-semibold mt-[100px] md:mt-20"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-0">

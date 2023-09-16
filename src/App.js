@@ -23,9 +23,9 @@ function App() {
       <Navbar />
       <Home />
       <About />
+      <Skills />
       <Portfolio />
       <Github />
-      <Skills />
       <Contact />
       <SocialLinks />
       <GotoTop />

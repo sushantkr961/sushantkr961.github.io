@@ -6,7 +6,7 @@ import { ImLocation } from "react-icons/im";
 
 const Contact = () => {
   return (
-    <div name="contact" className="w-full h-fit md:h-screen p-4 text-black font-semibold" >
+    <div name="contact" className="w-full h-fit md:h-screen p-4 text-black font-semibold md:mt-32" >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500"> Contact </p>
@@ -24,14 +24,14 @@ const Contact = () => {
             </div>
           </div>
           <form action="https://getform.io/f/a2faa1c8-8f78-4e02-8bed-5379f15866dc" method="POST" className=" flex flex-col w-full md:w-1/2" >
-            <input type="text" name="name" placeholder="Enter your name" className="p-2 bg-transparent border-2 border-gray-800 rounded-md focus:outline-none" />
-            <input type="text" name="email" placeholder="Enter your email" className="my-4 p-2 bg-transparent border-2 border-gray-800 rounded-md focus:outline-none" />
-            <textarea name="message" placeholder="Enter your message" rows="10" className="p-2 bg-transparent border-2 border-gray-800 rounded-md focus:outline-none"></textarea>
+            <input type="text" name="name" placeholder="Enter your name" className="p-2 bg-transparent border-2 border-gray-800 rounded-md focus:outline-none" required />
+            <input type="text" name="email" placeholder="Enter your email" className="my-4 p-2 bg-transparent border-2 border-gray-800 rounded-md focus:outline-none" required />
+            <textarea required name="message" placeholder="Enter your message" rows="10" className="p-2 bg-transparent border-2 border-gray-800 rounded-md focus:outline-none"></textarea>
             <button className="bg-gradient-to-b from-gray-300 to-gray-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"> Let's talk </button>
           </form>
         </div>
       </div>
-      <p className="text-xs text-gray-700 text-center">Created by Sushant Kumar</p>
+      <p className="text-xs text-gray-700 text-center mb-3 mt-5">Created by Sushant Kumar</p>
     </div>
   );
 };
