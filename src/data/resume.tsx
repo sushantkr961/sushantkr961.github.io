@@ -29,6 +29,7 @@ export const DATA = {
     "MySQL",
     "Express.js",
     "Redux",
+    "Redux-toolkit",
     "Redux-saga",
   ],
   navbar: [
