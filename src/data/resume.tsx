@@ -1,4 +1,3 @@
-
 import { Icons } from "@/components/icons";
 import { HomeIcon, UserIcon } from "lucide-react";
 
@@ -34,7 +33,11 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://drive.google.com/file/d/14Qq1p4eUGvDNjziaUtVvT7HynPCK1jtx/view", icon: UserIcon, label: "Resume" },
+    {
+      href: "https://drive.google.com/file/d/14Qq1p4eUGvDNjziaUtVvT7HynPCK1jtx/view",
+      icon: UserIcon,
+      label: "Resume",
+    },
   ],
   contact: {
     email: "sushantonly961@gmail.com",
@@ -126,121 +129,107 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Loadingwalla Android App",
+      href: "https://play.google.com/store/apps/details?id=com.loadingwalla",
+      dates: "Jan 2024 - Present",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "[LoadingWalla](#company) is a [logistics](#logistics) and [transportation platform](#transportation)  designed to simplify goods movement in India. It connects [shippers](#shippers) with verified [truck operators](#trucks), enabling efficient truck bookings and load matching. The app features real-time [GPS tracking](#gps) for shipments, a [toll calculator](#toll) for route planning, and a transparent pricing model to ensure cost-effectiveness. Businesses, individuals, and truck operators can all benefit from its seamless and intuitive interface, available on Android via the [Google Play Store](#https://play.google.com/store/apps/details?id=com.loadingwalla). By streamlining logistics operations, LoadingWalla is transforming how India handles transportation needs.",
+      technologies: [
+        "Typescript",
+        "React Native",
+        "Redux",
+        "Redux-saga",
+        "Node.js",
+        "Laravel",
+        "Firebase",
+        "Razorpay",
+        "My SQL",
+        "Traccar",
+        "Figma",
+        "Express.js",
+      ],
+      links: [
+        {
+          type: "Play Store",
+          href: "https://play.google.com/store/apps/details?id=com.loadingwalla",
+          icon: <Icons.playStore className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Loadingwalla Website",
+      href: "https://loadingwalla.com",
+      dates: "December 2024 - Present",
+      active: true,
+      description:
+        "The [LoadingWalla website](#https://loadingwalla.com) offers a seamless platform for managing logistics and transportation needs. Users can search for and book trucks, post load requirements, and match loads with truck operators to ensure efficient transportation. The website features [real-time GPS tracking](#gps) for shipments, a [toll calculator](#toll) for accurate route planning, and transparent pricing to eliminate hidden costs. It also provides a blog section with industry insights and updates, along with easy access to customer support for a hassle-free experience. Designed with a user-friendly and mobile-responsive interface, the website integrates seamlessly with the LoadingWalla mobile app, making it a comprehensive solution for businesses, individuals, and truck operators.",
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "Redux",
+        "Redux-toolkit",
+        "Node.js",
+        "Laravel",
+        "My SQL",
+        "Traccar",
+        "Figma",
+        "Express.js",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://loadingwalla.com",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video: "",
     },
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
+      title: "Indulge Global Moblile Application",
+      href: "https://play.google.com/store/apps/details?id=com.rutu12.IndulgeApplication",
+      dates: "August 2024 - November 2024",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "The [Indulge Global mobile application](#indulge) is a platform that enhances the shopping and lifestyle experience by offering exclusive deals, curated products, and premium services across fashion, travel, dining, and entertainment. I built the [frontend and implemented APIs](#responsible) for this [Freelance Project](#freelance), ensuring a seamless and user-friendly experience. The app features personalized recommendations, secure payment integration, and smooth booking options, making luxury and everyday essentials easily accessible in one place.",
+      technologies: ["Typescript", "React Native", "Xcode", "Figma"],
+      links: [
+        {
+          type: "Website",
+          href: "https://indulge.global",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Jas Oberoi Group",
+      href: "https://jasoberoi.ca",
+      dates: "May 2024 - July 2024",
+      active: true,
+      description:
+        "The [Jas Oberoi Group](#company) is a leading real estate team in Surrey, BC, specializing in residential and commercial properties with over $800 million in career sales. They provide a seamless real estate experience through expert consultation and a commitment to excellence. I built their [static website](#static) as a [freelance project](#freelance), ensuring a professional and user-friendly online presence.",
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "MongoDB",
+        "Node.js",
+        "Express.js",
       ],
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
+          href: "https://jasoberoi.ca",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/sushantkr961/jasoberoi",
           icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
-    },
-    {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
-    },
-    {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
-      active: true,
-      description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
