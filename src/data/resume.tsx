@@ -4,8 +4,7 @@ import { HomeIcon, UserIcon } from "lucide-react";
 export const DATA = {
   name: "Sushant Kumar",
   initials: "SK",
-  // url: "https://sushantkr961.github.io",
-  url: "https://dillion.io",
+  url: "https://sushantkr961.github.io",
   location: "New Delhi, INDIA",
   locationLink: "https://www.google.com/maps/place/newdelhi",
   description:
@@ -157,7 +156,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "",
+      video: "/lwApp.mp4",
     },
     {
       title: "Loadingwalla Website",
@@ -186,7 +185,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "",
+      video: "/LwWeb.mp4",
     },
     {
       title: "Indulge Global Moblile Application",
@@ -204,7 +203,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "",
+      video: "/indulgeApp.mp4",
     },
     {
       title: "Jas Oberoi Group",
@@ -234,7 +233,7 @@ export const DATA = {
       ],
       image: "",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+        "/jasoberoi.mp4",
     },
   ],
   // hackathons: [
