@@ -1,5 +1,5 @@
 {
-  "homepage": "https://sushantkr961.github.io",
+  "homepage": "https://sushantkr961.github.io/sushant_porfolio",
   "name": "sushant_porfolio",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "npm run build && gh-pages -d out -b gh-pages"
+    "deploy": "npm run build && npm run export && gh-pages -d out -b gh-pages"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
