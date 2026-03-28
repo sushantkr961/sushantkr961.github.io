@@ -24,6 +24,7 @@ import {
 import { IPhoneHome } from "@/components/mobile/iPhoneHome";
 import { IPadDesktop } from "@/components/tablet/IPadDesktop";
 import { BootScreen } from "./BootScreen";
+import { WallpaperClock } from "./WallpaperClock";
 import { useIsMobile, useIsTablet } from "@/hooks/useMediaQuery";
 import { useWindowManager } from "@/hooks/useWindowManager";
 import { useState, useEffect, useCallback } from "react";
@@ -39,9 +40,28 @@ function MacDesktopInner() {
     (id) => windows[id].isOpen && !windows[id].isMinimized && windows[id].isMaximized
   );
 
+  const anyWindowOpen = WINDOW_IDS.some(
+    (id) => windows[id].isOpen && !windows[id].isMinimized
+  );
+
   return (
     <div className="fixed inset-0 overflow-hidden select-none">
       <Wallpaper />
+
+      {/* Wallpaper Clock — visible when no windows are open */}
+      <AnimatePresence>
+        {!anyWindowOpen && (
+          <motion.div
+            key="clock"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <WallpaperClock />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* MenuBar — hidden when fullscreen */}
       <AnimatePresence>
