@@ -19,6 +19,7 @@ import { SafariProjects } from "@/components/windows/SafariProjects";
 import { MailContact } from "@/components/windows/MailContact";
 import { NotesExperience } from "@/components/windows/NotesExperience";
 import { CalendarEducation } from "@/components/windows/CalendarEducation";
+import { LaunchpadOverview } from "@/components/windows/LaunchpadOverview";
 import { Wallpaper } from "@/components/desktop/Wallpaper";
 import { IPadMenuBar } from "./IPadMenuBar";
 
@@ -37,6 +38,7 @@ const APPS: AppItem[] = [
   { id: "mail", label: "Contact", sublabel: "Mail", icon: <MailIcon size={56} />, component: <MailContact /> },
   { id: "notes", label: "Experience", sublabel: "Notes", icon: <NotesIcon size={56} />, component: <NotesExperience /> },
   { id: "calendar", label: "Education", sublabel: "Calendar", icon: <CalendarIcon size={56} />, component: <CalendarEducation /> },
+  { id: "launchpad", label: "Overview", sublabel: "Launchpad", icon: <LaunchpadIcon size={56} />, component: <LaunchpadOverview /> },
 ];
 
 const DOCK_APPS = [
@@ -121,21 +123,21 @@ export function IPadDesktop() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-0 pt-[32px] pb-[76px] flex flex-col"
+            className="absolute inset-0 pt-[32px] pb-[72px] flex flex-col overflow-y-auto"
           >
             {/* Hero */}
-            <div className="text-center pt-6 pb-4">
+            <div className="text-center pt-5 pb-3">
               <h1 className="text-xl font-semibold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                 {DATA.name}
               </h1>
-              <p className="text-xs text-white/70 mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+              <p className="text-xs text-white/70 mt-1 px-8 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                 {DATA.description}
               </p>
             </div>
 
-            {/* App Grid */}
-            <div className="flex-1 flex items-start justify-center px-12 pt-4">
-              <div className="grid grid-cols-3 gap-x-16 gap-y-8">
+            {/* App Grid — 4 columns to fit all 7 apps */}
+            <div className="flex justify-center px-10 pt-3 pb-4">
+              <div className="grid grid-cols-4 gap-x-12 gap-y-6">
                 {APPS.map((app, i) => (
                   <motion.div
                     key={app.id}
@@ -155,7 +157,7 @@ export function IPadDesktop() {
             </div>
 
             {/* Stats Row */}
-            <div className="flex justify-center gap-3 px-8 pb-4">
+            <div className="flex justify-center gap-3 px-8 pb-3">
               <div className="px-5 py-2 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10">
                 <p className="text-sm font-semibold text-white text-center">{DATA.skills.length}</p>
                 <p className="text-[9px] text-white/50 uppercase text-center">Skills</p>
@@ -169,6 +171,25 @@ export function IPadDesktop() {
                 <p className="text-[9px] text-white/50 uppercase text-center">Roles</p>
               </div>
             </div>
+
+            {/* Top Technologies */}
+            <div className="flex justify-center px-8 pb-4">
+              <div className="px-4 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/10 max-w-lg w-full">
+                <p className="text-[9px] font-semibold text-white/40 uppercase tracking-wider mb-2">
+                  Top Technologies
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {DATA.skills.slice(0, 10).map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2 py-0.5 text-[10px] font-medium text-white/70 bg-white/10 rounded-full border border-white/10"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -179,17 +200,13 @@ export function IPadDesktop() {
           <motion.div
             key={activeApp.id}
             initial={{ scale: 0.85, opacity: 0, y: 30 }}
-            animate={
-              isFullscreen
-                ? { scale: 1, opacity: 1, y: 0 }
-                : { scale: 1, opacity: 1, y: 0 }
-            }
+            animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.85, opacity: 0, y: 30 }}
             transition={{ type: "spring", stiffness: 350, damping: 28 }}
             className={`absolute flex flex-col overflow-hidden shadow-2xl border border-white/15 ${
               isFullscreen
                 ? "inset-0 rounded-none z-[9998]"
-                : "top-[36px] bottom-[76px] left-4 right-4 rounded-xl"
+                : "top-[36px] bottom-[72px] left-4 right-4 rounded-xl"
             }`}
           >
             {/* Title Bar */}
