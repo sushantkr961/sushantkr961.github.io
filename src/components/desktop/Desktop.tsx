@@ -23,9 +23,10 @@ import {
 } from "./MacIcons";
 import { IPhoneHome } from "@/components/mobile/iPhoneHome";
 import { IPadDesktop } from "@/components/tablet/IPadDesktop";
+import { BootScreen } from "./BootScreen";
 import { useIsMobile, useIsTablet } from "@/hooks/useMediaQuery";
 import { useWindowManager } from "@/hooks/useWindowManager";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WINDOW_IDS: WindowId[] = ["finder", "terminal", "safari", "mail", "notes", "calendar", "launchpad"];
@@ -108,7 +109,12 @@ function MacDesktop() {
 export function Desktop() {
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
+  const [booting, setBooting] = useState(true);
   const [mounted, setMounted] = useState(false);
+
+  const handleBootComplete = useCallback(() => {
+    setBooting(false);
+  }, []);
 
   useEffect(() => {
     setMounted(true);
@@ -116,13 +122,18 @@ export function Desktop() {
 
   if (!mounted) {
     return (
-      <div className="fixed inset-0">
-        <Wallpaper />
-      </div>
+      <div className="fixed inset-0 bg-black" />
     );
   }
 
-  if (isMobile) return <IPhoneHome />;
-  if (isTablet) return <IPadDesktop />;
-  return <MacDesktop />;
+  return (
+    <>
+      <AnimatePresence>
+        {booting && <BootScreen onComplete={handleBootComplete} />}
+      </AnimatePresence>
+      {!booting && (
+        isMobile ? <IPhoneHome /> : isTablet ? <IPadDesktop /> : <MacDesktop />
+      )}
+    </>
+  );
 }
