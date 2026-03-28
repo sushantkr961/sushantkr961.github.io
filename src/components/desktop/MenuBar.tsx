@@ -4,11 +4,22 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { AppleLogo } from "./MacIcons";
 import { DATA } from "@/data/resume";
+import { useWindowManager } from "@/hooks/useWindowManager";
+import type { WindowId } from "./WindowManager";
 
 export function MenuBar() {
   const { theme, setTheme } = useTheme();
+  const { openWindow } = useWindowManager();
   const [time, setTime] = useState("");
   const [mounted, setMounted] = useState(false);
+
+  const menuItems: { label: string; windowId: WindowId }[] = [
+    { label: "About", windowId: "finder" },
+    { label: "Skills", windowId: "terminal" },
+    { label: "Projects", windowId: "safari" },
+    { label: "Experience", windowId: "notes" },
+    { label: "Contact", windowId: "mail" },
+  ];
 
   useEffect(() => {
     setMounted(true);
@@ -47,13 +58,14 @@ export function MenuBar() {
         <span className="text-[13px] font-bold text-white/90 ml-[18px] tracking-[0.01em]">
           {DATA.name}
         </span>
-        {["File", "Edit", "View", "Window", "Help"].map((item) => (
-          <span
-            key={item}
+        {menuItems.map((item) => (
+          <button
+            key={item.label}
+            onClick={() => openWindow(item.windowId)}
             className="text-[13px] text-white/60 ml-[18px] hover:text-white/90 cursor-default transition-colors"
           >
-            {item}
-          </span>
+            {item.label}
+          </button>
         ))}
       </div>
 
