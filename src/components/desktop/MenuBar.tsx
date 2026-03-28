@@ -45,11 +45,12 @@ export function MenuBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 h-[24px] z-[9999] flex items-center justify-between px-[16px] select-none"
+      className="fixed top-0 left-0 right-0 h-[25px] z-[9999] flex items-center justify-between px-[16px] select-none"
       style={{
-        background: "rgba(0,0,0,0.28)",
-        backdropFilter: "blur(80px) saturate(200%)",
-        WebkitBackdropFilter: "blur(80px) saturate(200%)",
+        background: "rgba(0,0,0,0.2)",
+        backdropFilter: "blur(80px) saturate(250%)",
+        WebkitBackdropFilter: "blur(80px) saturate(250%)",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
       }}
     >
       {/* Left — Apple + App name + menus */}

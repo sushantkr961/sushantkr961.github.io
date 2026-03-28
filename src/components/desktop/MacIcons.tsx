@@ -9,182 +9,208 @@ export function AppleLogo({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 export function FinderIcon({ size = 44 }: { size?: number }) {
+  const id = `fi-${size}`;
   return (
-    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
-          <linearGradient id="fi-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#4FC3F7" />
-            <stop offset="50%" stopColor="#2196F3" />
-            <stop offset="100%" stopColor="#1565C0" />
+          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#6EC6FF" />
+            <stop offset="100%" stopColor="#1976D2" />
+          </linearGradient>
+          <linearGradient id={`${id}-face`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#FFFFFF" />
+            <stop offset="100%" stopColor="#E8E8E8" />
           </linearGradient>
         </defs>
-        <rect width="120" height="120" rx="26" fill="url(#fi-bg)" />
-        {/* Face outline */}
-        <rect x="28" y="22" width="64" height="76" rx="10" fill="white" />
+        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
+        {/* Shine */}
+        <rect width="120" height="60" rx="26" fill="white" opacity="0.12" />
+        {/* Face */}
+        <rect x="28" y="18" width="64" height="82" rx="8" fill={`url(#${id}-face)`} />
+        {/* Divider line */}
+        <line x1="60" y1="18" x2="60" y2="100" stroke="#D0D0D0" strokeWidth="0.8" />
         {/* Left eye */}
-        <ellipse cx="46" cy="50" rx="5.5" ry="8" fill="#333" />
-        <ellipse cx="44.5" cy="48" rx="2" ry="3" fill="white" opacity="0.4" />
+        <ellipse cx="46" cy="48" rx="5" ry="9" fill="#333" />
+        <ellipse cx="44.5" cy="45" rx="2" ry="3.5" fill="white" opacity="0.5" />
         {/* Right eye */}
-        <ellipse cx="74" cy="50" rx="5.5" ry="8" fill="#333" />
-        <ellipse cx="72.5" cy="48" rx="2" ry="3" fill="white" opacity="0.4" />
+        <ellipse cx="74" cy="48" rx="5" ry="9" fill="#333" />
+        <ellipse cx="72.5" cy="45" rx="2" ry="3.5" fill="white" opacity="0.5" />
         {/* Nose */}
-        <line x1="60" y1="52" x2="60" y2="66" stroke="#555" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="60" y1="55" x2="60" y2="68" stroke="#888" strokeWidth="2" strokeLinecap="round" />
         {/* Smile */}
-        <path d="M42 74 Q52 84 60 84 Q68 84 78 74" stroke="#555" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+        <path d="M43 76 Q52 86 60 86 Q68 86 77 76" stroke="#888" strokeWidth="2.2" fill="none" strokeLinecap="round" />
       </svg>
     </div>
   );
 }
 
 export function TerminalIcon({ size = 44 }: { size?: number }) {
+  const id = `te-${size}`;
   return (
-    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
-          <linearGradient id="te-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#424242" />
-            <stop offset="100%" stopColor="#1a1a1a" />
+          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#4A4A4A" />
+            <stop offset="100%" stopColor="#1C1C1C" />
           </linearGradient>
         </defs>
-        <rect width="120" height="120" rx="26" fill="url(#te-bg)" />
-        {/* Screen */}
-        <rect x="14" y="18" width="92" height="84" rx="8" fill="#000" opacity="0.6" />
-        {/* Top bar */}
-        <rect x="14" y="18" width="92" height="18" rx="8" fill="#2d2d2d" />
-        <rect x="14" y="28" width="92" height="8" fill="#2d2d2d" />
+        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
+        {/* Shine */}
+        <rect width="120" height="55" rx="26" fill="white" opacity="0.06" />
+        {/* Screen bezel */}
+        <rect x="12" y="14" width="96" height="92" rx="10" fill="#0D0D0D" />
+        {/* Screen inner */}
+        <rect x="15" y="30" width="90" height="73" rx="7" fill="#1A1A1A" />
+        {/* Title bar */}
+        <rect x="15" y="17" width="90" height="16" rx="7" fill="#333" />
+        <rect x="15" y="26" width="90" height="7" fill="#333" />
         {/* Traffic lights */}
-        <circle cx="27" cy="27" r="3.5" fill="#FF5F57" />
-        <circle cx="38" cy="27" r="3.5" fill="#FEBC2E" />
-        <circle cx="49" cy="27" r="3.5" fill="#28C840" />
-        {/* Prompt chevron */}
-        <path d="M28 56 L44 68 L28 80" stroke="#2ECC40" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Cursor */}
-        <rect x="52" y="62" width="32" height="4" rx="2" fill="white" opacity="0.7" />
+        <circle cx="27" cy="25" r="3" fill="#FF5F57" />
+        <circle cx="37" cy="25" r="3" fill="#FEBC2E" />
+        <circle cx="47" cy="25" r="3" fill="#28C840" />
+        {/* Prompt */}
+        <path d="M26 52 L40 62 L26 72" stroke="#32D74B" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Cursor line */}
+        <rect x="48" y="58" width="36" height="3" rx="1.5" fill="#fff" opacity="0.6" />
+        {/* Second line */}
+        <rect x="26" y="82" width="24" height="2.5" rx="1" fill="#555" opacity="0.4" />
       </svg>
     </div>
   );
 }
 
 export function SafariIcon({ size = 44 }: { size?: number }) {
+  const id = `sa-${size}`;
   return (
-    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
-          <linearGradient id="sa-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#64B5F6" />
-            <stop offset="50%" stopColor="#2196F3" />
-            <stop offset="100%" stopColor="#1565C0" />
+          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#78D5FF" />
+            <stop offset="50%" stopColor="#4BA3F5" />
+            <stop offset="100%" stopColor="#1A6AE0" />
           </linearGradient>
         </defs>
-        <rect width="120" height="120" rx="26" fill="url(#sa-bg)" />
-        {/* Compass ring */}
-        <circle cx="60" cy="60" r="40" fill="none" stroke="white" strokeWidth="3" opacity="0.85" />
-        <circle cx="60" cy="60" r="36" fill="none" stroke="white" strokeWidth="0.5" opacity="0.3" />
-        {/* Direction ticks */}
+        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
+        {/* Shine */}
+        <rect width="120" height="55" rx="26" fill="white" opacity="0.15" />
+        {/* Compass outer ring */}
+        <circle cx="60" cy="60" r="42" fill="none" stroke="white" strokeWidth="2.5" opacity="0.9" />
+        {/* Tick marks */}
         {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
           <line
             key={a}
-            x1="60" y1={a % 90 === 0 ? "22" : "24"} x2="60" y2={a % 90 === 0 ? "28" : "27"}
-            stroke="white" strokeWidth={a % 90 === 0 ? "2" : "1"} opacity="0.6"
+            x1="60" y1={a % 90 === 0 ? "20" : "22"} x2="60" y2={a % 90 === 0 ? "28" : "26"}
+            stroke="white" strokeWidth={a % 90 === 0 ? "2.5" : "1.2"} opacity="0.7"
             transform={`rotate(${a} 60 60)`}
           />
         ))}
-        {/* Red needle */}
-        <polygon points="60,24 55,58 60,54 65,58" fill="#FF3B30" />
-        {/* White needle */}
-        <polygon points="60,96 55,62 60,66 65,62" fill="white" opacity="0.85" />
-        {/* Center dot */}
-        <circle cx="60" cy="60" r="3" fill="white" />
+        {/* Red needle (north) */}
+        <polygon points="60,22 55.5,57 60,52 64.5,57" fill="#FF3B30" />
+        {/* White needle (south) */}
+        <polygon points="60,98 55.5,63 60,68 64.5,63" fill="white" opacity="0.9" />
+        {/* Center jewel */}
+        <circle cx="60" cy="60" r="3.5" fill="white" />
+        <circle cx="60" cy="60" r="2" fill="#ccc" />
       </svg>
     </div>
   );
 }
 
 export function MailIcon({ size = 44 }: { size?: number }) {
+  const id = `ma-${size}`;
   return (
-    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
-          <linearGradient id="ma-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#42A5F5" />
+          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#64B5F6" />
             <stop offset="100%" stopColor="#1565C0" />
           </linearGradient>
         </defs>
-        <rect width="120" height="120" rx="26" fill="url(#ma-bg)" />
-        {/* Envelope */}
-        <rect x="18" y="36" width="84" height="54" rx="6" fill="white" />
-        {/* Flap lines */}
-        <path d="M18 40 L60 70 L102 40" stroke="#1565C0" strokeWidth="1" fill="none" opacity="0.15" />
-        {/* Top flap */}
-        <path d="M18 36 L60 64 L102 36" fill="white" />
-        <path d="M18 36 L60 64 L102 36" stroke="#e0e0e0" strokeWidth="0.8" fill="none" />
-        {/* Bottom flap crease */}
-        <path d="M18 90 L48 68" stroke="#e0e0e0" strokeWidth="0.5" fill="none" opacity="0.5" />
-        <path d="M102 90 L72 68" stroke="#e0e0e0" strokeWidth="0.5" fill="none" opacity="0.5" />
+        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
+        {/* Shine */}
+        <rect width="120" height="55" rx="26" fill="white" opacity="0.12" />
+        {/* Envelope body */}
+        <rect x="16" y="34" width="88" height="56" rx="7" fill="white" />
+        {/* Envelope flap */}
+        <path d="M16 38 C16 34 19 31 23 31 L97 31 C101 31 104 34 104 38 L60 66 Z" fill="#F5F5F5" />
+        <path d="M16 38 L60 66 L104 38" stroke="#E0E0E0" strokeWidth="1" fill="none" />
+        {/* Shadow crease */}
+        <path d="M16 90 L50 66" stroke="#E8E8E8" strokeWidth="0.6" fill="none" />
+        <path d="M104 90 L70 66" stroke="#E8E8E8" strokeWidth="0.6" fill="none" />
+        {/* Blue accent line */}
+        <path d="M16 38 L60 66 L104 38" stroke="#1E88E5" strokeWidth="0.5" fill="none" opacity="0.3" />
       </svg>
     </div>
   );
 }
 
 export function NotesIcon({ size = 44 }: { size?: number }) {
+  const id = `no-${size}`;
   return (
-    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
-          <linearGradient id="no-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#FFF9C4" />
-            <stop offset="100%" stopColor="#FBC02D" />
+          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#FFF59D" />
+            <stop offset="100%" stopColor="#F9A825" />
           </linearGradient>
         </defs>
-        <rect width="120" height="120" rx="26" fill="url(#no-bg)" />
+        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
+        {/* Shine */}
+        <rect width="120" height="55" rx="26" fill="white" opacity="0.2" />
         {/* Paper */}
-        <rect x="22" y="12" width="76" height="96" rx="5" fill="white" opacity="0.95" />
-        {/* Yellow header bar */}
-        <rect x="22" y="12" width="76" height="20" rx="5" fill="#FDD835" opacity="0.4" />
-        <rect x="22" y="27" width="76" height="5" fill="#FDD835" opacity="0.4" />
-        {/* Title text */}
-        <rect x="30" y="18" width="40" height="5" rx="2" fill="#E6A800" opacity="0.5" />
-        {/* Lines */}
+        <rect x="20" y="10" width="80" height="100" rx="6" fill="white" opacity="0.97" />
+        {/* Yellow header */}
+        <rect x="20" y="10" width="80" height="22" rx="6" fill="#FFD54F" opacity="0.5" />
+        <rect x="20" y="26" width="80" height="6" fill="#FFD54F" opacity="0.5" />
+        {/* Title line */}
+        <rect x="28" y="17" width="44" height="4.5" rx="2" fill="#E6A800" opacity="0.45" />
+        {/* Ruled lines */}
         {[42, 54, 66, 78, 90].map((y) => (
-          <line key={y} x1="30" y1={y} x2="90" y2={y} stroke="#e8e0c8" strokeWidth="0.8" />
+          <line key={y} x1="28" y1={y} x2="92" y2={y} stroke="#E8DFC8" strokeWidth="0.7" />
         ))}
-        {/* Text content lines */}
-        <rect x="30" y="44" width="52" height="3" rx="1" fill="#bbb" opacity="0.5" />
-        <rect x="30" y="56" width="44" height="3" rx="1" fill="#bbb" opacity="0.5" />
-        <rect x="30" y="68" width="48" height="3" rx="1" fill="#bbb" opacity="0.5" />
+        {/* Content */}
+        <rect x="28" y="44" width="56" height="3.5" rx="1.5" fill="#C8C0A8" opacity="0.45" />
+        <rect x="28" y="56" width="42" height="3.5" rx="1.5" fill="#C8C0A8" opacity="0.45" />
+        <rect x="28" y="68" width="50" height="3.5" rx="1.5" fill="#C8C0A8" opacity="0.45" />
+        <rect x="28" y="80" width="36" height="3.5" rx="1.5" fill="#C8C0A8" opacity="0.35" />
       </svg>
     </div>
   );
 }
 
 export function LaunchpadIcon({ size = 44 }: { size?: number }) {
+  const id = `lp-${size}`;
   return (
-    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
-          <linearGradient id="lp-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#424242" />
-            <stop offset="100%" stopColor="#212121" />
+          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#555" />
+            <stop offset="100%" stopColor="#1a1a1a" />
           </linearGradient>
         </defs>
-        <rect width="120" height="120" rx="26" fill="url(#lp-bg)" />
-        {/* Rocket */}
-        <g transform="translate(60,60) scale(1.1)">
-          {/* Flame */}
-          <ellipse cx="0" cy="24" rx="5" ry="10" fill="#FF6B35" opacity="0.9" />
-          <ellipse cx="0" cy="22" rx="3" ry="7" fill="#FFD700" opacity="0.8" />
-          {/* Body */}
-          <path d="M0,-28 C8,-28 12,-10 12,8 L12,14 C12,17 8,20 0,20 C-8,20 -12,17 -12,14 L-12,8 C-12,-10 -8,-28 0,-28Z" fill="white" />
-          {/* Nose */}
-          <path d="M0,-28 C4,-28 6,-22 6,-16 L-6,-16 C-6,-22 -4,-28 0,-28Z" fill="#FF3B30" />
-          {/* Window */}
-          <circle cx="0" cy="-4" r="5" fill="#42A5F5" />
-          <circle cx="0" cy="-4" r="3.5" fill="#64B5F6" />
-          {/* Fins */}
-          <path d="M-12,8 L-20,18 L-12,16 Z" fill="#FF3B30" />
-          <path d="M12,8 L20,18 L12,16 Z" fill="#FF3B30" />
-        </g>
+        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
+        {/* Shine */}
+        <rect width="120" height="55" rx="26" fill="white" opacity="0.06" />
+        {/* Grid of colored circles — like real Launchpad icon */}
+        {[
+          { cx: 36, cy: 36, color: "#FF6B6B" },
+          { cx: 60, cy: 36, color: "#4ECDC4" },
+          { cx: 84, cy: 36, color: "#FFE66D" },
+          { cx: 36, cy: 60, color: "#A78BFA" },
+          { cx: 60, cy: 60, color: "#60A5FA" },
+          { cx: 84, cy: 60, color: "#F97316" },
+          { cx: 36, cy: 84, color: "#34D399" },
+          { cx: 60, cy: 84, color: "#F472B6" },
+          { cx: 84, cy: 84, color: "#38BDF8" },
+        ].map(({ cx, cy, color }) => (
+          <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="10" fill={color} opacity="0.9" />
+        ))}
       </svg>
     </div>
   );
@@ -196,24 +222,27 @@ export function CalendarIcon({ size = 44 }: { size?: number }) {
   const weekday = today.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase();
 
   return (
-    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <rect width="120" height="120" rx="26" fill="#fff" />
-        {/* Red header */}
-        <rect x="0" y="0" width="120" height="34" rx="26" fill="#FF3B30" />
-        <rect x="0" y="14" width="120" height="20" fill="#FF3B30" />
-        {/* Day name in header */}
+        {/* Red header with rounded top */}
+        <rect x="0" y="0" width="120" height="36" rx="26" fill="#FF3B30" />
+        <rect x="0" y="16" width="120" height="20" fill="#FF3B30" />
+        {/* Header shine */}
+        <rect x="0" y="0" width="120" height="18" rx="26" fill="white" opacity="0.15" />
+        {/* Day name */}
         <text
-          x="60" y="26" textAnchor="middle"
-          fill="white" fontSize="13" fontWeight="600"
+          x="60" y="28" textAnchor="middle"
+          fill="white" fontSize="13" fontWeight="700"
           fontFamily="-apple-system, SF Pro Display, Helvetica Neue, sans-serif"
+          letterSpacing="1"
         >
           {weekday}
         </text>
         {/* Day number */}
         <text
-          x="60" y="88" textAnchor="middle"
-          fill="#1a1a1a" fontSize="54" fontWeight="200"
+          x="60" y="90" textAnchor="middle"
+          fill="#1a1a1a" fontSize="56" fontWeight="200"
           fontFamily="-apple-system, SF Pro Display, Helvetica Neue, sans-serif"
           letterSpacing="-2"
         >

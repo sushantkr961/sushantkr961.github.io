@@ -108,14 +108,14 @@ export function Dock() {
           damping: 20,
           delay: 0.3,
         }}
-        className="flex items-end px-[6px] pt-[6px] pb-[2px] rounded-[18px]"
+        className="flex items-end px-[8px] pt-[6px] pb-[3px] rounded-[20px]"
         style={{
-          background: "rgba(255,255,255,0.12)",
-          backdropFilter: "blur(50px) saturate(180%)",
-          WebkitBackdropFilter: "blur(50px) saturate(180%)",
-          border: "1px solid rgba(255,255,255,0.18)",
+          background: "rgba(255,255,255,0.18)",
+          backdropFilter: "blur(60px) saturate(200%)",
+          WebkitBackdropFilter: "blur(60px) saturate(200%)",
+          border: "1px solid rgba(255,255,255,0.25)",
           boxShadow:
-            "0 8px 32px rgba(0,0,0,0.25), inset 0 0.5px 0 rgba(255,255,255,0.15)",
+            "0 12px 40px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.15), inset 0 0.5px 0 rgba(255,255,255,0.2)",
         }}
       >
         {DOCK_APPS.map((app) => (

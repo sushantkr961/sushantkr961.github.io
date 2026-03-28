@@ -61,6 +61,7 @@ export function Window({ id, title, icon, children, className }: WindowProps) {
                   width: "100%",
                   height: "100%",
                   zIndex: win.zIndex,
+                  boxShadow: "0 8px 40px rgba(0,0,0,0.3), 0 2px 12px rgba(0,0,0,0.15), inset 0 0.5px 0 rgba(255,255,255,0.1)",
                 }
               : {
                   position: "absolute",
@@ -68,13 +69,21 @@ export function Window({ id, title, icon, children, className }: WindowProps) {
                   top: win.position.y,
                   width: win.size.width,
                   zIndex: win.zIndex,
+                  boxShadow: "0 8px 40px rgba(0,0,0,0.3), 0 2px 12px rgba(0,0,0,0.15), inset 0 0.5px 0 rgba(255,255,255,0.1)",
                 }
           }
           onPointerDown={() => focusWindow(id)}
-          className={`flex flex-col overflow-hidden shadow-2xl border border-white/20 dark:border-white/10 ${win.isMaximized ? "" : "rounded-xl"} ${className ?? ""}`}
+          className={`flex flex-col overflow-hidden border border-white/25 dark:border-white/15 ${win.isMaximized ? "" : "rounded-xl"} ${className ?? ""}`}
         >
           {/* Title Bar */}
-          <div className="flex items-center gap-2 px-3 py-2.5 bg-[#f6f6f6]/90 dark:bg-[#2d2d2d]/90 backdrop-blur-xl border-b border-black/5 dark:border-white/5 select-none cursor-grab active:cursor-grabbing">
+          <div
+            className="flex items-center gap-2 px-3 py-2.5 border-b border-black/5 dark:border-white/5 select-none cursor-grab active:cursor-grabbing"
+            style={{
+              background: "rgba(246,246,246,0.75)",
+              backdropFilter: "blur(40px) saturate(180%)",
+              WebkitBackdropFilter: "blur(40px) saturate(180%)",
+            }}
+          >
             {/* Traffic Lights */}
             <div className="flex items-center gap-1.5 group">
               <button
@@ -121,8 +130,13 @@ export function Window({ id, title, icon, children, className }: WindowProps) {
 
           {/* Window Content */}
           <div
-            className="flex-1 bg-white/95 dark:bg-[#1e1e1e]/95 backdrop-blur-xl overflow-y-auto"
-            style={win.isMaximized ? { flex: 1 } : { height: win.size.height - 40 }}
+            className="flex-1 overflow-y-auto"
+            style={{
+              background: "rgba(255,255,255,0.88)",
+              backdropFilter: "blur(40px) saturate(180%)",
+              WebkitBackdropFilter: "blur(40px) saturate(180%)",
+              ...(win.isMaximized ? { flex: 1 } : { height: win.size.height - 40 }),
+            }}
           >
             {children}
           </div>
