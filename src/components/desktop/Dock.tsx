@@ -31,18 +31,23 @@ const DOCK_APPS: DockApp[] = [
 ];
 
 function DockIconButton({ app }: { app: DockApp }) {
-  const { windows, toggleWindow, focusWindow } = useWindowManager();
+  const { windows, openWindow, focusWindow } = useWindowManager();
   const [isBouncing, setIsBouncing] = useState(false);
-  const isOpen = windows[app.id].isOpen;
+  const win = windows[app.id];
 
   const handleClick = () => {
-    if (!isOpen) {
+    if (!win.isOpen) {
+      // Not open — bounce then open
       setIsBouncing(true);
       setTimeout(() => {
         setIsBouncing(false);
-        toggleWindow(app.id);
+        openWindow(app.id);
       }, 500);
+    } else if (win.isMinimized) {
+      // Minimized — restore it
+      openWindow(app.id);
     } else {
+      // Already visible — just focus
       focusWindow(app.id);
     }
   };
@@ -78,7 +83,7 @@ function DockIconButton({ app }: { app: DockApp }) {
 
       {/* Open indicator dot */}
       <div className="h-[5px] flex items-center justify-center">
-        {isOpen && (
+        {win.isOpen && (
           <motion.div
             className="w-[4px] h-[4px] bg-white/60 rounded-full"
             initial={{ scale: 0 }}
