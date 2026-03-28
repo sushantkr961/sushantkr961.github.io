@@ -262,7 +262,7 @@ export function IPadDesktop() {
             animate={{ y: 0 }}
             exit={{ y: 100 }}
             transition={{ type: "spring", stiffness: 250, damping: 25 }}
-            className="fixed bottom-[6px] left-1/2 -translate-x-1/2 z-[9999]"
+            className="fixed bottom-[6px] left-0 right-0 z-[9999] flex justify-center"
           >
             <div
               className="flex items-center gap-[2px] px-[8px] pt-[6px] pb-[4px] rounded-[22px]"
