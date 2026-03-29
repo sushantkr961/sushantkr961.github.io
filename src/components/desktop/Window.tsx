@@ -77,12 +77,7 @@ export function Window({ id, title, icon, children, className }: WindowProps) {
         >
           {/* Title Bar */}
           <div
-            className="flex items-center gap-2 px-3 py-2.5 border-b border-black/5 dark:border-white/5 select-none cursor-grab active:cursor-grabbing"
-            style={{
-              background: "rgba(246,246,246,0.75)",
-              backdropFilter: "blur(40px) saturate(180%)",
-              WebkitBackdropFilter: "blur(40px) saturate(180%)",
-            }}
+            className="flex items-center gap-2 px-3 py-2.5 bg-[#e8e8e8] dark:bg-[#2d2d2d] border-b border-black/10 dark:border-white/5 select-none cursor-grab active:cursor-grabbing"
           >
             {/* Traffic Lights */}
             <div className="flex items-center gap-1.5 group">
@@ -130,13 +125,8 @@ export function Window({ id, title, icon, children, className }: WindowProps) {
 
           {/* Window Content */}
           <div
-            className="flex-1 overflow-y-auto"
-            style={{
-              background: "rgba(255,255,255,0.88)",
-              backdropFilter: "blur(40px) saturate(180%)",
-              WebkitBackdropFilter: "blur(40px) saturate(180%)",
-              ...(win.isMaximized ? { flex: 1 } : { height: win.size.height - 40 }),
-            }}
+            className="flex-1 bg-white dark:bg-[#1e1e1e] overflow-y-auto"
+            style={win.isMaximized ? { flex: 1 } : { height: win.size.height - 40 }}
           >
             {children}
           </div>

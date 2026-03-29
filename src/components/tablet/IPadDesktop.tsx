@@ -247,7 +247,7 @@ export function IPadDesktop() {
             </div>
 
             {/* Content */}
-            <div className="flex-1 bg-white/95 dark:bg-[#1e1e1e]/95 backdrop-blur-xl overflow-y-auto">
+            <div className="flex-1 bg-white dark:bg-[#1e1e1e] overflow-y-auto">
               {activeApp.component}
             </div>
           </motion.div>
