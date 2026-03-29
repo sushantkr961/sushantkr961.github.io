@@ -12,34 +12,20 @@ export function FinderIcon({ size = 44 }: { size?: number }) {
   const id = `fi-${size}`;
   return (
     <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
-      <svg viewBox="0 0 120 120" className="w-full h-full">
+      <svg viewBox="0 0 512 512" className="w-full h-full">
         <defs>
-          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#6EC6FF" />
-            <stop offset="100%" stopColor="#1976D2" />
+          <linearGradient id={`${id}-bg`} x2="0" y1="100%">
+            <stop offset="0" stopColor="#1e73f2" />
+            <stop offset="1" stopColor="#19d3fd" />
           </linearGradient>
-          <linearGradient id={`${id}-face`} x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#FFFFFF" />
-            <stop offset="100%" stopColor="#E8E8E8" />
+          <linearGradient id={`${id}-face`} x2="0" y1="100%">
+            <stop offset="0" stopColor="#dbe9f4" />
+            <stop offset="1" stopColor="#f7f6f6" />
           </linearGradient>
         </defs>
-        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
-        {/* Shine */}
-        <rect width="120" height="60" rx="26" fill="white" opacity="0.12" />
-        {/* Face */}
-        <rect x="28" y="18" width="64" height="82" rx="8" fill={`url(#${id}-face)`} />
-        {/* Divider line */}
-        <line x1="60" y1="18" x2="60" y2="100" stroke="#D0D0D0" strokeWidth="0.8" />
-        {/* Left eye */}
-        <ellipse cx="46" cy="48" rx="5" ry="9" fill="#333" />
-        <ellipse cx="44.5" cy="45" rx="2" ry="3.5" fill="white" opacity="0.5" />
-        {/* Right eye */}
-        <ellipse cx="74" cy="48" rx="5" ry="9" fill="#333" />
-        <ellipse cx="72.5" cy="45" rx="2" ry="3.5" fill="white" opacity="0.5" />
-        {/* Nose */}
-        <line x1="60" y1="55" x2="60" y2="68" stroke="#888" strokeWidth="2" strokeLinecap="round" />
-        {/* Smile */}
-        <path d="M43 76 Q52 86 60 86 Q68 86 77 76" stroke="#888" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+        <rect width="512" height="512" rx="15%" fill={`url(#${id}-bg)`} />
+        <path fill={`url(#${id}-face)`} d="M435.2 0H274.4c-21.2 49.2-59.2 129.6-60.8 283.4a9.9 9.9 0 0010 10.1h58.7a9.9 9.9 0 019.9 10.2A933.3 933.3 0 00311.3 512h123.9a76.8 76.8 0 0076.8-76.8V76.8A76.8 76.8 0 00435.2 0z" />
+        <path fill="none" stroke="#000" strokeLinecap="round" strokeWidth="20" d="M371 149v34m-229-34v34m263.4 147.2a215.2 215.2 0 01-298.8 0" />
       </svg>
     </div>
   );
@@ -87,62 +73,61 @@ export function SafariIcon({ size = 44 }: { size?: number }) {
     <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
-          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#78D5FF" />
-            <stop offset="50%" stopColor="#4BA3F5" />
-            <stop offset="100%" stopColor="#1A6AE0" />
+          <linearGradient id={`${id}-bg`} x2="0" y1="1" y2="0">
+            <stop offset="0" stopColor="#005ad5" />
+            <stop offset=".16" stopColor="#0875f0" />
+            <stop offset=".31" stopColor="#218cee" />
+            <stop offset=".63" stopColor="#27a5f3" />
+            <stop offset="1" stopColor="#21aaef" />
+          </linearGradient>
+          <linearGradient id={`${id}-red`} x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stopColor="#c72e24" />
+            <stop offset="1" stopColor="#fd3b2f" />
           </linearGradient>
         </defs>
-        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
-        {/* Shine */}
-        <rect width="120" height="55" rx="26" fill="white" opacity="0.15" />
-        {/* Compass outer ring */}
-        <circle cx="60" cy="60" r="42" fill="none" stroke="white" strokeWidth="2.5" opacity="0.9" />
-        {/* Tick marks */}
-        {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-          <line
-            key={a}
-            x1="60" y1={a % 90 === 0 ? "20" : "22"} x2="60" y2={a % 90 === 0 ? "28" : "26"}
-            stroke="white" strokeWidth={a % 90 === 0 ? "2.5" : "1.2"} opacity="0.7"
-            transform={`rotate(${a} 60 60)`}
-          />
-        ))}
-        {/* Red needle (north) */}
-        <polygon points="60,22 55.5,57 60,52 64.5,57" fill="#FF3B30" />
-        {/* White needle (south) */}
-        <polygon points="60,98 55.5,63 60,68 64.5,63" fill="white" opacity="0.9" />
-        {/* Center jewel */}
-        <circle cx="60" cy="60" r="3.5" fill="white" />
-        <circle cx="60" cy="60" r="2" fill="#ccc" />
+        {/* Blue background circle */}
+        <circle cx="60" cy="60" r="60" fill={`url(#${id}-bg)`} />
+        {/* Tick marks around compass */}
+        {Array.from({ length: 72 }).map((_, i) => {
+          const angle = i * 5;
+          const isMajor = angle % 30 === 0;
+          const r1 = isMajor ? 52 : 54;
+          const r2 = 57;
+          const rad = (angle * Math.PI) / 180;
+          return (
+            <line
+              key={angle}
+              x1={60 + r1 * Math.sin(rad)}
+              y1={60 - r1 * Math.cos(rad)}
+              x2={60 + r2 * Math.sin(rad)}
+              y2={60 - r2 * Math.cos(rad)}
+              stroke="white"
+              strokeWidth={isMajor ? "1.8" : "0.7"}
+              strokeLinecap="round"
+              opacity={isMajor ? "0.85" : "0.5"}
+            />
+          );
+        })}
+        {/* Red needle (NE) */}
+        <polygon points="60,60 56,57 87,17 64,63" fill={`url(#${id}-red)`} />
+        {/* White needle (SW) */}
+        <polygon points="60,60 64,63 33,103 56,57" fill="white" opacity="0.9" />
+        {/* Center dot */}
+        <circle cx="60" cy="60" r="2.5" fill="white" />
       </svg>
     </div>
   );
 }
 
 export function MailIcon({ size = 44 }: { size?: number }) {
-  const id = `ma-${size}`;
   return (
     <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
-      <svg viewBox="0 0 120 120" className="w-full h-full">
-        <defs>
-          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#64B5F6" />
-            <stop offset="100%" stopColor="#1565C0" />
-          </linearGradient>
-        </defs>
-        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
-        {/* Shine */}
-        <rect width="120" height="55" rx="26" fill="white" opacity="0.12" />
-        {/* Envelope body */}
-        <rect x="16" y="34" width="88" height="56" rx="7" fill="white" />
-        {/* Envelope flap */}
-        <path d="M16 38 C16 34 19 31 23 31 L97 31 C101 31 104 34 104 38 L60 66 Z" fill="#F5F5F5" />
-        <path d="M16 38 L60 66 L104 38" stroke="#E0E0E0" strokeWidth="1" fill="none" />
-        {/* Shadow crease */}
-        <path d="M16 90 L50 66" stroke="#E8E8E8" strokeWidth="0.6" fill="none" />
-        <path d="M104 90 L70 66" stroke="#E8E8E8" strokeWidth="0.6" fill="none" />
-        {/* Blue accent line */}
-        <path d="M16 38 L60 66 L104 38" stroke="#1E88E5" strokeWidth="0.5" fill="none" opacity="0.3" />
+      <svg viewBox="0 0 48 48" className="w-full h-full">
+        <rect y="6" width="48" height="36" rx="2" ry="2" fill="#38b1e7" />
+        {/* Bottom fold */}
+        <path d="M47.84,40.56A2.11,2.11,0,0,1,46,41.9L2,42H2A2,2,0,0,1,.15,40.78a2,2,0,0,1,.44-2.16L17.88,21.73a9.23,9.23,0,0,1,12.56.07L47.4,38.41A2,2,0,0,1,47.84,40.56Z" fill="#299acc" />
+        {/* Top flap */}
+        <path d="M47.84,7.44A2.11,2.11,0,0,0,46,6.1L2,6H2A2,2,0,0,0,.15,7.22,2,2,0,0,0,.59,9.38L17.88,26.27a9.23,9.23,0,0,0,12.56-.07L47.4,9.59A2,2,0,0,0,47.84,7.44Z" fill="#6ac1e7" />
       </svg>
     </div>
   );
