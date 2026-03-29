@@ -28,8 +28,8 @@ export function IPhoneStatusBar() {
         {time}
       </span>
 
-      {/* Dynamic Island placeholder */}
-      <div className="w-[126px] h-[36px] bg-black rounded-full" />
+      {/* Spacer */}
+      <div className="w-[126px]" />
 
       {/* Right icons */}
       <div className="flex items-center gap-[5px] w-16 justify-end">
