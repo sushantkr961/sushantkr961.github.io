@@ -102,14 +102,6 @@ export function IPhoneHome() {
           </div>
         </div>
 
-        {/* Page Dots */}
-        <div className="flex justify-center py-2">
-          <div className="flex gap-[6px]">
-            <div className="w-[6px] h-[6px] rounded-full bg-white" />
-            <div className="w-[6px] h-[6px] rounded-full bg-white/30" />
-          </div>
-        </div>
-
         {/* Dock */}
         <div className="px-4 pb-3">
           <motion.div

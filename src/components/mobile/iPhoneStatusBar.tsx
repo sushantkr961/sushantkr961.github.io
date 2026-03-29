@@ -28,8 +28,8 @@ export function IPhoneStatusBar() {
         {time}
       </span>
 
-      {/* Spacer */}
-      <div className="w-[126px]" />
+      {/* Spacer for centering */}
+      <div className="flex-1" />
 
       {/* Right icons */}
       <div className="flex items-center gap-[5px] w-16 justify-end">
