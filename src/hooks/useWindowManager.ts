@@ -20,5 +20,7 @@ export function useWindowManager() {
     restoreWindow: (id: WindowId) => dispatch({ type: "RESTORE_WINDOW", id }),
     moveWindow: (id: WindowId, position: { x: number; y: number }) =>
       dispatch({ type: "MOVE_WINDOW", id, position }),
+    resizeWindow: (id: WindowId, size: { width: number; height: number }) =>
+      dispatch({ type: "RESIZE_WINDOW", id, size }),
   };
 }

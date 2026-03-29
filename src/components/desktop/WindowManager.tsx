@@ -34,7 +34,8 @@ type Action =
   | { type: "MOVE_WINDOW"; id: WindowId; position: { x: number; y: number } }
   | { type: "TOGGLE_WINDOW"; id: WindowId }
   | { type: "MAXIMIZE_WINDOW"; id: WindowId }
-  | { type: "RESTORE_WINDOW"; id: WindowId };
+  | { type: "RESTORE_WINDOW"; id: WindowId }
+  | { type: "RESIZE_WINDOW"; id: WindowId; size: { width: number; height: number } };
 
 const DEFAULT_SIZES: Record<WindowId, { width: number; height: number }> = {
   finder: { width: 700, height: 480 },
@@ -176,6 +177,17 @@ function desktopReducer(state: DesktopState, action: Action): DesktopState {
           [action.id]: {
             ...state.windows[action.id],
             isMaximized: false,
+          },
+        },
+      };
+    case "RESIZE_WINDOW":
+      return {
+        ...state,
+        windows: {
+          ...state.windows,
+          [action.id]: {
+            ...state.windows[action.id],
+            size: action.size,
           },
         },
       };
