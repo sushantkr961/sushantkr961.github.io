@@ -1,6 +1,7 @@
 "use client";
 
-import { DATA } from "@/data/resume";
+import { DATA, ALL_SKILLS } from "@/data/resume";
+import gh from "@/data/github.json";
 import { useWindowManager } from "@/hooks/useWindowManager";
 import type { WindowId } from "@/components/desktop/WindowManager";
 import { motion } from "framer-motion";
@@ -11,6 +12,7 @@ import {
   MailIcon,
   NotesIcon,
   CalendarIcon,
+  GitHubIcon,
 } from "@/components/desktop/MacIcons";
 import type { ReactNode } from "react";
 
@@ -28,6 +30,7 @@ const QUICK_LINKS: QuickLink[] = [
   { id: "mail", label: "Contact", sublabel: "Mail", icon: <MailIcon size={40} /> },
   { id: "notes", label: "Experience", sublabel: "Notes", icon: <NotesIcon size={40} /> },
   { id: "calendar", label: "Education", sublabel: "Calendar", icon: <CalendarIcon size={40} /> },
+  { id: "github", label: "GitHub", sublabel: "Open Source", icon: <GitHubIcon size={40} /> },
 ];
 
 export function LaunchpadOverview() {
@@ -51,7 +54,7 @@ export function LaunchpadOverview() {
       </div>
 
       {/* Quick Links Grid */}
-      <div className="grid grid-cols-3 gap-3 mb-5">
+      <div className="grid grid-cols-4 gap-3 mb-5">
         {QUICK_LINKS.map((link, i) => (
           <motion.button
             key={link.id}
@@ -73,10 +76,10 @@ export function LaunchpadOverview() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-3 mb-5">
+      <div className="grid grid-cols-4 gap-3 mb-5">
         <div className="bg-[#f8f8f8] dark:bg-[#2a2a2a] rounded-lg p-3 border border-black/5 dark:border-white/5 text-center">
           <p className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
-            {DATA.skills.length}
+            {ALL_SKILLS.length}
           </p>
           <p className="text-[10px] text-neutral-400 uppercase">Skills</p>
         </div>
@@ -92,6 +95,12 @@ export function LaunchpadOverview() {
           </p>
           <p className="text-[10px] text-neutral-400 uppercase">Roles</p>
         </div>
+        <div className="bg-[#f8f8f8] dark:bg-[#2a2a2a] rounded-lg p-3 border border-black/5 dark:border-white/5 text-center">
+          <p className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
+            {gh.stats.totalContributions.toLocaleString()}
+          </p>
+          <p className="text-[10px] text-neutral-400 uppercase">Commits</p>
+        </div>
       </div>
 
       {/* Top Skills */}
@@ -100,7 +109,7 @@ export function LaunchpadOverview() {
           Top Technologies
         </p>
         <div className="flex flex-wrap gap-1.5">
-          {DATA.skills.slice(0, 10).map((skill) => (
+          {ALL_SKILLS.slice(0, 10).map((skill) => (
             <span
               key={skill}
               className="px-2 py-0.5 text-[10px] font-medium bg-white dark:bg-[#333] text-neutral-600 dark:text-neutral-400 rounded-full border border-black/5 dark:border-white/5"

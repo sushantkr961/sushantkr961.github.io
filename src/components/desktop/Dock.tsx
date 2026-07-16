@@ -11,6 +11,7 @@ import {
   MailIcon,
   NotesIcon,
   CalendarIcon,
+  GitHubIcon,
   LaunchpadIcon,
 } from "./MacIcons";
 
@@ -27,6 +28,7 @@ const DOCK_APPS: DockApp[] = [
   { id: "mail", label: "Mail", icon: <MailIcon size={50} /> },
   { id: "notes", label: "Notes", icon: <NotesIcon size={50} /> },
   { id: "calendar", label: "Calendar", icon: <CalendarIcon size={50} /> },
+  { id: "github", label: "GitHub", icon: <GitHubIcon size={50} /> },
   { id: "launchpad", label: "Launchpad", icon: <LaunchpadIcon size={50} /> },
 ];
 

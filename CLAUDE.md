@@ -24,6 +24,7 @@ A **multi-platform portfolio** that adapts to device:
 | Mail | Contact | Email, phone, social links |
 | Notes | Experience | Work history timeline |
 | Calendar | Education | Education timeline |
+| GitHub | Open Source | Contribution heatmap, language split, searchable repo browser, activity feed |
 | Launchpad | Overview | Quick navigation grid, stats, top technologies |
 
 ### Key Features
@@ -42,8 +43,25 @@ A **multi-platform portfolio** that adapts to device:
 - **next-themes** for dark/light mode
 - **gh-pages** package for deployment (with `--dotfiles` for `.nojekyll`)
 
+## GitHub Data
+The GitHub window renders from `src/data/github.json`, which is **generated, not hand-edited**:
+```bash
+pnpm run github:sync   # rewrites src/data/github.json from the GitHub API
+```
+`pnpm run deploy` runs this automatically, so every deploy ships fresh numbers. The JSON is
+committed so builds work offline and the static export never calls the API at runtime.
+
+- **Token (optional)**: reads `GITHUB_TOKEN`, else `~/.gh_portfolio_token`. Without one it uses
+  public data at 60 req/hr — which this script exhausts on its own, so it waits out the reset.
+  With one, the limit is 5000/hr, private repos are included, and contributions come from
+  GitHub's GraphQL API instead of a public proxy.
+- The script **fails loudly** rather than write partial data: if language bytes can't be read for
+  every repo, the percentages would be computed against an incomplete denominator and silently lie.
+
 ## Key Files
-- `src/data/resume.tsx` — Single source of truth for ALL portfolio data (do NOT split)
+- `src/data/resume.tsx` — Single source of truth for ALL hand-written portfolio data (do NOT split)
+- `src/data/github.json` — Generated GitHub data (do NOT hand-edit; run `pnpm run github:sync`)
+- `scripts/fetch-github.mjs` — The sync script above
 - `src/components/desktop/` — macOS shell: Desktop, MenuBar, Dock, Window, WindowManager, MacIcons, Wallpaper
 - `src/components/tablet/` — iPadOS layout: IPadDesktop, IPadMenuBar
 - `src/components/mobile/` — iPhone layout: iPhoneHome, iPhoneAppView, iPhoneStatusBar
@@ -79,7 +97,9 @@ pnpm run deploy   # build + deploy to gh-pages
 - [x] Phase 6: Cleanup & deploy (removed old components, .gitignore, .nojekyll, deployed)
 
 ## Rules
-- Keep ALL portfolio data in `src/data/resume.tsx` — single file, no splitting
+- Keep ALL hand-written portfolio data in `src/data/resume.tsx` — single file, no splitting
+- Skills live in `DATA.skillGroups` (grouped); `ALL_SKILLS` is the derived flat list — edit the groups, never the derived list
+- `src/data/github.json` is generated — never hand-edit it
 - Use pnpm, not npm
 - Framer Motion for all animations
 - Static export only (no server runtime) — must work on GitHub Pages

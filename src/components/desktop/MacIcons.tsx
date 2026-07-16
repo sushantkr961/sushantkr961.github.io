@@ -201,6 +201,30 @@ export function LaunchpadIcon({ size = 44 }: { size?: number }) {
   );
 }
 
+export function GitHubIcon({ size = 44 }: { size?: number }) {
+  const id = `gh-${size}`;
+  return (
+    <div style={{ width: size, height: size }} className="rounded-[22%] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
+      <svg viewBox="0 0 120 120" className="w-full h-full">
+        <defs>
+          <linearGradient id={`${id}-bg`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#3a3f46" />
+            <stop offset="100%" stopColor="#14171a" />
+          </linearGradient>
+        </defs>
+        <rect width="120" height="120" rx="26" fill={`url(#${id}-bg)`} />
+        <rect width="120" height="55" rx="26" fill="white" opacity="0.07" />
+        <g transform="translate(24, 23) scale(3.0)">
+          <path
+            fill="#fff"
+            d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+          />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
 export function CalendarIcon({ size = 44 }: { size?: number }) {
   const today = new Date();
   const day = today.getDate().toString();

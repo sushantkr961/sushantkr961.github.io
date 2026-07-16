@@ -12,6 +12,7 @@ import { MailContact } from "@/components/windows/MailContact";
 import { NotesExperience } from "@/components/windows/NotesExperience";
 import { CalendarEducation } from "@/components/windows/CalendarEducation";
 import { LaunchpadOverview } from "@/components/windows/LaunchpadOverview";
+import { GitHubStats } from "@/components/windows/GitHubStats";
 import {
   FinderIcon,
   TerminalIcon,
@@ -19,6 +20,7 @@ import {
   MailIcon,
   NotesIcon,
   CalendarIcon,
+  GitHubIcon,
   LaunchpadIcon,
 } from "./MacIcons";
 import { IPhoneHome } from "@/components/mobile/iPhoneHome";
@@ -30,7 +32,7 @@ import { useWindowManager } from "@/hooks/useWindowManager";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WINDOW_IDS: WindowId[] = ["finder", "terminal", "safari", "mail", "notes", "calendar", "launchpad"];
+const WINDOW_IDS: WindowId[] = ["finder", "terminal", "safari", "mail", "notes", "calendar", "github", "launchpad"];
 
 function MacDesktopInner() {
   const { windows } = useWindowManager();
@@ -95,6 +97,9 @@ function MacDesktopInner() {
         </Window>
         <Window id="calendar" title="Calendar — Education" icon={<CalendarIcon size={16} />}>
           <CalendarEducation />
+        </Window>
+        <Window id="github" title="GitHub — Open Source" icon={<GitHubIcon size={16} />}>
+          <GitHubStats />
         </Window>
         <Window id="launchpad" title="Launchpad — Overview" icon={<LaunchpadIcon size={16} />}>
           <LaunchpadOverview />

@@ -1,6 +1,6 @@
 "use client";
 
-import { DATA } from "@/data/resume";
+import { DATA, ALL_SKILLS } from "@/data/resume";
 import { motion } from "framer-motion";
 
 export function TerminalSkills() {
@@ -27,17 +27,23 @@ export function TerminalSkills() {
         <span className="text-neutral-500">:</span>
         <span className="text-blue-400">~</span>
         <span className="text-neutral-500"> $ </span>
-        <span className="text-white">ls ./skills/</span>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 md:gap-x-6 gap-y-1 mt-1.5">
-          {DATA.skills.map((skill, i) => (
+        <span className="text-white">tree ./skills/</span>
+        <div className="mt-1.5 space-y-2">
+          {DATA.skillGroups.map((group, gi) => (
             <motion.div
-              key={skill}
+              key={group.label}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 + i * 0.05 }}
-              className="text-yellow-300"
+              transition={{ delay: 0.25 + gi * 0.09 }}
             >
-              {skill}/
+              <div className="text-cyan-300">
+                {gi === DATA.skillGroups.length - 1 ? "└──" : "├──"} {group.label}/
+              </div>
+              <div className="flex flex-wrap gap-x-3 gap-y-0.5 pl-5 text-yellow-300">
+                {group.items.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -49,8 +55,8 @@ export function TerminalSkills() {
         <span className="text-neutral-500">:</span>
         <span className="text-blue-400">~</span>
         <span className="text-neutral-500"> $ </span>
-        <span className="text-white">echo &quot;Total: {DATA.skills.length} skills loaded&quot;</span>
-        <div className="text-green-300 mt-0.5">Total: {DATA.skills.length} skills loaded</div>
+        <span className="text-white">echo &quot;Total: {ALL_SKILLS.length} skills loaded&quot;</span>
+        <div className="text-green-300 mt-0.5">Total: {ALL_SKILLS.length} skills loaded</div>
       </div>
 
       {/* cat experience */}

@@ -12,6 +12,15 @@
 /.next/
 /out/
 
+# typescript
+tsconfig.tsbuildinfo
+
+# secrets — never commit tokens or service-account keys
+.env
+*.pem
+*serviceAccountKey*.json
+.gh_portfolio_token
+
 # misc
 .DS_Store
 .env.local

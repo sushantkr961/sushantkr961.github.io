@@ -12,23 +12,77 @@ export const DATA = {
   summary:
     "At the end of 2022, I fully transitioned into [software development](#occupation)—what once started as a hobby became my full-time focus. Before that, I earned my [bachelor's degree in Mechanical Engineering](/#education) in 2020. In mid-2022, I joined [Masai School](#platform), an online platform, to sharpen my coding skills and dive deep into [full-stack development](#skills). By early 2023, I landed my first role as a [Software Developer at Pantheon Digital](#designation) while also working as a [freelancer](#freelancer), turning my passion into a profession.",
   avatarUrl: "/me.png",
-  skills: [
-    "React",
-    "Next.js",
-    "Typescript",
-    "Node.js",
-    "React Native",
-    "Android Studio",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "Template Engines",
-    "MongoDB",
-    "MySQL",
-    "Express.js",
-    "Redux",
-    "Redux-toolkit",
-    "Redux-saga",
+  skillGroups: [
+    {
+      label: "Languages",
+      items: ["TypeScript", "JavaScript", "Java", "Kotlin", "PHP", "SQL", "HTML", "CSS"],
+    },
+    {
+      label: "Frontend",
+      items: [
+        "React",
+        "Next.js",
+        "Redux",
+        "Redux-toolkit",
+        "Redux-saga",
+        "TanStack Query",
+        "Tailwind CSS",
+        "Chakra UI",
+        "Material UI",
+        "Framer Motion",
+        "Radix UI",
+      ],
+    },
+    {
+      label: "Mobile",
+      items: [
+        "React Native",
+        "Expo",
+        "React Navigation",
+        "Android Studio",
+        "Xcode",
+        "Play Store Release",
+        "Firebase Cloud Messaging",
+      ],
+    },
+    {
+      label: "Backend",
+      items: [
+        "Node.js",
+        "Express.js",
+        "Prisma",
+        "Mongoose",
+        "REST APIs",
+        "JWT Auth",
+        "Socket.IO",
+        "Zod",
+        "Laravel",
+        "Template Engines",
+      ],
+    },
+    {
+      label: "Databases",
+      items: ["MongoDB", "MySQL", "MariaDB", "Firebase"],
+    },
+    {
+      label: "Tooling & Delivery",
+      items: [
+        "Electron",
+        "Docker",
+        "Git",
+        "Vitest",
+        "pnpm",
+        "Vercel",
+        "Netlify",
+        "GitHub Pages",
+        "Figma",
+        "Postman",
+      ],
+    },
+    {
+      label: "Integrations",
+      items: ["Razorpay", "PayPal", "Traccar GPS", "Cloudflare Tunnel", "Nodemailer"],
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -127,6 +181,36 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "School Management System — On-Premise",
+      href: "https://github.com/sushantkr961/School-Mangagement-Software---onPremise",
+      dates: "2026 - Present",
+      active: true,
+      description:
+        "A complete [school ERP](#erp) that installs from a single desktop shortcut. An [Electron](#electron) supervisor boots a bundled [MariaDB](#mariadb), an [Express API](#api) and a [Next.js](#nextjs) server, then opens a setup wizard — the school's IT admin installs once, and hundreds of teachers, students and parents connect from their own devices with nothing to install. A [Cloudflare tunnel](#tunnel) makes the parent portal reachable without port forwarding, a static IP, or router config, and works behind the CGNAT most school broadband sits behind. [Multi-branch isolation](#isolation) is enforced structurally by a Prisma extension that injects the branch scope into every query and throws rather than leak another school's data. 81 tables across 13 modules, backed by [281 unit tests](#tests) plus 19 branch-isolation tests against a real database — covering integer-paise money handling, exam grading rules, and timetable conflict detection.",
+      technologies: [
+        "TypeScript",
+        "Next.js",
+        "Electron",
+        "Node.js",
+        "Express.js",
+        "Prisma",
+        "MariaDB",
+        "Zod",
+        "Vitest",
+        "Tailwind CSS",
+        "Cloudflare Tunnel",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sushantkr961/School-Mangagement-Software---onPremise",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
     {
       title: "Loadingwalla Android App",
       href: "https://play.google.com/store/apps/details?id=com.loadingwalla",
@@ -234,6 +318,133 @@ export const DATA = {
       image: "",
       video:
         "/jasoberoi.mp4",
+    },
+    {
+      title: "SkMart — MERN E-Commerce",
+      href: "https://github.com/sushantkr961/SkMart",
+      dates: "2023",
+      active: false,
+      description:
+        "A full [e-commerce store](#store) built on the MERN stack: product catalog with categories and reviews, cart and order flow, [PayPal payments](#paypal), and an admin dashboard with sales analytics charts. It also carries a [real-time chat](#chat) built on [Socket.IO](#socket) that connects shoppers directly to the store admin, plus database seeders and [JWT](#jwt) authentication hardened with helmet.",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.IO",
+        "Redux",
+        "PayPal",
+        "JWT Auth",
+        "Bootstrap",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://skmart.onrender.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/sushantkr961/SkMart",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Tripadvisor Clone",
+      href: "https://github.com/sushantkr961/Tripadvisor-Clone",
+      dates: "2023",
+      active: false,
+      description:
+        "A [Tripadvisor](#tripadvisor) clone covering hotel browsing, debounced search, and full account management — signup, login, and [password reset over email](#email) via Nodemailer. Ships an [admin dashboard](#admin) for adding hotels behind private routes. The backend is written in [TypeScript](#ts) with Express and Mongoose; the frontend uses Chakra UI and Redux.",
+      technologies: [
+        "TypeScript",
+        "React",
+        "Express.js",
+        "MongoDB",
+        "Chakra UI",
+        "Redux",
+        "JWT Auth",
+        "Nodemailer",
+        "Firebase",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://cheery-dasik-4fae30.netlify.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/sushantkr961/Tripadvisor-Clone",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "HLS Video Player & WebView App",
+      href: "https://github.com/sushantkr961/houseofedtechAssignment",
+      dates: "Jan 2026",
+      active: false,
+      description:
+        "An [Expo](#expo) React Native app pairing an instrumented [WebView](#webview) with a custom [HLS video player](#hls). The player is built on expo-video with a hand-rolled control suite — play/pause, mute, ±10s jump, fullscreen, and a multi-stream selector — with controls kept reactively in sync with the player's internal state. A [local notification](#notifications) system fires when web content finishes loading.",
+      technologies: ["TypeScript", "React Native", "Expo", "HLS", "expo-video"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sushantkr961/houseofedtechAssignment",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Workflo — Kanban Task Board",
+      href: "https://github.com/sushantkr961/workflo-",
+      dates: "2024",
+      active: false,
+      description:
+        "A [Kanban](#kanban) task-management board with column-based task organisation, built on [Next.js](#nextjs) App Router with API routes handling auth and task CRUD. Uses [Redux Toolkit](#redux) for client state, Mongoose for persistence, and JWT for sessions.",
+      technologies: [
+        "TypeScript",
+        "Next.js",
+        "Redux-toolkit",
+        "MongoDB",
+        "Tailwind CSS",
+        "JWT Auth",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sushantkr961/workflo-",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "MERN Chat App",
+      href: "https://github.com/sushantkr961/chat_app",
+      dates: "2023",
+      active: false,
+      description:
+        "A [MERN](#mern) messaging app supporting one-to-one and [group chats](#group), with JWT authentication and a Chakra UI frontend. Chat state is shared through a React context provider, with the backend modelling users, chats and messages separately.",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Chakra UI", "JWT Auth"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sushantkr961/chat_app",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
     },
   ],
   // hackathons: [
@@ -622,3 +833,6 @@ export const DATA = {
   //   },
   // ],
 } as const;
+
+/** Flat skill list, derived so the groups above stay the single place skills are edited. */
+export const ALL_SKILLS: string[] = DATA.skillGroups.flatMap((g) => [...g.items]);

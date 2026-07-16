@@ -9,6 +9,7 @@ export type WindowId =
   | "mail"
   | "notes"
   | "calendar"
+  | "github"
   | "launchpad";
 
 export interface WindowState {
@@ -44,6 +45,7 @@ const DEFAULT_SIZES: Record<WindowId, { width: number; height: number }> = {
   mail: { width: 680, height: 460 },
   notes: { width: 700, height: 480 },
   calendar: { width: 660, height: 440 },
+  github: { width: 860, height: 580 },
   launchpad: { width: 720, height: 500 },
 };
 
@@ -54,6 +56,7 @@ const DEFAULT_OFFSETS: Record<WindowId, { x: number; y: number }> = {
   mail: { x: 180, y: 100 },
   notes: { x: 120, y: 70 },
   calendar: { x: 200, y: 90 },
+  github: { x: 90, y: 40 },
   launchpad: { x: 140, y: 60 },
 };
 
@@ -76,6 +79,7 @@ const WINDOW_IDS: WindowId[] = [
   "mail",
   "notes",
   "calendar",
+  "github",
   "launchpad",
 ];
 

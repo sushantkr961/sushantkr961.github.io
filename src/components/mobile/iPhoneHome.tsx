@@ -10,6 +10,7 @@ import {
   MailIcon,
   NotesIcon,
   CalendarIcon,
+  GitHubIcon,
   LaunchpadIcon,
 } from "@/components/desktop/MacIcons";
 import { IPhoneStatusBar } from "./iPhoneStatusBar";
@@ -28,6 +29,7 @@ const HOME_APPS: AppItem[] = [
   { id: "safari", label: "Projects", icon: <SafariIcon size={60} /> },
   { id: "mail", label: "Contact", icon: <MailIcon size={60} /> },
   { id: "calendar", label: "Education", icon: <CalendarIcon size={60} /> },
+  { id: "github", label: "GitHub", icon: <GitHubIcon size={60} /> },
   { id: "launchpad", label: "Overview", icon: <LaunchpadIcon size={60} /> },
 ];
 
@@ -36,6 +38,7 @@ const DOCK_APPS: AppItem[] = [
   { id: "safari", label: "Projects", icon: <SafariIcon size={52} /> },
   { id: "mail", label: "Contact", icon: <MailIcon size={52} /> },
   { id: "terminal", label: "Skills", icon: <TerminalIcon size={52} /> },
+  { id: "github", label: "GitHub", icon: <GitHubIcon size={52} /> },
 ];
 
 function AppIcon({

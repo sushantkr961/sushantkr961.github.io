@@ -9,6 +9,7 @@ import { MailContact } from "@/components/windows/MailContact";
 import { NotesExperience } from "@/components/windows/NotesExperience";
 import { CalendarEducation } from "@/components/windows/CalendarEducation";
 import { LaunchpadOverview } from "@/components/windows/LaunchpadOverview";
+import { GitHubStats } from "@/components/windows/GitHubStats";
 import { ChevronLeft } from "lucide-react";
 
 const APP_CONTENT: Record<WindowId, { title: string; component: React.ReactNode }> = {
@@ -18,6 +19,7 @@ const APP_CONTENT: Record<WindowId, { title: string; component: React.ReactNode 
   mail: { title: "Contact", component: <MailContact /> },
   notes: { title: "Experience", component: <NotesExperience /> },
   calendar: { title: "Education", component: <CalendarEducation /> },
+  github: { title: "GitHub", component: <GitHubStats /> },
   launchpad: { title: "Overview", component: <LaunchpadOverview /> },
 };
 

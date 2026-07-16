@@ -3,7 +3,7 @@
 import { useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { WindowId } from "@/components/desktop/WindowManager";
-import { DATA } from "@/data/resume";
+import { DATA, ALL_SKILLS } from "@/data/resume";
 import {
   FinderIcon,
   TerminalIcon,
@@ -11,6 +11,7 @@ import {
   MailIcon,
   NotesIcon,
   CalendarIcon,
+  GitHubIcon,
   LaunchpadIcon,
 } from "@/components/desktop/MacIcons";
 import { FinderAbout } from "@/components/windows/FinderAbout";
@@ -20,6 +21,7 @@ import { MailContact } from "@/components/windows/MailContact";
 import { NotesExperience } from "@/components/windows/NotesExperience";
 import { CalendarEducation } from "@/components/windows/CalendarEducation";
 import { LaunchpadOverview } from "@/components/windows/LaunchpadOverview";
+import { GitHubStats } from "@/components/windows/GitHubStats";
 import { Wallpaper } from "@/components/desktop/Wallpaper";
 import { IPadMenuBar } from "./IPadMenuBar";
 
@@ -38,6 +40,7 @@ const APPS: AppItem[] = [
   { id: "mail", label: "Contact", sublabel: "Mail", icon: <MailIcon size={56} />, component: <MailContact /> },
   { id: "notes", label: "Experience", sublabel: "Notes", icon: <NotesIcon size={56} />, component: <NotesExperience /> },
   { id: "calendar", label: "Education", sublabel: "Calendar", icon: <CalendarIcon size={56} />, component: <CalendarEducation /> },
+  { id: "github", label: "GitHub", sublabel: "Open Source", icon: <GitHubIcon size={56} />, component: <GitHubStats /> },
   { id: "launchpad", label: "Overview", sublabel: "Launchpad", icon: <LaunchpadIcon size={56} />, component: <LaunchpadOverview /> },
 ];
 
@@ -48,6 +51,7 @@ const DOCK_APPS = [
   { id: "mail" as WindowId, icon: <MailIcon size={46} /> },
   { id: "notes" as WindowId, icon: <NotesIcon size={46} /> },
   { id: "calendar" as WindowId, icon: <CalendarIcon size={46} /> },
+  { id: "github" as WindowId, icon: <GitHubIcon size={46} /> },
   { id: "launchpad" as WindowId, icon: <LaunchpadIcon size={46} /> },
 ];
 
@@ -159,7 +163,7 @@ export function IPadDesktop() {
             {/* Stats Row */}
             <div className="flex justify-center gap-3 px-8 pb-3">
               <div className="px-5 py-2 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10">
-                <p className="text-sm font-semibold text-white text-center">{DATA.skills.length}</p>
+                <p className="text-sm font-semibold text-white text-center">{ALL_SKILLS.length}</p>
                 <p className="text-[9px] text-white/50 uppercase text-center">Skills</p>
               </div>
               <div className="px-5 py-2 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10">
@@ -179,7 +183,7 @@ export function IPadDesktop() {
                   Top Technologies
                 </p>
                 <div className="flex flex-wrap gap-1.5">
-                  {DATA.skills.slice(0, 10).map((skill) => (
+                  {ALL_SKILLS.slice(0, 10).map((skill) => (
                     <span
                       key={skill}
                       className="px-2 py-0.5 text-[10px] font-medium text-white/70 bg-white/10 rounded-full border border-white/10"

@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && gh-pages -d out -b gh-pages --dotfiles"
+    "github:sync": "node scripts/fetch-github.mjs",
+    "deploy": "pnpm run github:sync && next build && gh-pages -d out -b gh-pages --dotfiles"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.0",
