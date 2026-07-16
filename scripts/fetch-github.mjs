@@ -15,6 +15,20 @@ const USER = "sushantkr961";
 const OUT = join(process.cwd(), "src/data/github.json");
 const START_YEAR = 2022;
 
+/**
+ * Whether private repos are NAMED in the published output.
+ *
+ * Off by default, and deliberately not an env var — flipping this publishes repo names,
+ * descriptions and timestamps to a public site, including repos owned by clients and
+ * employers who never consented to appear there. It should take an intentional code edit
+ * and a review, not a stray shell variable.
+ *
+ * Private repos still count toward every aggregate (repo totals, language volume,
+ * contribution graph) with this off. Listing them by name adds nothing a visitor can use —
+ * the links 404 for everyone but the owner — so the default trades nothing away.
+ */
+const PUBLISH_PRIVATE_NAMES = false;
+
 async function resolveToken() {
   if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN.trim();
   try {
@@ -130,7 +144,7 @@ const profile = await gh(`/users/${USER}`);
 const repos = [];
 for (let page = 1; page <= 10; page++) {
   const path = token
-    ? `/user/repos?per_page=100&page=${page}&affiliation=owner&sort=updated`
+    ? `/user/repos?per_page=100&page=${page}&affiliation=owner,collaborator,organization_member&sort=updated`
     : `/users/${USER}/repos?per_page=100&page=${page}&sort=updated`;
   const batch = await gh(path);
   repos.push(...batch);
@@ -138,23 +152,42 @@ for (let page = 1; page <= 10; page++) {
 }
 
 const owned = repos.filter((r) => !r.fork && r.owner.login === USER);
-console.log(`→ ${repos.length} repos (${owned.length} owned, ${repos.length - owned.length} forks)`);
 
-// Language bytes, aggregated across owned repos. Every repo must report, otherwise the
-// percentages are computed against an incomplete denominator and quietly lie.
+/**
+ * Repos owned by someone else (a client, an employer, a teammate) that this account can
+ * only see because it was invited. They count toward aggregate stats, but PUBLISH_PRIVATE
+ * governs whether any of them is ever named on the public site — their names alone disclose
+ * a third party's internal projects, and those third parties never agreed to appear here.
+ */
+const external = repos.filter((r) => r.owner.login !== USER);
+const privateCount = repos.filter((r) => r.private).length;
+
+console.log(
+  `→ ${repos.length} repos visible (${owned.length} owned, ${external.length} via invite/org, ` +
+    `${privateCount} private, ${repos.filter((r) => r.fork).length} forks)`,
+);
+
+// Language bytes across every repo this account authored in — private and invited work
+// included, since that is where the real code volume lives. This is an aggregate: no repo
+// is identifiable from a byte count, so it discloses nothing even for client repos.
+// Every repo must report, otherwise the percentages are computed against an incomplete
+// denominator and quietly lie.
+const langSources = repos.filter((r) => !r.fork);
 const languageBytes = {};
 let covered = 0;
-for (const repo of owned) {
-  const langs = await gh(`/repos/${USER}/${repo.name}/languages`);
+for (const repo of langSources) {
+  const langs = await gh(`/repos/${repo.full_name}/languages`);
   covered++;
   for (const [lang, bytes] of Object.entries(langs)) {
     languageBytes[lang] = (languageBytes[lang] ?? 0) + bytes;
   }
 }
-if (covered !== owned.length) {
-  throw new Error(`Language data covers only ${covered}/${owned.length} repos — refusing to write skewed percentages.`);
+if (covered !== langSources.length) {
+  throw new Error(
+    `Language data covers only ${covered}/${langSources.length} repos — refusing to write skewed percentages.`,
+  );
 }
-console.log(`→ languages read from all ${covered} owned repos`);
+console.log(`→ languages read from all ${covered} non-fork repos (private included)`);
 
 const totalBytes = Object.values(languageBytes).reduce((a, b) => a + b, 0) || 1;
 const languages = Object.entries(languageBytes)
@@ -221,8 +254,9 @@ const data = {
   stats: {
     totalRepos: repos.length,
     ownedRepos: owned.length,
-    forkedRepos: repos.length - owned.length,
-    privateRepos: owned.filter((r) => r.private).length,
+    forkedRepos: repos.filter((r) => r.fork).length,
+    privateRepos: privateCount,
+    externalRepos: external.length,
     totalStars: owned.reduce((sum, r) => sum + r.stargazers_count, 0),
     totalForks: owned.reduce((sum, r) => sum + r.forks_count, 0),
     totalContributions: years.reduce((sum, y) => sum + y.total, 0),
@@ -232,7 +266,10 @@ const data = {
   years,
   languages,
   contributions: recentDays,
+  // The published list. Private repos are excluded unless PUBLISH_PRIVATE_NAMES is on:
+  // their links 404 for every visitor, so listing them costs disclosure and returns nothing.
   repos: owned
+    .filter((r) => PUBLISH_PRIVATE_NAMES || !r.private)
     .map((r) => ({
       name: r.name,
       description: r.description,
@@ -248,6 +285,12 @@ const data = {
     }))
     .sort((a, b) => b.stars - a.stars || b.updatedAt.localeCompare(a.updatedAt)),
 };
+
+const named = data.repos.filter((r) => r.private).length;
+console.log(
+  `→ publishing ${data.repos.length} repo names (${named} private)` +
+    (PUBLISH_PRIVATE_NAMES ? "  ⚠ PRIVATE NAMES ARE PUBLIC" : "; private work counts toward stats only"),
+);
 
 await writeFile(OUT, JSON.stringify(data, null, 2));
 console.log(

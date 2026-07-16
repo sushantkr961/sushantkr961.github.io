@@ -267,6 +267,10 @@ function Repos() {
     );
   });
 
+  // The Overview counts every repo; this tab can only list the public ones. Say so, rather
+  // than let the two numbers quietly disagree.
+  const unlisted = gh.stats.ownedRepos - gh.repos.length;
+
   return (
     <div className="space-y-2.5">
       <input
@@ -275,6 +279,13 @@ function Repos() {
         placeholder="Search repositories…"
         className="w-full rounded-md border border-black/10 bg-white px-2.5 py-1.5 text-[11px] text-neutral-700 outline-none placeholder:text-neutral-400 focus:border-emerald-500 dark:border-white/10 dark:bg-[#1e1e1e] dark:text-neutral-200"
       />
+
+      {unlisted > 0 && (
+        <p className="text-[9px] leading-snug text-neutral-400">
+          Showing {gh.repos.length} public repositories. {unlisted} private repositories — client
+          and in-house work under NDA — are counted in the stats above but not listed here.
+        </p>
+      )}
 
       <div className="flex flex-wrap gap-1">
         <button
