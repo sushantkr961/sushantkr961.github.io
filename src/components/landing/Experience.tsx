@@ -15,7 +15,7 @@ export function Experience() {
             key={w.company}
             {...rise}
             transition={{ ...rise.transition, delay: i * 0.05 }}
-            className="grid gap-4 rounded-2xl border border-landing-line/10 bg-landing-surface p-5 sm:grid-cols-[48px_minmax(0,1fr)_auto] sm:p-6"
+            className="grid grid-cols-1 gap-4 rounded-2xl border border-landing-line/10 bg-landing-surface p-5 sm:grid-cols-[48px_minmax(0,1fr)_auto] sm:p-6"
           >
             <div className="size-12 overflow-hidden rounded-xl border border-landing-line/10 bg-landing-bg">
               <Image src={w.logoUrl} alt={w.company} width={48} height={48} className="size-full object-cover" />
@@ -42,7 +42,7 @@ export function Experience() {
         ))}
         <motion.div
           {...rise}
-          className="grid gap-3 sm:grid-cols-3"
+          className="grid grid-cols-1 gap-3 sm:grid-cols-3"
         >
           {[...DATA.certification, ...DATA.education].map((e) => (
             <div

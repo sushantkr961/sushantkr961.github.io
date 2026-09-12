@@ -107,24 +107,30 @@ export function RouteTrace() {
         const isLast = w.i === PTS.length - 1;
         const isFirst = w.i === 0;
         return (
-          <motion.div
+          /* Outer box only positions; the inner box only fades. Framer Motion writes an
+             inline transform, which would cancel Tailwind's translate classes if they
+             shared one element. */
+          <div
             key={w.what}
-            initial={reduce ? { opacity: 1 } : { opacity: 0, y: 4 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: reduce ? 0 : 0.5 + (w.i / (PTS.length - 1)) * 2.2 }}
             style={{ left }}
-            className={`absolute whitespace-nowrap font-mono text-[11px] leading-tight ${
+            className={`absolute whitespace-nowrap font-mono text-[10px] leading-tight sm:text-[11px] ${
               w.side === "top" ? "-top-2 -translate-y-full" : "-bottom-1 translate-y-full"
             } ${
               isLast ? "-translate-x-full text-right" : isFirst ? "" : "-translate-x-1/2 text-center"
             } ${n === 1 || n === 2 ? "hidden sm:block" : ""}`}
           >
-            <span className={isLast ? "text-landing-live" : "text-landing-accent"}>
-              {w.when}
-            </span>
-            <span className="text-landing-text"> · {w.what}</span>
-            <span className="block text-landing-dim">{w.sub}</span>
-          </motion.div>
+            <motion.div
+              initial={reduce ? { opacity: 1 } : { opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: reduce ? 0 : 0.5 + (w.i / (PTS.length - 1)) * 2.2 }}
+            >
+              <span className={isLast ? "text-landing-live" : "text-landing-accent"}>
+                {w.when}
+              </span>
+              <span className="text-landing-text"> · {w.what}</span>
+              <span className="hidden text-landing-dim sm:block">{w.sub}</span>
+            </motion.div>
+          </div>
         );
       })}
     </div>

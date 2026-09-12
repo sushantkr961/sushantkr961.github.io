@@ -25,7 +25,7 @@ export function Landing() {
     <main className="landing min-h-screen overflow-x-hidden bg-landing-bg font-body text-landing-text antialiased selection:bg-landing-accent selection:text-landing-accent-ink">
       <TopBar />
       <Dock />
-      <div className="mx-auto max-w-6xl space-y-16 px-4 pb-28 pt-4 sm:px-6 sm:pt-6 lg:space-y-20" id="top">
+      <div className="mx-auto max-w-6xl space-y-16 px-4 pb-28 pt-4 sm:px-6 sm:pt-6 lg:space-y-20 xl:max-w-7xl 2xl:max-w-[1440px]" id="top">
         <div className="space-y-4">
           <Hero />
           <Proof />
@@ -44,7 +44,7 @@ export function Landing() {
 
 function TopBar() {
   return (
-    <header className="mx-auto flex max-w-6xl items-center justify-between px-4 pt-4 sm:px-6">
+    <header className="mx-auto flex max-w-6xl items-center justify-between px-4 pt-4 sm:px-6 xl:max-w-7xl 2xl:max-w-[1440px]">
       <a href="#top" className="flex items-center gap-3">
         <span className="size-9 overflow-hidden rounded-full border border-landing-line/15">
           <Image src={DATA.avatarUrl} alt="" width={36} height={36} className="size-full object-cover object-[center_20%]" />

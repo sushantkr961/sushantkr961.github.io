@@ -45,7 +45,7 @@ export function Hero() {
           <motion.h1
             {...rise}
             transition={{ ...rise.transition, delay: 0.05 }}
-            className="mt-6 font-display text-[2.6rem] font-semibold leading-[0.98] tracking-[-0.02em] text-landing-text sm:text-6xl lg:text-[4.25rem]"
+            className="mt-6 font-display text-[2.6rem] font-semibold leading-[0.98] tracking-[-0.02em] text-landing-text sm:text-6xl lg:text-[3.5rem] xl:text-[4.25rem] 2xl:text-[4.75rem]"
           >
             Software that ships,
             <br />
@@ -55,7 +55,7 @@ export function Hero() {
           <motion.p
             {...rise}
             transition={{ ...rise.transition, delay: 0.1 }}
-            className="mt-6 max-w-xl text-[15px] leading-relaxed text-landing-muted sm:text-base"
+            className="mt-6 max-w-xl text-base leading-relaxed text-landing-muted"
           >
             I&apos;m Sushant — a Full-Stack, React Native &amp; IoT engineer. I take
             products from idea to the App Store, Play Store, factory floor and

@@ -62,9 +62,9 @@ export function ProjectCover({ p, className = "" }: { p: Project; className?: st
           pts.map(([x, y], i) => (
             <rect
               key={i}
-              x={x + 4}
+              x={(i * 400) / n + 4}
               y={y}
-              width="18"
+              width={400 / n - 8}
               height={160 - y}
               rx="2"
               fill="rgb(var(--l-accent))"

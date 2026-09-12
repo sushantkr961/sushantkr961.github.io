@@ -111,7 +111,7 @@ function FeaturedCard({ p, i, wide }: { p: Project; i: number; wide: boolean }) 
             <span className="text-landing-text/80">Role:</span> {p.role}
           </p>
         )}
-        <p className={`mt-3 text-sm leading-relaxed text-landing-muted ${wide ? "" : "line-clamp-4"}`}>
+        <p className={`mt-3 text-sm leading-relaxed text-landing-muted ${wide ? "max-w-prose" : "line-clamp-4"}`}>
           {clean(p.description)}
         </p>
         {p.hardware && p.hardware.length > 0 && (
@@ -155,7 +155,7 @@ function Row({ p, i }: { p: Project; i: number }) {
     <motion.div
       {...rise}
       transition={{ ...rise.transition, delay: Math.min(i, 4) * 0.03 }}
-      className="grid gap-3 p-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start"
+      className="grid grid-cols-1 gap-3 p-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start"
     >
       <div className="min-w-0">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
