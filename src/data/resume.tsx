@@ -1,5 +1,578 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, UserIcon } from "lucide-react";
+import type { ReactNode } from "react";
+
+/* ------------------------------------------------------------------ *
+ *  Projects — newest first. `featured` picks the big cards on the home
+ *  page; `subtitle` is the short product name the desktop Safari tabs use;
+ *  `kind` drives the badge ("employer · private", "freelance", …).
+ *  Employer and contract cards carry NO source link on purpose.
+ * ------------------------------------------------------------------ */
+export type ProjectKind =
+  | "employer"
+  | "contract"
+  | "freelance"
+  | "product"
+  | "open-source";
+export type ProjectGroup = "iot" | "platforms" | "freelance" | "earlier";
+
+export interface Project {
+  /** Action-verb headline shown on cards. */
+  title: string;
+  /** Short product name (desktop Safari tabs, card eyebrow). */
+  subtitle: string;
+  kind: ProjectKind;
+  group: ProjectGroup;
+  /** One honest line about what I did on it. */
+  role?: string;
+  featured?: boolean;
+  /** Physical hardware involved, shown as chips. */
+  hardware?: readonly string[];
+  href: string;
+  dates: string;
+  active: boolean;
+  description: string;
+  technologies: readonly string[];
+  links: readonly { type: string; href: string; icon: ReactNode }[];
+  image: string;
+  video: string;
+}
+
+export const PROJECT_GROUPS: Record<ProjectGroup, { label: string; blurb: string }> = {
+  iot: {
+    label: "Industrial IoT at Uptime Linked",
+    blurb: "Sensors on factory machines → live dashboards, relays and reports. 2026 – present.",
+  },
+  platforms: {
+    label: "Logistics & HR platforms",
+    blurb: "Marketplace, GPS and HR products I built and led at Pantheon Digital. 2023 – 2026.",
+  },
+  freelance: {
+    label: "Freelance & own products",
+    blurb: "Client builds shipped end to end, plus a product of my own.",
+  },
+  earlier: {
+    label: "Earlier & open source",
+    blurb: "Full-stack builds from the first years — source on GitHub.",
+  },
+};
+
+const PROJECTS: readonly Project[] = [
+  /* ---------------------- Industrial IoT (2026 →) ---------------------- */
+  {
+    title: "Keep every factory machine visible, live",
+    subtitle: "UptimeLinked",
+    kind: "employer",
+    group: "iot",
+    featured: true,
+    role: "Lead engineer · top contributor (490+ commits) · team of 6",
+    href: "https://www.hungrybulb.com",
+    dates: "Mar 2026 – Present",
+    active: true,
+    description:
+      "Manufacturing IoT platform that turns sensor pulses from the shop floor into decisions a plant manager can act on. Three-phase power meters, cycle counters and temperature loggers stream readings over MQTT; the platform turns them into live Active / Idle / Offline boards, shift-wise production sheets, OEE and productivity scores, automatic downtime tickets with 4M root-cause analysis, energy and carbon reports, and ANDON kiosks on factory TVs. Next.js 16 with ~470 API routes and ~120 Prisma models on MySQL, TimescaleDB for high-volume sensor archives, and alerts over Telegram, WhatsApp and push. Built with the Uptime Linked team; I lead the platform and its roadmap.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "MySQL",
+      "TimescaleDB",
+      "MQTT",
+      "Firebase",
+      "Telegram Bot",
+      "AWS S3",
+      "Recharts",
+    ],
+    hardware: ["3-phase power meters", "Cycle counters", "NodeMCU", "Temperature / BMS loggers"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Read machines from a Raspberry Pi and phone home",
+    subtitle: "Intelli-Edge",
+    kind: "employer",
+    group: "iot",
+    featured: true,
+    role: "Team build · I own the device sync, health and update paths",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: true,
+    description:
+      "A Python agent that runs on a Raspberry Pi bolted next to the machines. It reads 11 digital inputs and 4 current transformers through an Arduino Nano, plus a Modbus RTU energy meter where one is fitted, and reports one row per machine per time window to UptimeLinked. It runs as a systemd service, queues uploads atomically so a power cut never corrupts data, provisions its own device identity, and self-updates from a signed manifest. Built with the Uptime Linked team.",
+    technologies: ["Python", "Raspberry Pi", "Arduino Nano", "Modbus RTU", "systemd", "REST"],
+    hardware: ["Raspberry Pi", "Arduino Nano", "Current transformers (CT)", "Modbus RTU energy meter"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Drive factory-floor TVs and relays from the cloud",
+    subtitle: "Machine Mate",
+    kind: "employer",
+    group: "iot",
+    role: "Team build · I own the server API, relay control spec and device runbook",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: true,
+    description:
+      "A Raspberry Pi 4 that hangs behind one or two TVs on a factory floor. It only ever calls out: every few seconds it asks the server what each screen should show, renders the dashboards with a PySide6 / QML renderer on two HDMI outputs, and drives five GPIO relays — red, yellow and green stack lights, a buzzer and a machine interlock. If the network drops it keeps showing the last data marked stale and fails every relay open after a 75-second grace window. Ships with a one-line installer, A/B self-update with rollback, and an mmctl command for status, logs and reset. Built with the Uptime Linked team.",
+    technologies: ["Python", "PySide6 / QML", "Raspberry Pi", "GPIO", "systemd", "Next.js"],
+    hardware: ["Raspberry Pi 4", "5-channel GPIO relays", "Stack lights + buzzer", "Dual HDMI"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Bridge RS485 energy meters to the internet",
+    subtitle: "ESP32 Modbus Gateway",
+    kind: "employer",
+    group: "iot",
+    role: "Team build · firmware planning, server API and test server",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: true,
+    description:
+      "ESP32 firmware that polls RS485 / Modbus RTU devices — starting with the Selec MFM376 three-phase energy meter — from a manifest the server hands it, then uploads readings as JSON over HTTPS. Handles Wi-Fi management, configuration in EEPROM, SD-card buffering while offline and a hardware reset button, on a custom PCB. Built with the Uptime Linked team.",
+    technologies: ["C++ (Arduino)", "ESP32", "Modbus RTU", "RS485", "HTTPS", "Express"],
+    hardware: ["ESP32", "MAX485 transceiver", "Selec MFM376 energy meter", "SD card"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Turn power meters into shift-by-shift energy reports",
+    subtitle: "UptimeLinked Energy",
+    kind: "employer",
+    group: "iot",
+    role: "Contributor · reports and run-time derivation",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: true,
+    description:
+      "Energy monitoring app for factories: shift and hourly energy reports, machine run-time derived from consumption for customers with energy-only sensors, PDF and Excel exports, and alerts through a Telegram bot. A Next.js PWA over Prisma and MySQL; the ESP32 gateway firmware that feeds it lives in the same repo.",
+    technologies: ["Next.js", "Prisma", "MySQL", "PWA", "Telegram Bot", "jsPDF", "ExcelJS"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Trace every order from batch to dispatch",
+    subtitle: "TaktBoard",
+    kind: "employer",
+    group: "iot",
+    role: "Merge lead · planned and lead the TaktBoard → UptimeLinked merge",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: true,
+    description:
+      "Production planning and traceability MES for discrete manufacturers. Customer orders become batches that move through a visual workflow designer — material receipt, processing, assembly, quality check, packaging, warehouse, with outsourced stages — with pick lists, per-stage rejected and rework counts, QR / barcode scanning, OEE and operator analytics, and an AI assistant powered by Claude. Being merged into UptimeLinked as sellable module bundles.",
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "Prisma",
+      "MySQL",
+      "React Flow",
+      "TanStack Query",
+      "Zod",
+      "Anthropic SDK",
+      "Cloudflare R2",
+    ],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Get upstream of every deal",
+    subtitle: "Upstream CRM",
+    kind: "employer",
+    group: "iot",
+    role: "Core contributor (30+ commits)",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: true,
+    description:
+      "Sales CRM with a drag-and-drop kanban pipeline, deal lifecycle with stages and probabilities, contacts and companies, a product catalogue with margins, activities and reports. Connected to UptimeLinked through signed webhooks so support and sales share one customer record.",
+    technologies: ["Next.js", "TypeScript", "MySQL", "NextAuth", "dnd-kit", "Recharts"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Close deals from the phone",
+    subtitle: "Upstream CRM app",
+    kind: "employer",
+    group: "iot",
+    role: "Built solo",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: true,
+    description:
+      "Expo companion app for the CRM: deals with role-based permissions, push notifications, secure token storage and haptics, routed with expo-router.",
+    technologies: ["React Native", "Expo", "expo-router", "TanStack Query", "NativeWind"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Put the factory dashboard in a pocket",
+    subtitle: "UptimeLinked app",
+    kind: "employer",
+    group: "iot",
+    role: "Built solo",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: true,
+    description:
+      "React Native shell that wraps the platform for Android and iOS, with native file downloads and viewers for exported reports.",
+    technologies: ["React Native", "WebView", "TypeScript"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Read labels with the camera",
+    subtitle: "OCR scanner",
+    kind: "employer",
+    group: "iot",
+    role: "Prototype · built solo",
+    href: "https://www.hungrybulb.com",
+    dates: "2026",
+    active: false,
+    description:
+      "React Native prototype using Vision Camera with an on-device OCR frame processor to read part labels and meter displays and copy them to the clipboard — groundwork for camera-based data entry on the floor.",
+    technologies: ["React Native", "Vision Camera", "OCR", "Nitro Modules"],
+    links: [],
+    image: "",
+    video: "",
+  },
+
+  /* ------------------ Logistics & HR platforms (2023–26) ------------------ */
+  {
+    title: "Move India's trucks with live GPS",
+    subtitle: "LoadingWalla app",
+    kind: "employer",
+    group: "platforms",
+    featured: true,
+    role: "Built the app · led the team",
+    href: "https://play.google.com/store/apps/details?id=com.loadingwalla",
+    dates: "Jan 2024 – 2026",
+    active: true,
+    description:
+      "Logistics marketplace connecting shippers with verified truck operators across India. Post a load, match a truck, book, pay through Razorpay, and follow the shipment on a live map fed by Traccar GPS devices. Includes a toll calculator for route costing, KYC through Aadhaar and DigiLocker, in-app chat and push alerts. Live on Google Play.",
+    technologies: [
+      "TypeScript",
+      "React Native",
+      "Redux-saga",
+      "Firebase",
+      "Razorpay",
+      "Traccar",
+      "Google Maps",
+      "Laravel",
+      "MySQL",
+    ],
+    links: [
+      {
+        type: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.loadingwalla",
+        icon: <Icons.playStore className="size-3" />,
+      },
+    ],
+    image: "",
+    video: "/lwApp.mp4",
+  },
+  {
+    title: "Book trucks from the browser",
+    subtitle: "LoadingWalla website",
+    kind: "employer",
+    group: "platforms",
+    role: "Built solo",
+    href: "https://loadingwalla.com",
+    dates: "Dec 2024 – 2026",
+    active: true,
+    description:
+      "The web side of LoadingWalla: search and book trucks, post loads, match with operators, live GPS tracking, the toll calculator, OTP-verified contact and agent flows, a blog and support. Next.js App Router with Redux Toolkit, Google Maps and its own API routes, sharing the Laravel backend with the app.",
+    technologies: ["Next.js", "TypeScript", "Redux-toolkit", "Google Maps", "Framer Motion", "MySQL"],
+    links: [
+      {
+        type: "Website",
+        href: "https://loadingwalla.com",
+        icon: <Icons.globe className="size-3" />,
+      },
+    ],
+    image: "",
+    video: "/LwWeb.mp4",
+  },
+  {
+    title: "Run the marketplace: bookings, GPS commerce, payments",
+    subtitle: "LoadingWalla API & CRM",
+    kind: "employer",
+    group: "platforms",
+    role: "Backend and admin CRM",
+    href: "https://loadingwalla.com",
+    dates: "2024 – 2025",
+    active: true,
+    description:
+      "Laravel backend and admin CRM behind the LoadingWalla apps: trucks, loads, bookings, wallets and Razorpay webhooks, GPS device sales with plans and installs, toll-plaza pricing, KYC (Aadhaar, DigiLocker, Signzy vehicle checks), field-agent attendance and visits, blogs and help desk. MySQL for business data, MongoDB for high-volume GPS pings, Redis and Pusher for realtime.",
+    technologies: ["Laravel", "PHP", "MySQL", "MongoDB", "Redis", "Razorpay", "Firebase", "AWS S3", "Pusher"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Clock in from anywhere, verified",
+    subtitle: "ZFour HRMS · web + mobile",
+    kind: "employer",
+    group: "platforms",
+    featured: true,
+    role: "Project lead · team of 5",
+    href: "https://pantheondigitals.com",
+    dates: "2024 – 2026",
+    active: true,
+    description:
+      "HR suite shipped to the App Store and Play Store: attendance with geo-fenced and trusted-Wi-Fi clock-in, biometric device sync, leave and regularisation, payroll and payslips, reimbursements and loans, a recruitment ATS, assets, helpdesk tickets, company policies, training videos and an internal social feed. Laravel backend with granular RBAC; React Native app with Redux-Saga, Firebase push, maps and PDF payslips. Improved performance by 30% for 7,000+ users.",
+    technologies: ["Laravel", "PHP", "MySQL", "React Native", "Redux-saga", "Firebase", "Redis", "Google Maps"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Track every field employee, live",
+    subtitle: "ZFour Realtime Tracking",
+    kind: "employer",
+    group: "platforms",
+    role: "Built solo · app, backend, dashboard, AWS",
+    href: "https://pantheondigitals.com",
+    dates: "2025",
+    active: true,
+    description:
+      "Three-part system: a React Native app that keeps sending location in the background even when closed (with battery, network and speed), an Express + Socket.io backend on MySQL, and a Next.js dashboard with Leaflet maps showing live positions with animated movement and session playback. Deployed on AWS EC2 and RDS.",
+    technologies: ["React Native", "Express.js", "Socket.IO", "MySQL", "Next.js", "Leaflet", "AWS EC2 / RDS"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Ingest GPS at scale, smooth the noise",
+    subtitle: "Geotracking API",
+    kind: "contract",
+    group: "platforms",
+    role: "Built solo for a client · repo lives in their organisation",
+    href: "https://github.com/amtechsci",
+    dates: "2026",
+    active: true,
+    description:
+      "High-frequency location ingestion service. The API acknowledges pings instantly into a Redis Stream, a worker batches them into MySQL, and analytics simplify tracks with the Ramer–Douglas–Peucker algorithm, detect stops and flag offline gaps. Authenticates with the client's existing Laravel tokens.",
+    technologies: ["TypeScript", "Express.js", "Redis Streams", "MySQL", "Jest"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Give employees a company feed",
+    subtitle: "ZFeed",
+    kind: "employer",
+    group: "platforms",
+    role: "Built solo",
+    href: "https://pantheondigitals.com",
+    dates: "2025",
+    active: true,
+    description:
+      "Internal social feed for the HRMS: posts by type, likes on posts and comments, comment threads, my-feed versus company feed and a user directory. Next.js 15 App Router with API routes proxying the HRMS backend and Redux-Saga state.",
+    technologies: ["Next.js", "TypeScript", "Redux-saga", "Tailwind CSS"],
+    links: [],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Rebuild the HRMS on Node",
+    subtitle: "HRMS (Node rewrite)",
+    kind: "employer",
+    group: "platforms",
+    role: "Built solo",
+    href: "https://pantheondigitals.com",
+    dates: "2026",
+    active: false,
+    description:
+      "Node and Sequelize re-implementation of the ZFour HRMS with 24 models, BullMQ job queues on Redis, S3 uploads and a Next.js frontend — the migration path off Laravel.",
+    technologies: ["Node.js", "Express.js", "Sequelize", "MySQL", "BullMQ", "Redis", "AWS S3", "Next.js"],
+    links: [],
+    image: "",
+    video: "",
+  },
+
+  /* ------------------- Freelance & own products ------------------- */
+  {
+    title: "Run a whole school from one installer",
+    subtitle: "School Management System",
+    kind: "product",
+    group: "freelance",
+    featured: true,
+    role: "Own product · built solo",
+    href: "https://github.com/sushantkr961/School-Mangagement-Software---onPremise",
+    dates: "2026 – Present",
+    active: true,
+    description:
+      "A complete school ERP that installs from a single desktop shortcut. An Electron supervisor boots a bundled MariaDB, an Express API and a Next.js server, then opens a setup wizard — the school's IT admin installs once, and hundreds of teachers, students and parents connect from their own devices with nothing to install. A Cloudflare tunnel makes the parent portal reachable without port forwarding or a static IP. Multi-branch isolation is enforced structurally by a Prisma extension that injects the branch scope into every query. 81 tables across 13 modules, 281 unit tests plus 19 isolation tests against a real database. A cloud multi-tenant mode with a vendor console was added in July 2026.",
+    technologies: [
+      "TypeScript",
+      "Next.js",
+      "Electron",
+      "Express.js",
+      "Prisma",
+      "MariaDB",
+      "Zod",
+      "Vitest",
+      "Tailwind CSS",
+      "Cloudflare Tunnel",
+    ],
+    links: [
+      {
+        type: "Source",
+        href: "https://github.com/sushantkr961/School-Mangagement-Software---onPremise",
+        icon: <Icons.github className="size-3" />,
+      },
+    ],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Launch a luxury-deals app on iOS and Android",
+    subtitle: "Indulge Global",
+    kind: "freelance",
+    group: "freelance",
+    featured: true,
+    role: "Freelance · frontend and API integration",
+    href: "https://play.google.com/store/apps/details?id=com.rutu12.IndulgeApplication",
+    dates: "Aug 2024 – Nov 2024",
+    active: true,
+    description:
+      "Lifestyle app offering exclusive deals, curated products and premium services across fashion, travel, dining and entertainment. I built the React Native frontend from Figma and wired the APIs: personalised recommendations, secure payments and bookings. Shipped to both stores.",
+    technologies: ["TypeScript", "React Native", "Xcode", "Figma"],
+    links: [
+      {
+        type: "Website",
+        href: "https://indulge.global",
+        icon: <Icons.globe className="size-3" />,
+      },
+    ],
+    image: "",
+    video: "/indulgeApp.mp4",
+  },
+  {
+    title: "Put an $800M real-estate team online",
+    subtitle: "Jas Oberoi Group",
+    kind: "freelance",
+    group: "freelance",
+    featured: true,
+    role: "Freelance · built solo",
+    href: "https://jasoberoi.ca",
+    dates: "May 2024 – Jul 2024",
+    active: true,
+    description:
+      "Website for a leading real-estate team in Surrey, BC with over $800 million in career sales. Next.js frontend with listings and consultation flows, backed by Node, Express and MongoDB. Delivered end to end as a freelance build.",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Node.js", "Express.js"],
+    links: [
+      {
+        type: "Website",
+        href: "https://jasoberoi.ca",
+        icon: <Icons.globe className="size-3" />,
+      },
+      {
+        type: "Source",
+        href: "https://github.com/sushantkr961/jasoberoi",
+        icon: <Icons.github className="size-3" />,
+      },
+    ],
+    image: "",
+    video: "/jasoberoi.mp4",
+  },
+
+  /* ---------------------- Earlier & open source ---------------------- */
+  {
+    title: "Sell online with a live line to the store admin",
+    subtitle: "SkMart",
+    kind: "open-source",
+    group: "earlier",
+    href: "https://github.com/sushantkr961/SkMart",
+    dates: "2023",
+    active: false,
+    description:
+      "MERN e-commerce store: catalogue with categories and reviews, cart and order flow, PayPal payments, an admin dashboard with sales charts, and a real-time Socket.IO chat between shoppers and the store admin. JWT auth hardened with helmet, plus database seeders.",
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Socket.IO", "Redux", "PayPal", "JWT Auth"],
+    links: [
+      { type: "Website", href: "https://skmart.onrender.com", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/sushantkr961/SkMart", icon: <Icons.github className="size-3" /> },
+    ],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Browse and book hotels, Tripadvisor-style",
+    subtitle: "Tripadvisor Clone",
+    kind: "open-source",
+    group: "earlier",
+    href: "https://github.com/sushantkr961/Tripadvisor-Clone",
+    dates: "2023",
+    active: false,
+    description:
+      "Hotel browsing with debounced search and full account management — signup, login and password reset over email via Nodemailer — plus an admin dashboard behind private routes. TypeScript Express and Mongoose backend; Chakra UI and Redux frontend.",
+    technologies: ["TypeScript", "React", "Express.js", "MongoDB", "Chakra UI", "Redux", "Nodemailer"],
+    links: [
+      { type: "Website", href: "https://cheery-dasik-4fae30.netlify.app", icon: <Icons.globe className="size-3" /> },
+      { type: "Source", href: "https://github.com/sushantkr961/Tripadvisor-Clone", icon: <Icons.github className="size-3" /> },
+    ],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Play HLS streams inside a React Native app",
+    subtitle: "HLS Video Player",
+    kind: "open-source",
+    group: "earlier",
+    href: "https://github.com/sushantkr961/houseofedtechAssignment",
+    dates: "Jan 2026",
+    active: false,
+    description:
+      "Expo app pairing an instrumented WebView with a custom HLS player on expo-video: play / pause, mute, ±10s jump, fullscreen and a multi-stream selector, with controls kept in sync with the player's own state. Local notifications fire when web content finishes loading.",
+    technologies: ["TypeScript", "React Native", "Expo", "HLS", "expo-video"],
+    links: [
+      { type: "Source", href: "https://github.com/sushantkr961/houseofedtechAssignment", icon: <Icons.github className="size-3" /> },
+    ],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Organise work on a Kanban board",
+    subtitle: "Workflo",
+    kind: "open-source",
+    group: "earlier",
+    href: "https://github.com/sushantkr961/workflo-",
+    dates: "2024",
+    active: false,
+    description:
+      "Column-based task board on the Next.js App Router with API routes for auth and task CRUD, Redux Toolkit on the client, Mongoose for persistence and JWT sessions.",
+    technologies: ["TypeScript", "Next.js", "Redux-toolkit", "MongoDB", "Tailwind CSS", "JWT Auth"],
+    links: [{ type: "Source", href: "https://github.com/sushantkr961/workflo-", icon: <Icons.github className="size-3" /> }],
+    image: "",
+    video: "",
+  },
+  {
+    title: "Chat one-to-one and in groups",
+    subtitle: "MERN Chat App",
+    kind: "open-source",
+    group: "earlier",
+    href: "https://github.com/sushantkr961/chat_app",
+    dates: "2023",
+    active: false,
+    description:
+      "Messaging app with one-to-one and group chats, JWT authentication and a Chakra UI frontend. Chat state flows through a React context provider; the backend models users, chats and messages separately.",
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Chakra UI", "JWT Auth"],
+    links: [{ type: "Source", href: "https://github.com/sushantkr961/chat_app", icon: <Icons.github className="size-3" /> }],
+    image: "",
+    video: "",
+  },
+];
 
 export const DATA = {
   name: "Sushant Kumar",
@@ -8,14 +581,15 @@ export const DATA = {
   location: "New Delhi, INDIA",
   locationLink: "https://www.google.com/maps/place/newdelhi",
   description:
-    "Mechanical Engineer turned Software Developer. Passionate about building solutions and solving problems. Always learning and growing in tech.",
+    "I build web, mobile and IoT software that ships to real users — factory sensors feeding live dashboards, logistics platforms tracking trucks in real time, HR systems live on both app stores, and custom software that runs where businesses actually work.",
+  tagline: "Full-Stack, React Native & IoT Engineer — freelance and full-time",
   summary:
-    "At the end of 2022, I fully transitioned into [software development](#occupation)—what once started as a hobby became my full-time focus. Before that, I earned my [bachelor's degree in Mechanical Engineering](/#education) in 2020. In mid-2022, I joined [Masai School](#platform), an online platform, to sharpen my coding skills and dive deep into [full-stack development](#skills). By early 2023, I landed my first role as a [Software Developer at Pantheon Digital](#designation) while also working as a [freelancer](#freelancer), turning my passion into a profession.",
+    "I'm a mechanical engineer turned software developer, and it shaped how I build: for reliability, efficiency, and clean interfaces. After finishing my [Mechanical Engineering degree](/#education) in 2020, I retrained through [Masai School's](#platform) full-stack program, then spent the last 3+ years shipping production apps — first at [Pantheon Digital](#designation) (2023–2026) and now as a Product Lead at [Uptime Linked](#designation), while taking on [freelance](#freelancer) product builds on the side. I've shipped apps live on both app stores, led a team of 6, and built everything from real-time GPS logistics to on-premise school ERPs.",
   avatarUrl: "/me.png",
   skillGroups: [
     {
       label: "Languages",
-      items: ["TypeScript", "JavaScript", "Java", "Kotlin", "PHP", "SQL", "HTML", "CSS"],
+      items: ["TypeScript", "JavaScript", "Python", "C++ (Arduino)", "Java", "Kotlin", "PHP", "SQL", "HTML", "CSS"],
     },
     {
       label: "Frontend",
@@ -43,6 +617,23 @@ export const DATA = {
         "Xcode",
         "Play Store Release",
         "Firebase Cloud Messaging",
+      ],
+    },
+    {
+      label: "IoT & Edge",
+      items: [
+        "Raspberry Pi",
+        "ESP32",
+        "Arduino Nano",
+        "Modbus RTU / RS485",
+        "MQTT",
+        "Current transformers (CT)",
+        "3-phase energy meters",
+        "Cycle counters",
+        "Temperature / BMS loggers",
+        "GPIO relays",
+        "PySide6 / QML",
+        "systemd",
       ],
     },
     {
@@ -118,30 +709,91 @@ export const DATA = {
     },
   },
 
+  availability: {
+    open: true,
+    label: "Available for freelance",
+    note: "Taking on 1–2 product builds per quarter",
+  },
+  whatsapp: "917544909637",
+  stats: [
+    { value: "7K+", label: "users served" },
+    { value: "2", label: "app stores live" },
+    { value: "20+", label: "products shipped" },
+    { value: "3+", label: "years building" },
+  ],
+  services: [
+    {
+      id: "mobile",
+      title: "Mobile Apps",
+      blurb:
+        "Cross-platform iOS + Android apps in React Native — shipped to the App Store and Play Store, not left in a demo.",
+      tech: ["React Native", "Expo", "Firebase", "Redux-Saga"],
+    },
+    {
+      id: "web",
+      title: "Full-Stack Web",
+      blurb:
+        "Fast, scalable web apps and dashboards with React, Next.js, and Node.js — from marketing sites to internal CRMs.",
+      tech: ["Next.js", "React", "Node.js", "TypeScript"],
+    },
+    {
+      id: "product",
+      title: "Full Product / MVP",
+      blurb:
+        "Idea to launched product — web, mobile, and backend built and shipped together. I take ownership end to end.",
+      tech: ["Web + Mobile", "REST APIs", "AWS", "CI/CD"],
+    },
+    {
+      id: "custom",
+      title: "Custom Software, ERP & IoT",
+      blurb:
+        "Bespoke business software — multi-tenant ERPs, on-premise installs, real-time tracking, and sensor-to-dashboard IoT on Raspberry Pi and ESP32.",
+      tech: ["Electron", "Prisma", "Raspberry Pi / ESP32", "Socket.IO"],
+    },
+  ],
+  /** How a freelance engagement runs — a real sequence, so it is numbered on the page. */
+  process: [
+    {
+      step: "Scope call",
+      blurb: "30 minutes on what you're building, who it's for, and what \"done\" looks like. Free.",
+    },
+    {
+      step: "Fixed plan & quote",
+      blurb: "A written scope with milestones, a price, and a timeline — no surprises later.",
+    },
+    {
+      step: "Build in weekly demos",
+      blurb: "You see working software every week and can steer while it's cheap to change.",
+    },
+    {
+      step: "Ship + 30-day support",
+      blurb: "Store submission, deployment, handover docs, and a month of fixes on me.",
+    },
+  ],
   work: [
     {
-      company: "Loading Walla Ventures Pvt. Ltd.",
-      href: "https://loadingwalla.com/",
+      company: "Uptime Linked · Hungrybulb Technologies",
+      href: "https://www.hungrybulb.com",
       badges: [],
-      location: "Saket, New Delhi",
-      title: "Software Developer (Team Lead)",
-      logoUrl: "/loadingwalla.png",
-      start: "Oct 2024",
+      location: "New Delhi · Hybrid",
+      title: "Full Stack Developer & Product Lead",
+      logoUrl: "/uptime.png",
+      start: "Mar 2026",
       end: "present",
       description:
-        "Developed LoadingWalla’s website using Next.js, TypeScript, and Node.js, ensuring a scalable and high-performance web experience. Additionally, I built the Android app using React Native, delivering a smooth and efficient mobile experience. To streamline internal operations, I also engineered the CRM platform using Next.js, optimizing user management and business workflows.",
+        "Lead product development across 6 platforms (2 internal, 4 global) for an Industrial IoT company, managing a team of 6 engineers from architecture to delivery. Build cross-platform mobile and web apps with React Native, React, Node.js, and TypeScript, and set the team's CI/CD and code-review standards on AWS.",
     },
     {
       company: "Pantheon Digital Pvt. Ltd.",
       badges: [],
       href: "https://pantheondigitals.com",
       location: "Saket, New Delhi",
-      title: "Software Developer",
+      title: "Software Developer → Project Lead",
       logoUrl: "/pantheon.jpg",
-      start: "April 2023",
-      end: "Sep 2024",
+      start: "Apr 2023",
+      end: "Feb 2026",
       description:
-        "Developed and maintained Pantheon Digital’s website, HR portal, and CRM software to streamline internal operations. Implemented secure authentication with login/signup functionality, built asset management and attendance tracking features for the HR portal, and enhanced the CRM by developing a ticketing system to improve customer support efficiency.",
+        "Promoted to project lead within a year, directing a 5-member team across 3 concurrent products. Built and shipped LoadingWalla — a logistics platform with real-time GPS tracking (Android app + website) — and an HRMS suite live on the App Store and Google Play. Improved overall application performance by 30% for 7,000+ users (~33,000 requests/day).",
     },
   ],
   education: [
@@ -180,273 +832,7 @@ export const DATA = {
       end: "Feb 2023",
     },
   ],
-  projects: [
-    {
-      title: "School Management System — On-Premise",
-      href: "https://github.com/sushantkr961/School-Mangagement-Software---onPremise",
-      dates: "2026 - Present",
-      active: true,
-      description:
-        "A complete [school ERP](#erp) that installs from a single desktop shortcut. An [Electron](#electron) supervisor boots a bundled [MariaDB](#mariadb), an [Express API](#api) and a [Next.js](#nextjs) server, then opens a setup wizard — the school's IT admin installs once, and hundreds of teachers, students and parents connect from their own devices with nothing to install. A [Cloudflare tunnel](#tunnel) makes the parent portal reachable without port forwarding, a static IP, or router config, and works behind the CGNAT most school broadband sits behind. [Multi-branch isolation](#isolation) is enforced structurally by a Prisma extension that injects the branch scope into every query and throws rather than leak another school's data. 81 tables across 13 modules, backed by [281 unit tests](#tests) plus 19 branch-isolation tests against a real database — covering integer-paise money handling, exam grading rules, and timetable conflict detection.",
-      technologies: [
-        "TypeScript",
-        "Next.js",
-        "Electron",
-        "Node.js",
-        "Express.js",
-        "Prisma",
-        "MariaDB",
-        "Zod",
-        "Vitest",
-        "Tailwind CSS",
-        "Cloudflare Tunnel",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/sushantkr961/School-Mangagement-Software---onPremise",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Loadingwalla Android App",
-      href: "https://play.google.com/store/apps/details?id=com.loadingwalla",
-      dates: "Jan 2024 - Present",
-      active: true,
-      description:
-        "[LoadingWalla](#company) is a [logistics](#logistics) and [transportation platform](#transportation)  designed to simplify goods movement in India. It connects [shippers](#shippers) with verified [truck operators](#trucks), enabling efficient truck bookings and load matching. The app features real-time [GPS tracking](#gps) for shipments, a [toll calculator](#toll) for route planning, and a transparent pricing model to ensure cost-effectiveness. Businesses, individuals, and truck operators can all benefit from its seamless and intuitive interface, available on Android via the [Google Play Store](#https://play.google.com/store/apps/details?id=com.loadingwalla). By streamlining logistics operations, LoadingWalla is transforming how India handles transportation needs.",
-      technologies: [
-        "Typescript",
-        "React Native",
-        "Redux",
-        "Redux-saga",
-        "Node.js",
-        "Laravel",
-        "Firebase",
-        "Razorpay",
-        "My SQL",
-        "Traccar",
-        "Figma",
-        "Express.js",
-      ],
-      links: [
-        {
-          type: "Play Store",
-          href: "https://play.google.com/store/apps/details?id=com.loadingwalla",
-          icon: <Icons.playStore className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "/lwApp.mp4",
-    },
-    {
-      title: "Loadingwalla Website",
-      href: "https://loadingwalla.com",
-      dates: "December 2024 - Present",
-      active: true,
-      description:
-        "The [LoadingWalla website](#https://loadingwalla.com) offers a seamless platform for managing logistics and transportation needs. Users can search for and book trucks, post load requirements, and match loads with truck operators to ensure efficient transportation. The website features [real-time GPS tracking](#gps) for shipments, a [toll calculator](#toll) for accurate route planning, and transparent pricing to eliminate hidden costs. It also provides a blog section with industry insights and updates, along with easy access to customer support for a hassle-free experience. Designed with a user-friendly and mobile-responsive interface, the website integrates seamlessly with the LoadingWalla mobile app, making it a comprehensive solution for businesses, individuals, and truck operators.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "Redux",
-        "Redux-toolkit",
-        "Node.js",
-        "Laravel",
-        "My SQL",
-        "Traccar",
-        "Figma",
-        "Express.js",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://loadingwalla.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "/LwWeb.mp4",
-    },
-    {
-      title: "Indulge Global Moblile Application",
-      href: "https://play.google.com/store/apps/details?id=com.rutu12.IndulgeApplication",
-      dates: "August 2024 - November 2024",
-      active: true,
-      description:
-        "The [Indulge Global mobile application](#indulge) is a platform that enhances the shopping and lifestyle experience by offering exclusive deals, curated products, and premium services across fashion, travel, dining, and entertainment. I built the [frontend and implemented APIs](#responsible) for this [Freelance Project](#freelance), ensuring a seamless and user-friendly experience. The app features personalized recommendations, secure payment integration, and smooth booking options, making luxury and everyday essentials easily accessible in one place.",
-      technologies: ["Typescript", "React Native", "Xcode", "Figma"],
-      links: [
-        {
-          type: "Website",
-          href: "https://indulge.global",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "/indulgeApp.mp4",
-    },
-    {
-      title: "Jas Oberoi Group",
-      href: "https://jasoberoi.ca",
-      dates: "May 2024 - July 2024",
-      active: true,
-      description:
-        "The [Jas Oberoi Group](#company) is a leading real estate team in Surrey, BC, specializing in residential and commercial properties with over $800 million in career sales. They provide a seamless real estate experience through expert consultation and a commitment to excellence. I built their [static website](#static) as a [freelance project](#freelance), ensuring a professional and user-friendly online presence.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "MongoDB",
-        "Node.js",
-        "Express.js",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://jasoberoi.ca",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/sushantkr961/jasoberoi",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "/jasoberoi.mp4",
-    },
-    {
-      title: "SkMart — MERN E-Commerce",
-      href: "https://github.com/sushantkr961/SkMart",
-      dates: "2023",
-      active: false,
-      description:
-        "A full [e-commerce store](#store) built on the MERN stack: product catalog with categories and reviews, cart and order flow, [PayPal payments](#paypal), and an admin dashboard with sales analytics charts. It also carries a [real-time chat](#chat) built on [Socket.IO](#socket) that connects shoppers directly to the store admin, plus database seeders and [JWT](#jwt) authentication hardened with helmet.",
-      technologies: [
-        "React",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Socket.IO",
-        "Redux",
-        "PayPal",
-        "JWT Auth",
-        "Bootstrap",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://skmart.onrender.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/sushantkr961/SkMart",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Tripadvisor Clone",
-      href: "https://github.com/sushantkr961/Tripadvisor-Clone",
-      dates: "2023",
-      active: false,
-      description:
-        "A [Tripadvisor](#tripadvisor) clone covering hotel browsing, debounced search, and full account management — signup, login, and [password reset over email](#email) via Nodemailer. Ships an [admin dashboard](#admin) for adding hotels behind private routes. The backend is written in [TypeScript](#ts) with Express and Mongoose; the frontend uses Chakra UI and Redux.",
-      technologies: [
-        "TypeScript",
-        "React",
-        "Express.js",
-        "MongoDB",
-        "Chakra UI",
-        "Redux",
-        "JWT Auth",
-        "Nodemailer",
-        "Firebase",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://cheery-dasik-4fae30.netlify.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/sushantkr961/Tripadvisor-Clone",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "HLS Video Player & WebView App",
-      href: "https://github.com/sushantkr961/houseofedtechAssignment",
-      dates: "Jan 2026",
-      active: false,
-      description:
-        "An [Expo](#expo) React Native app pairing an instrumented [WebView](#webview) with a custom [HLS video player](#hls). The player is built on expo-video with a hand-rolled control suite — play/pause, mute, ±10s jump, fullscreen, and a multi-stream selector — with controls kept reactively in sync with the player's internal state. A [local notification](#notifications) system fires when web content finishes loading.",
-      technologies: ["TypeScript", "React Native", "Expo", "HLS", "expo-video"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/sushantkr961/houseofedtechAssignment",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Workflo — Kanban Task Board",
-      href: "https://github.com/sushantkr961/workflo-",
-      dates: "2024",
-      active: false,
-      description:
-        "A [Kanban](#kanban) task-management board with column-based task organisation, built on [Next.js](#nextjs) App Router with API routes handling auth and task CRUD. Uses [Redux Toolkit](#redux) for client state, Mongoose for persistence, and JWT for sessions.",
-      technologies: [
-        "TypeScript",
-        "Next.js",
-        "Redux-toolkit",
-        "MongoDB",
-        "Tailwind CSS",
-        "JWT Auth",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/sushantkr961/workflo-",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "MERN Chat App",
-      href: "https://github.com/sushantkr961/chat_app",
-      dates: "2023",
-      active: false,
-      description:
-        "A [MERN](#mern) messaging app supporting one-to-one and [group chats](#group), with JWT authentication and a Chakra UI frontend. Chat state is shared through a React context provider, with the backend modelling users, chats and messages separately.",
-      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Chakra UI", "JWT Auth"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/sushantkr961/chat_app",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-  ],
+  projects: PROJECTS,
   // hackathons: [
   //   {
   //     title: "Hack Western 5",

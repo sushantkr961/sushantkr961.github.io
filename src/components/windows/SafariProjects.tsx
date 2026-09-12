@@ -22,7 +22,7 @@ export function SafariProjects() {
                 : "text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300"
             }`}
           >
-            {p.title.length > 20 ? p.title.slice(0, 20) + "…" : p.title}
+            {p.subtitle}
           </button>
         ))}
       </div>
@@ -66,6 +66,9 @@ export function SafariProjects() {
         )}
 
         {/* Project Info */}
+        <p className="text-[10px] font-medium uppercase tracking-wider text-neutral-400 mb-0.5">
+          {project.subtitle}
+        </p>
         <h2 className="text-base font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
           {project.title}
         </h2>

@@ -20,6 +20,7 @@ const config = {
     },
     extend: {
       fontFamily: {
+        // Default stays Apple-system so the macOS desktop simulator feels native
         sans: [
           "-apple-system",
           "BlinkMacSystemFont",
@@ -30,8 +31,25 @@ const config = {
           "Arial",
           "sans-serif",
         ],
+        // Landing-page typefaces (scoped via font-* classes on the landing tree)
+        display: ["var(--font-display)", ...fontFamily.sans],
+        body: ["var(--font-sans)", ...fontFamily.sans],
+        mono: ["var(--font-mono)", ...fontFamily.mono],
       },
       colors: {
+        // Landing-page palette; values are RGB channels set on `.landing` in globals.css
+        landing: {
+          bg: "rgb(var(--l-bg) / <alpha-value>)",
+          surface: "rgb(var(--l-surface) / <alpha-value>)",
+          "surface-2": "rgb(var(--l-surface-2) / <alpha-value>)",
+          text: "rgb(var(--l-text) / <alpha-value>)",
+          muted: "rgb(var(--l-muted) / <alpha-value>)",
+          dim: "rgb(var(--l-dim) / <alpha-value>)",
+          line: "rgb(var(--l-line) / <alpha-value>)",
+          accent: "rgb(var(--l-accent) / <alpha-value>)",
+          "accent-ink": "rgb(var(--l-accent-ink) / <alpha-value>)",
+          live: "rgb(var(--l-live) / <alpha-value>)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

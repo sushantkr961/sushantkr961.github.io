@@ -75,6 +75,31 @@
     }
   }
 
+  /* ---- Landing page tokens (scoped: the macOS simulator never sees these) ----
+     RGB channels so Tailwind opacity modifiers work: bg-landing-accent/10 etc. */
+  .landing {
+    --l-bg: 14 17 22;          /* asphalt */
+    --l-surface: 22 27 34;
+    --l-surface-2: 28 34 43;
+    --l-text: 237 233 225;     /* warm paper, not pure white */
+    --l-muted: 163 161 153;
+    --l-dim: 122 121 116;
+    --l-line: 237 233 225;     /* borders = text colour at low alpha */
+    --l-accent: 255 122 26;    /* signal orange — stack lights, hazard tape, trucks */
+    --l-accent-ink: 26 14 4;
+    --l-live: 92 224 168;      /* telemetry green — only for "live / available" */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .landing *,
+    .landing *::before,
+    .landing *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   h3 code {
     @apply !text-lg md:!text-xl;
   }

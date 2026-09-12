@@ -58,6 +58,27 @@ committed so builds work offline and the static export never calls the API at ru
 - The script **fails loudly** rather than write partial data: if language bytes can't be read for
   every repo, the percentages would be computed against an incomplete denominator and silently lie.
 
+## Landing Page (home route `/`)
+The home page is **not** the macOS desktop — it is a marketing-style landing for two audiences
+(freelance clients + hiring managers). The desktop simulator lives at `/desktop`.
+
+- `src/components/landing/` — one file per section: `Landing` (shell + dock), `Hero` (+ `RouteTrace`
+  signature animation), `Proof`, `Services`, `Work` (+ `ProjectCover` generated SVG covers),
+  `WaysToWork`, `Process`, `Experience`, `Stack`, `Contact`; `ui.tsx` holds shared buttons/chips.
+- Colours come from `.landing` tokens in `globals.css` exposed as `landing-*` Tailwind colours. Never
+  raw hex in landing components. The `.landing` scope keeps them away from the macOS windows.
+- Fonts: Bricolage Grotesque (display) + Geist (body) + JetBrains Mono, loaded in `layout.tsx` as
+  `font-display` / `font-body` / `font-mono`. The desktop keeps the Apple system font.
+- Project fields that matter: `featured` picks the big home-page cards (not title matching);
+  `subtitle` is the short product name used by desktop Safari tabs; `kind` drives the badge;
+  `hardware` renders IoT chips; `group` decides the "more work" section. Newest project first.
+- **Employer and contract projects carry no source link** (UptimeLinked family, ZFour, LoadingWalla
+  backend, Geotracking). Never link `sendNotificationApi` (it has a committed Firebase key). Never
+  publish private repo names (see `scripts/fetch-github.mjs`).
+- Skills: the "IoT & Edge" group sits after Mobile on purpose; moving it earlier changes the
+  Launchpad "Top Technologies" list.
+- Testimonials were removed; add a section only with real client quotes.
+
 ## Key Files
 - `src/data/resume.tsx` — Single source of truth for ALL hand-written portfolio data (do NOT split)
 - `src/data/github.json` — Generated GitHub data (do NOT hand-edit; run `pnpm run github:sync`)
