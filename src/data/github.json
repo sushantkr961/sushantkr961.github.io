@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-12T16:23:09.158Z",
-  "authenticated": false,
+  "generatedAt": "2026-09-22T16:43:25.130Z",
+  "authenticated": true,
   "profile": {
     "login": "sushantkr961",
     "name": "Sushant Kumar",
@@ -8,23 +8,23 @@
     "avatarUrl": "https://avatars.githubusercontent.com/u/101393454?v=4",
     "location": "New Delhi, India",
     "blog": "https://sushantkr961.github.io/",
-    "followers": 821,
-    "following": 1246,
-    "publicRepos": 64,
+    "followers": 831,
+    "following": 1260,
+    "publicRepos": 65,
     "createdAt": "2022-03-11T09:14:54Z",
     "hireable": true
   },
   "stats": {
-    "totalRepos": 64,
-    "ownedRepos": 41,
-    "forkedRepos": 23,
-    "privateRepos": 0,
-    "externalRepos": 0,
-    "totalStars": 23,
+    "totalRepos": 118,
+    "ownedRepos": 71,
+    "forkedRepos": 24,
+    "privateRepos": 44,
+    "externalRepos": 23,
+    "totalStars": 26,
     "totalForks": 5,
-    "totalContributions": 5990,
-    "lastYearContributions": 1850,
-    "longest": 33
+    "totalContributions": 6018,
+    "lastYearContributions": 1818,
+    "longest": 23
   },
   "years": [
     {
@@ -45,112 +45,87 @@
     },
     {
       "year": 2026,
-      "total": 1039
+      "total": 1067
     }
   ],
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 21051027,
-      "percent": 82.2
+      "bytes": 57419485,
+      "percent": 44.4
     },
     {
       "name": "JavaScript",
-      "bytes": 1828931,
-      "percent": 7.1
+      "bytes": 23755971,
+      "percent": 18.4
     },
     {
-      "name": "CSS",
-      "bytes": 1451857,
-      "percent": 5.7
-    },
-    {
-      "name": "HTML",
-      "bytes": 902626,
-      "percent": 3.5
+      "name": "Blade",
+      "bytes": 22178725,
+      "percent": 17.2
     },
     {
       "name": "PHP",
-      "bytes": 204718,
-      "percent": 0.8
+      "bytes": 15054270,
+      "percent": 11.6
     },
     {
-      "name": "Shell",
-      "bytes": 44311,
-      "percent": 0.2
+      "name": "CSS",
+      "bytes": 5026686,
+      "percent": 3.9
+    },
+    {
+      "name": "HTML",
+      "bytes": 3345266,
+      "percent": 2.6
     },
     {
       "name": "Hack",
-      "bytes": 42074,
-      "percent": 0.2
+      "bytes": 601907,
+      "percent": 0.5
     },
     {
-      "name": "Java",
-      "bytes": 29874,
+      "name": "Python",
+      "bytes": 572656,
+      "percent": 0.4
+    },
+    {
+      "name": "SCSS",
+      "bytes": 329186,
+      "percent": 0.3
+    },
+    {
+      "name": "Less",
+      "bytes": 177283,
       "percent": 0.1
     },
     {
-      "name": "Ruby",
-      "bytes": 14035,
+      "name": "Vue",
+      "bytes": 143122,
       "percent": 0.1
     },
     {
-      "name": "Objective-C",
-      "bytes": 13776,
+      "name": "Shell",
+      "bytes": 135272,
+      "percent": 0.1
+    },
+    {
+      "name": "QML",
+      "bytes": 130530,
+      "percent": 0.1
+    },
+    {
+      "name": "C++",
+      "bytes": 94863,
+      "percent": 0.1
+    },
+    {
+      "name": "Kotlin",
+      "bytes": 82262,
       "percent": 0.1
     }
   ],
   "contributions": [
-    {
-      "date": "2025-09-12",
-      "count": 8,
-      "level": 1
-    },
-    {
-      "date": "2025-09-13",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-09-14",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-09-15",
-      "count": 10,
-      "level": 1
-    },
-    {
-      "date": "2025-09-16",
-      "count": 9,
-      "level": 1
-    },
-    {
-      "date": "2025-09-17",
-      "count": 4,
-      "level": 1
-    },
-    {
-      "date": "2025-09-18",
-      "count": 17,
-      "level": 2
-    },
-    {
-      "date": "2025-09-19",
-      "count": 7,
-      "level": 1
-    },
-    {
-      "date": "2025-09-20",
-      "count": 5,
-      "level": 1
-    },
-    {
-      "date": "2025-09-21",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-09-22",
       "count": 2,
@@ -1928,7 +1903,57 @@
     },
     {
       "date": "2026-09-12",
+      "count": 12,
+      "level": 1
+    },
+    {
+      "date": "2026-09-13",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-09-14",
       "count": 8,
+      "level": 1
+    },
+    {
+      "date": "2026-09-15",
+      "count": 1,
+      "level": 1
+    },
+    {
+      "date": "2026-09-16",
+      "count": 2,
+      "level": 1
+    },
+    {
+      "date": "2026-09-17",
+      "count": 3,
+      "level": 1
+    },
+    {
+      "date": "2026-09-18",
+      "count": 3,
+      "level": 1
+    },
+    {
+      "date": "2026-09-19",
+      "count": 2,
+      "level": 1
+    },
+    {
+      "date": "2026-09-20",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-09-21",
+      "count": 4,
+      "level": 1
+    },
+    {
+      "date": "2026-09-22",
+      "count": 1,
       "level": 1
     }
   ],
@@ -2098,6 +2123,19 @@
       "createdAt": "2022-08-23T07:56:25Z"
     },
     {
+      "name": "OCRapp",
+      "description": null,
+      "url": "https://github.com/sushantkr961/OCRapp",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "private": false,
+      "topics": [],
+      "updatedAt": "2026-09-16T18:05:34Z",
+      "createdAt": "2026-09-16T18:03:23Z"
+    },
+    {
       "name": "sushantkr961.github.io",
       "description": "This is Sushant Kumar's portfolio repository as a software developer. I built this website using NextJs and Tailwind css.",
       "url": "https://github.com/sushantkr961/sushantkr961.github.io",
@@ -2111,7 +2149,7 @@
         "reactjs",
         "tailwind-css"
       ],
-      "updatedAt": "2026-09-12T15:51:36Z",
+      "updatedAt": "2026-09-12T16:23:28Z",
       "createdAt": "2022-10-13T17:26:21Z"
     },
     {
@@ -2251,19 +2289,6 @@
       "createdAt": "2024-07-10T07:43:13Z"
     },
     {
-      "name": "my_first_kotlin_app",
-      "description": null,
-      "url": "https://github.com/sushantkr961/my_first_kotlin_app",
-      "homepage": null,
-      "language": null,
-      "stars": 0,
-      "forks": 0,
-      "private": false,
-      "topics": [],
-      "updatedAt": "2024-07-14T09:50:23Z",
-      "createdAt": "2024-04-03T12:53:04Z"
-    },
-    {
       "name": "jasoberoi",
       "description": null,
       "url": "https://github.com/sushantkr961/jasoberoi",
@@ -2275,6 +2300,19 @@
       "topics": [],
       "updatedAt": "2024-07-14T09:50:23Z",
       "createdAt": "2024-05-09T15:38:13Z"
+    },
+    {
+      "name": "my_first_kotlin_app",
+      "description": null,
+      "url": "https://github.com/sushantkr961/my_first_kotlin_app",
+      "homepage": null,
+      "language": null,
+      "stars": 0,
+      "forks": 0,
+      "private": false,
+      "topics": [],
+      "updatedAt": "2024-07-14T09:50:23Z",
+      "createdAt": "2024-04-03T12:53:04Z"
     },
     {
       "name": "React-Native_Cli--Projects",
