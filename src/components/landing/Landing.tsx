@@ -11,6 +11,7 @@ import { Process } from "./Process";
 import { Work } from "./Work";
 import { Experience } from "./Experience";
 import { Stack } from "./Stack";
+import { Profile } from "./Profile";
 import { WaysToWork } from "./WaysToWork";
 import { Contact } from "./Contact";
 import { PrimaryButton, WA } from "./ui";
@@ -36,6 +37,7 @@ export function Landing() {
         <Process />
         <Experience />
         <Stack />
+        <Profile />
         <Contact />
       </div>
     </main>

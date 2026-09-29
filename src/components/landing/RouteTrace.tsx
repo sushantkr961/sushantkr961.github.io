@@ -34,7 +34,9 @@ export function RouteTrace() {
   const last = PTS[PTS.length - 1];
 
   return (
-    <div className="relative mt-8 select-none" aria-hidden>
+    /* Top/bottom padding reserves room for the waypoint labels, so they can never
+       collide with the CTA buttons above or the card edge below at any width. */
+    <div className="relative mt-6 select-none pb-7 pt-7 sm:pb-10 sm:pt-10" aria-hidden>
       <svg
         viewBox="0 0 1000 150"
         className="h-auto w-full overflow-visible"
@@ -114,7 +116,7 @@ export function RouteTrace() {
             key={w.what}
             style={{ left }}
             className={`absolute whitespace-nowrap font-mono text-[10px] leading-tight sm:text-[11px] ${
-              w.side === "top" ? "-top-2 -translate-y-full" : "-bottom-1 translate-y-full"
+              w.side === "top" ? "top-0" : "bottom-0"
             } ${
               isLast ? "-translate-x-full text-right" : isFirst ? "" : "-translate-x-1/2 text-center"
             } ${n === 1 || n === 2 ? "hidden sm:block" : ""}`}

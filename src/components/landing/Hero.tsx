@@ -17,7 +17,7 @@ const rise = {
 
 export function Hero() {
   return (
-    <Tile className="relative overflow-hidden px-6 pb-16 pt-8 sm:px-9 sm:pt-10 lg:pb-20">
+    <Tile className="relative overflow-hidden px-6 pb-6 pt-8 sm:px-9 sm:pb-8 sm:pt-10">
       {/* warm light leak in the corner — orange, like a stack light */}
       <div
         aria-hidden
