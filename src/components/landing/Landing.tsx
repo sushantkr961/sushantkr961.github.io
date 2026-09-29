@@ -27,6 +27,7 @@ export function Landing() {
       <TopBar />
       <Dock />
       <div className="mx-auto max-w-6xl space-y-16 px-4 pb-28 pt-4 sm:px-6 sm:pt-6 lg:space-y-20 xl:max-w-7xl 2xl:max-w-[1440px]" id="top">
+        <Profile compact />
         <div className="space-y-4">
           <Hero />
           <Proof />
@@ -37,7 +38,6 @@ export function Landing() {
         <Process />
         <Experience />
         <Stack />
-        <Profile />
         <Contact />
       </div>
     </main>

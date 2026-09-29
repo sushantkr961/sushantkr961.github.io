@@ -12,15 +12,19 @@ import { SectionHead, rise } from "./ui";
  *  portrait card alone for phones/tablets where 9px characters would
  *  be unreadable. The SVG animates with SMIL only — no JavaScript.
  * ------------------------------------------------------------------ */
-export function Profile() {
+export function Profile({ compact = false }: { compact?: boolean }) {
   const github = DATA.contact.social.GitHub.url;
   return (
     <section id="profile" className="scroll-mt-24">
-      <SectionHead
-        eyebrow="system.info"
-        title="The profile, as a terminal"
-        blurb="The identity card that sits on my GitHub profile — portrait rendered in characters, roles, stack and selected work."
-      />
+      {/* `compact` drops the heading: used when the banner is the first block on the page,
+          where a section title above the real headline would read as a page title. */}
+      {!compact && (
+        <SectionHead
+          eyebrow="system.info"
+          title="The profile, as a terminal"
+          blurb="The identity card that sits on my GitHub profile — portrait rendered in characters, roles, stack and selected work."
+        />
+      )}
       <motion.div
         {...rise}
         className="overflow-hidden rounded-2xl border border-landing-line/10 bg-landing-surface p-2 sm:p-3"
