@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T16:45:53.057Z",
+  "generatedAt": "2026-09-29T18:05:01.652Z",
   "authenticated": true,
   "profile": {
     "login": "sushantkr961",
@@ -8,22 +8,22 @@
     "avatarUrl": "https://avatars.githubusercontent.com/u/101393454?v=4",
     "location": "New Delhi, India",
     "blog": "https://sushantkr961.github.io/",
-    "followers": 831,
-    "following": 1260,
+    "followers": 839,
+    "following": 1266,
     "publicRepos": 65,
     "createdAt": "2022-03-11T09:14:54Z",
     "hireable": true
   },
   "stats": {
-    "totalRepos": 118,
-    "ownedRepos": 71,
+    "totalRepos": 119,
+    "ownedRepos": 72,
     "forkedRepos": 24,
-    "privateRepos": 44,
+    "privateRepos": 45,
     "externalRepos": 23,
     "totalStars": 26,
     "totalForks": 5,
-    "totalContributions": 6018,
-    "lastYearContributions": 1818,
+    "totalContributions": 6037,
+    "lastYearContributions": 1764,
     "longest": 23
   },
   "years": [
@@ -45,49 +45,49 @@
     },
     {
       "year": 2026,
-      "total": 1067
+      "total": 1086
     }
   ],
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 57419485,
-      "percent": 44.4
+      "bytes": 57994085,
+      "percent": 44.6
     },
     {
       "name": "JavaScript",
-      "bytes": 23755971,
-      "percent": 18.4
+      "bytes": 23759381,
+      "percent": 18.3
     },
     {
       "name": "Blade",
-      "bytes": 22178725,
-      "percent": 17.2
+      "bytes": 22229274,
+      "percent": 17.1
     },
     {
       "name": "PHP",
-      "bytes": 15054270,
-      "percent": 11.6
+      "bytes": 15190341,
+      "percent": 11.7
     },
     {
       "name": "CSS",
-      "bytes": 5026686,
+      "bytes": 5031805,
       "percent": 3.9
     },
     {
       "name": "HTML",
-      "bytes": 3345266,
+      "bytes": 3345268,
       "percent": 2.6
+    },
+    {
+      "name": "Python",
+      "bytes": 610582,
+      "percent": 0.5
     },
     {
       "name": "Hack",
       "bytes": 601907,
       "percent": 0.5
-    },
-    {
-      "name": "Python",
-      "bytes": 572656,
-      "percent": 0.4
     },
     {
       "name": "SCSS",
@@ -106,12 +106,12 @@
     },
     {
       "name": "Shell",
-      "bytes": 135272,
+      "bytes": 137208,
       "percent": 0.1
     },
     {
       "name": "QML",
-      "bytes": 130530,
+      "bytes": 134209,
       "percent": 0.1
     },
     {
@@ -127,44 +127,9 @@
   ],
   "contributions": [
     {
-      "date": "2025-09-22",
-      "count": 2,
-      "level": 1
-    },
-    {
-      "date": "2025-09-23",
-      "count": 8,
-      "level": 1
-    },
-    {
-      "date": "2025-09-24",
-      "count": 48,
-      "level": 4
-    },
-    {
-      "date": "2025-09-25",
-      "count": 4,
-      "level": 1
-    },
-    {
-      "date": "2025-09-26",
-      "count": 10,
-      "level": 1
-    },
-    {
-      "date": "2025-09-27",
-      "count": 1,
-      "level": 1
-    },
-    {
-      "date": "2025-09-28",
-      "count": 0,
-      "level": 0
-    },
-    {
       "date": "2025-09-29",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-09-30",
@@ -189,7 +154,7 @@
     {
       "date": "2025-10-04",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-10-05",
@@ -199,22 +164,22 @@
     {
       "date": "2025-10-06",
       "count": 21,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-10-07",
       "count": 17,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-10-08",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-10-09",
       "count": 28,
-      "level": 3
+      "level": 4
     },
     {
       "date": "2025-10-10",
@@ -249,7 +214,7 @@
     {
       "date": "2025-10-16",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-10-17",
@@ -284,7 +249,7 @@
     {
       "date": "2025-10-23",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-10-24",
@@ -314,12 +279,12 @@
     {
       "date": "2025-10-29",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-10-30",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-10-31",
@@ -329,7 +294,7 @@
     {
       "date": "2025-11-01",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-11-02",
@@ -349,7 +314,7 @@
     {
       "date": "2025-11-05",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-11-06",
@@ -374,17 +339,17 @@
     {
       "date": "2025-11-10",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-11-11",
       "count": 20,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-12",
       "count": 19,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-13",
@@ -394,12 +359,12 @@
     {
       "date": "2025-11-14",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-11-15",
       "count": 18,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-16",
@@ -409,12 +374,12 @@
     {
       "date": "2025-11-17",
       "count": 18,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-18",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-11-19",
@@ -429,12 +394,12 @@
     {
       "date": "2025-11-21",
       "count": 17,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-22",
       "count": 15,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-23",
@@ -444,17 +409,17 @@
     {
       "date": "2025-11-24",
       "count": 15,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-25",
       "count": 15,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-26",
       "count": 19,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-11-27",
@@ -464,7 +429,7 @@
     {
       "date": "2025-11-28",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-11-29",
@@ -479,27 +444,27 @@
     {
       "date": "2025-12-01",
       "count": 19,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2025-12-02",
       "count": 22,
-      "level": 2
+      "level": 4
     },
     {
       "date": "2025-12-03",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-12-04",
       "count": 22,
-      "level": 2
+      "level": 4
     },
     {
       "date": "2025-12-05",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-12-06",
@@ -514,7 +479,7 @@
     {
       "date": "2025-12-08",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-12-09",
@@ -524,17 +489,17 @@
     {
       "date": "2025-12-10",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-12-11",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-12-12",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-12-13",
@@ -589,7 +554,7 @@
     {
       "date": "2025-12-23",
       "count": 25,
-      "level": 3
+      "level": 4
     },
     {
       "date": "2025-12-24",
@@ -604,7 +569,7 @@
     {
       "date": "2025-12-26",
       "count": 12,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-12-27",
@@ -619,17 +584,17 @@
     {
       "date": "2025-12-29",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2025-12-30",
       "count": 23,
-      "level": 2
+      "level": 4
     },
     {
       "date": "2025-12-31",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-01-01",
@@ -654,7 +619,7 @@
     {
       "date": "2026-01-05",
       "count": 19,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-01-06",
@@ -664,7 +629,7 @@
     {
       "date": "2026-01-07",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-01-08",
@@ -689,7 +654,7 @@
     {
       "date": "2026-01-12",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-01-13",
@@ -699,17 +664,17 @@
     {
       "date": "2026-01-14",
       "count": 21,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-01-15",
       "count": 27,
-      "level": 3
+      "level": 4
     },
     {
       "date": "2026-01-16",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-01-17",
@@ -724,7 +689,7 @@
     {
       "date": "2026-01-19",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-01-20",
@@ -734,12 +699,12 @@
     {
       "date": "2026-01-21",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-01-22",
       "count": 17,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-01-23",
@@ -784,7 +749,7 @@
     {
       "date": "2026-01-31",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-02-01",
@@ -794,7 +759,7 @@
     {
       "date": "2026-02-02",
       "count": 17,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-02-03",
@@ -819,7 +784,7 @@
     {
       "date": "2026-02-07",
       "count": 20,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-02-08",
@@ -829,27 +794,27 @@
     {
       "date": "2026-02-09",
       "count": 20,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-02-10",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-02-11",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-02-12",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-02-13",
       "count": 16,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-02-14",
@@ -869,17 +834,17 @@
     {
       "date": "2026-02-17",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-02-18",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-02-19",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-02-20",
@@ -974,7 +939,7 @@
     {
       "date": "2026-03-10",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-03-11",
@@ -1004,7 +969,7 @@
     {
       "date": "2026-03-16",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-03-17",
@@ -1019,12 +984,12 @@
     {
       "date": "2026-03-19",
       "count": 24,
-      "level": 2
+      "level": 4
     },
     {
       "date": "2026-03-20",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-03-21",
@@ -1054,7 +1019,7 @@
     {
       "date": "2026-03-26",
       "count": 18,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-03-27",
@@ -1069,12 +1034,12 @@
     {
       "date": "2026-03-29",
       "count": 16,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-03-30",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-03-31",
@@ -1084,12 +1049,12 @@
     {
       "date": "2026-04-01",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-04-02",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-04-03",
@@ -1114,7 +1079,7 @@
     {
       "date": "2026-04-07",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-04-08",
@@ -1144,7 +1109,7 @@
     {
       "date": "2026-04-13",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-04-14",
@@ -1164,7 +1129,7 @@
     {
       "date": "2026-04-17",
       "count": 11,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-04-18",
@@ -1254,7 +1219,7 @@
     {
       "date": "2026-05-05",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-05-06",
@@ -1344,7 +1309,7 @@
     {
       "date": "2026-05-23",
       "count": 9,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-05-24",
@@ -1439,7 +1404,7 @@
     {
       "date": "2026-06-11",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-06-12",
@@ -1609,7 +1574,7 @@
     {
       "date": "2026-07-15",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-07-16",
@@ -1894,7 +1859,7 @@
     {
       "date": "2026-09-10",
       "count": 10,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-09-11",
@@ -1904,7 +1869,7 @@
     {
       "date": "2026-09-12",
       "count": 12,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-09-13",
@@ -1914,7 +1879,7 @@
     {
       "date": "2026-09-14",
       "count": 8,
-      "level": 1
+      "level": 2
     },
     {
       "date": "2026-09-15",
@@ -1953,7 +1918,42 @@
     },
     {
       "date": "2026-09-22",
+      "count": 2,
+      "level": 1
+    },
+    {
+      "date": "2026-09-23",
+      "count": 2,
+      "level": 1
+    },
+    {
+      "date": "2026-09-24",
+      "count": 11,
+      "level": 2
+    },
+    {
+      "date": "2026-09-25",
+      "count": 2,
+      "level": 1
+    },
+    {
+      "date": "2026-09-26",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-09-27",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-09-28",
       "count": 1,
+      "level": 1
+    },
+    {
+      "date": "2026-09-29",
+      "count": 2,
       "level": 1
     }
   ],
@@ -2056,14 +2056,14 @@
       "description": "It's my (Sushant Kumar's) GitHub profile. This repository describes to me, What am I currently working on, what's tools and tech I use for coding, the working repository URL, and all my social handles, and much more...",
       "url": "https://github.com/sushantkr961/sushantkr961",
       "homepage": null,
-      "language": null,
+      "language": "Python",
       "stars": 1,
       "forks": 0,
       "private": false,
       "topics": [
         "readme"
       ],
-      "updatedAt": "2026-07-15T18:02:16Z",
+      "updatedAt": "2026-09-29T18:04:02Z",
       "createdAt": "2022-10-13T17:11:53Z"
     },
     {
@@ -2123,19 +2123,6 @@
       "createdAt": "2022-08-23T07:56:25Z"
     },
     {
-      "name": "OCRapp",
-      "description": null,
-      "url": "https://github.com/sushantkr961/OCRapp",
-      "homepage": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "private": false,
-      "topics": [],
-      "updatedAt": "2026-09-16T18:05:34Z",
-      "createdAt": "2026-09-16T18:03:23Z"
-    },
-    {
       "name": "sushantkr961.github.io",
       "description": "This is Sushant Kumar's portfolio repository as a software developer. I built this website using NextJs and Tailwind css.",
       "url": "https://github.com/sushantkr961/sushantkr961.github.io",
@@ -2149,8 +2136,21 @@
         "reactjs",
         "tailwind-css"
       ],
-      "updatedAt": "2026-09-12T16:23:28Z",
+      "updatedAt": "2026-09-22T16:46:16Z",
       "createdAt": "2022-10-13T17:26:21Z"
+    },
+    {
+      "name": "OCRapp",
+      "description": null,
+      "url": "https://github.com/sushantkr961/OCRapp",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "private": false,
+      "topics": [],
+      "updatedAt": "2026-09-16T18:05:34Z",
+      "createdAt": "2026-09-16T18:03:23Z"
     },
     {
       "name": "School-Mangagement-Software---onPremise",
